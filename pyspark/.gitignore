@@ -1,16 +1,5 @@
-# Ignore Excel files
-*.xlsx
-
-# Ignore CSV files
-*.csv
-
-# Ignore Parquet files
-*.parquet
-
-# Ignore Environment files
-*.env
-
 .git
+.env
 .DS_Store
 airflow_settings.yaml
 __pycache__/
