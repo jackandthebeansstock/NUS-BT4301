@@ -1,0 +1,792 @@
+[2025-03-14T11:13:37.094+0000] {processor.py:186} INFO - Started process (PID=1332) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:13:37.095+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:13:37.097+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:13:37.096+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:13:37.106+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:13:37.105+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:13:37.106+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:13:37.116+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.024 seconds
+[2025-03-14T11:14:07.623+0000] {processor.py:186} INFO - Started process (PID=1398) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:14:07.623+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:14:07.625+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:14:07.625+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:14:07.648+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:14:07.647+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:14:07.649+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:14:07.662+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.043 seconds
+[2025-03-14T11:14:38.010+0000] {processor.py:186} INFO - Started process (PID=1464) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:14:38.011+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:14:38.012+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:14:38.012+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:14:38.018+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:14:38.016+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:14:38.018+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:14:38.030+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.023 seconds
+[2025-03-14T11:15:08.397+0000] {processor.py:186} INFO - Started process (PID=1530) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:15:08.397+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:15:08.399+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:15:08.398+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:15:08.406+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:15:08.404+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:15:08.406+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:15:08.417+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.026 seconds
+[2025-03-14T11:15:38.862+0000] {processor.py:186} INFO - Started process (PID=1596) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:15:38.863+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:15:38.864+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:15:38.864+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:15:38.871+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:15:38.870+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:15:38.871+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:15:38.884+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.027 seconds
+[2025-03-14T11:16:09.190+0000] {processor.py:186} INFO - Started process (PID=1668) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:16:09.191+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:16:09.192+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:16:09.192+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:16:09.198+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:16:09.197+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:16:09.199+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:16:09.210+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.024 seconds
+[2025-03-14T11:16:39.583+0000] {processor.py:186} INFO - Started process (PID=1734) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:16:39.584+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:16:39.586+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:16:39.586+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:16:39.590+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:16:39.589+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:16:39.590+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:16:39.601+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.021 seconds
+[2025-03-14T11:17:09.916+0000] {processor.py:186} INFO - Started process (PID=1800) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:17:09.916+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:17:09.917+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:17:09.917+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:17:09.923+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:17:09.922+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:17:09.923+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:17:09.934+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.021 seconds
+[2025-03-14T11:17:40.400+0000] {processor.py:186} INFO - Started process (PID=1866) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:17:40.401+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:17:40.403+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:17:40.403+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:17:40.407+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:17:40.406+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:17:40.407+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:17:40.419+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.021 seconds
+[2025-03-14T11:18:10.722+0000] {processor.py:186} INFO - Started process (PID=1932) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:18:10.722+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:18:10.724+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:18:10.724+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:18:10.730+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:18:10.729+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:18:10.730+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:18:10.741+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.023 seconds
+[2025-03-14T11:18:41.176+0000] {processor.py:186} INFO - Started process (PID=1998) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:18:41.176+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:18:41.178+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:18:41.178+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:18:41.184+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:18:41.183+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:18:41.184+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:18:41.197+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.026 seconds
+[2025-03-14T11:19:11.558+0000] {processor.py:186} INFO - Started process (PID=2064) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:19:11.559+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:19:11.560+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:19:11.560+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:19:11.566+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:19:11.565+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:19:11.567+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:19:11.580+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.026 seconds
+[2025-03-14T11:19:41.801+0000] {processor.py:186} INFO - Started process (PID=2130) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:19:41.801+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:19:41.802+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:19:41.802+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:19:41.808+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:19:41.807+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:19:41.809+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:19:41.824+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.028 seconds
+[2025-03-14T11:20:12.109+0000] {processor.py:186} INFO - Started process (PID=2196) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:20:12.109+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:20:12.112+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:20:12.112+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:20:12.118+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:20:12.117+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:20:12.119+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:20:12.130+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.026 seconds
+[2025-03-14T11:20:42.481+0000] {processor.py:186} INFO - Started process (PID=2262) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:20:42.482+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:20:42.483+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:20:42.483+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:20:42.489+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:20:42.487+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:20:42.489+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:20:42.504+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.028 seconds
+[2025-03-14T11:21:13.044+0000] {processor.py:186} INFO - Started process (PID=2328) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:21:13.045+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:21:13.047+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:21:13.047+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:21:13.053+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:21:13.052+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:21:13.054+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:21:13.065+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.026 seconds
+[2025-03-14T11:21:43.666+0000] {processor.py:186} INFO - Started process (PID=2394) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:21:43.666+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:21:43.668+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:21:43.668+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:21:43.674+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:21:43.673+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:21:43.674+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:21:43.686+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.025 seconds
+[2025-03-14T11:22:14.001+0000] {processor.py:186} INFO - Started process (PID=2459) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:22:14.001+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:22:14.003+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:22:14.002+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:22:14.007+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:22:14.006+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:22:14.007+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:22:14.021+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.023 seconds
+[2025-03-14T11:22:44.431+0000] {processor.py:186} INFO - Started process (PID=2525) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:22:44.432+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:22:44.433+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:22:44.433+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:22:44.440+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:22:44.439+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:22:44.441+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:22:44.454+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.027 seconds
+[2025-03-14T11:23:14.817+0000] {processor.py:186} INFO - Started process (PID=2591) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:23:14.818+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:23:14.819+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:23:14.819+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:23:14.825+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:23:14.823+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:23:14.825+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:23:14.837+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.024 seconds
+[2025-03-14T11:23:45.441+0000] {processor.py:186} INFO - Started process (PID=2657) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:23:45.442+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:23:45.444+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:23:45.444+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:23:45.449+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:23:45.448+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:23:45.450+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:23:45.461+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.025 seconds
+[2025-03-14T11:24:15.847+0000] {processor.py:186} INFO - Started process (PID=2723) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:24:15.848+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:24:15.849+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:24:15.849+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:24:15.856+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:24:15.854+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:24:15.856+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:24:15.868+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.025 seconds
+[2025-03-14T11:24:46.093+0000] {processor.py:186} INFO - Started process (PID=2790) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:24:46.094+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:24:46.095+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:24:46.095+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:24:46.100+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:24:46.099+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:24:46.101+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:24:46.114+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.025 seconds
+[2025-03-14T11:25:16.573+0000] {processor.py:186} INFO - Started process (PID=2855) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:25:16.574+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:25:16.576+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:25:16.575+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:25:16.585+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:25:16.583+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:25:16.586+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:25:16.600+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.032 seconds
+[2025-03-14T11:25:47.373+0000] {processor.py:186} INFO - Started process (PID=2921) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:25:47.373+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:25:47.374+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:25:47.374+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:25:47.379+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:25:47.378+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:25:47.380+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:25:47.394+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.025 seconds
+[2025-03-14T11:26:17.860+0000] {processor.py:186} INFO - Started process (PID=2987) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:26:17.861+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:26:17.862+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:26:17.862+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:26:17.868+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:26:17.867+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:26:17.869+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:26:17.880+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.025 seconds
+[2025-03-14T11:26:48.175+0000] {processor.py:186} INFO - Started process (PID=3053) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:26:48.175+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:26:48.177+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:26:48.176+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:26:48.182+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:26:48.181+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:26:48.183+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:26:48.194+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.023 seconds
+[2025-03-14T11:27:18.866+0000] {processor.py:186} INFO - Started process (PID=3119) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:27:18.866+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:27:18.868+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:27:18.867+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:27:18.873+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:27:18.872+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:27:18.873+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:27:18.885+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.023 seconds
+[2025-03-14T11:27:49.021+0000] {processor.py:186} INFO - Started process (PID=3185) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:27:49.022+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:27:49.023+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:27:49.023+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:27:49.030+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:27:49.029+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:27:49.030+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:27:49.042+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.024 seconds
+[2025-03-14T11:28:19.214+0000] {processor.py:186} INFO - Started process (PID=3250) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:28:19.215+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:28:19.216+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:28:19.216+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:28:19.222+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:28:19.221+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:28:19.223+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:28:19.235+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.026 seconds
+[2025-03-14T11:28:49.341+0000] {processor.py:186} INFO - Started process (PID=3316) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:28:49.341+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:28:49.343+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:28:49.343+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:28:49.350+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:28:49.348+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:28:49.350+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:28:49.362+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.026 seconds
+[2025-03-14T11:29:19.677+0000] {processor.py:186} INFO - Started process (PID=3382) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:29:19.682+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:29:19.684+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:29:19.684+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:29:19.690+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:29:19.689+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:29:19.691+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:29:19.704+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.031 seconds
+[2025-03-14T11:29:49.789+0000] {processor.py:186} INFO - Started process (PID=3448) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:29:49.790+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:29:49.791+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:29:49.791+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:29:49.795+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:29:49.794+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:29:49.795+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:29:49.807+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.020 seconds
+[2025-03-14T11:30:19.987+0000] {processor.py:186} INFO - Started process (PID=3514) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:30:19.987+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:30:19.989+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:30:19.989+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:30:19.995+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:30:19.993+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:30:19.995+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:30:20.008+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.026 seconds
+[2025-03-14T11:30:50.196+0000] {processor.py:186} INFO - Started process (PID=3579) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:30:50.197+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:30:50.199+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:30:50.199+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:30:50.204+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:30:50.204+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:30:50.205+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:30:50.217+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.026 seconds
+[2025-03-14T11:31:20.500+0000] {processor.py:186} INFO - Started process (PID=3645) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:31:20.501+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:31:20.503+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:31:20.502+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:31:20.508+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:31:20.508+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:31:20.509+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:31:20.521+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.026 seconds
+[2025-03-14T11:31:50.671+0000] {processor.py:186} INFO - Started process (PID=3711) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:31:50.671+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:31:50.672+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:31:50.672+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:31:50.677+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:31:50.676+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:31:50.678+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:31:50.689+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.021 seconds
+[2025-03-14T11:32:20.869+0000] {processor.py:186} INFO - Started process (PID=3776) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:32:20.869+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:32:20.871+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:32:20.871+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:32:20.877+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:32:20.876+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:32:20.878+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:32:20.891+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.028 seconds
+[2025-03-14T11:32:51.204+0000] {processor.py:186} INFO - Started process (PID=3842) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:32:51.204+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:32:51.206+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:32:51.205+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:32:51.213+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:32:51.212+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:32:51.214+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:32:51.228+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.027 seconds
+[2025-03-14T11:33:21.372+0000] {processor.py:186} INFO - Started process (PID=3908) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:33:21.372+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:33:21.374+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:33:21.374+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:33:21.379+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:33:21.378+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:33:21.380+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:33:21.393+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.025 seconds
+[2025-03-14T11:33:51.652+0000] {processor.py:186} INFO - Started process (PID=3974) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:33:51.653+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:33:51.655+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:33:51.654+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:33:51.660+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:33:51.659+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:33:51.661+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:33:51.675+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.027 seconds
+[2025-03-14T11:34:21.817+0000] {processor.py:186} INFO - Started process (PID=4040) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:34:21.817+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:34:21.819+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:34:21.819+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:34:21.824+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:34:21.823+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:34:21.824+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:34:21.835+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.021 seconds
+[2025-03-14T11:34:52.064+0000] {processor.py:186} INFO - Started process (PID=4106) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:34:52.064+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:34:52.065+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:34:52.065+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:34:52.070+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:34:52.070+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:34:52.071+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:34:52.083+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.022 seconds
+[2025-03-14T11:35:22.556+0000] {processor.py:186} INFO - Started process (PID=4171) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:35:22.556+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:35:22.557+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:35:22.557+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:35:22.561+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:35:22.560+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:35:22.561+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:35:22.572+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.019 seconds
+[2025-03-14T11:35:52.935+0000] {processor.py:186} INFO - Started process (PID=4237) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:35:52.935+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:35:52.936+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:35:52.936+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:35:52.940+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:35:52.939+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+ModuleNotFoundError: No module named 'kaggle'
+[2025-03-14T11:35:52.941+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:35:52.951+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.020 seconds
+[2025-03-14T11:36:58.864+0000] {processor.py:186} INFO - Started process (PID=78) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:36:58.864+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:36:58.866+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:36:58.866+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:36:58.938+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:36:58.936+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/__init__.py", line 6, in <module>
+    api.authenticate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/api/kaggle_api_extended.py", line 433, in authenticate
+    raise IOError('Could not find {}. Make sure it\'s located in'
+OSError: Could not find kaggle.json. Make sure it's located in /home/airflow/.config/kaggle. Or use the environment method. See setup instructions at https://github.com/Kaggle/kaggle-api/
+[2025-03-14T11:36:58.938+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:36:58.945+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.084 seconds
+[2025-03-14T11:37:29.395+0000] {processor.py:186} INFO - Started process (PID=146) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:37:29.396+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:37:29.398+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:37:29.398+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:37:29.437+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:37:29.435+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/__init__.py", line 6, in <module>
+    api.authenticate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/api/kaggle_api_extended.py", line 433, in authenticate
+    raise IOError('Could not find {}. Make sure it\'s located in'
+OSError: Could not find kaggle.json. Make sure it's located in /home/airflow/.config/kaggle. Or use the environment method. See setup instructions at https://github.com/Kaggle/kaggle-api/
+[2025-03-14T11:37:29.437+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:37:29.444+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.052 seconds
+[2025-03-14T11:37:59.995+0000] {processor.py:186} INFO - Started process (PID=212) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:37:59.996+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:37:59.996+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:37:59.996+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:38:00.035+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:38:00.033+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/__init__.py", line 6, in <module>
+    api.authenticate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/api/kaggle_api_extended.py", line 433, in authenticate
+    raise IOError('Could not find {}. Make sure it\'s located in'
+OSError: Could not find kaggle.json. Make sure it's located in /home/airflow/.config/kaggle. Or use the environment method. See setup instructions at https://github.com/Kaggle/kaggle-api/
+[2025-03-14T11:38:00.035+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:38:00.043+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.050 seconds
+[2025-03-14T11:38:30.357+0000] {processor.py:186} INFO - Started process (PID=278) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:38:30.358+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:38:30.359+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:38:30.359+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:38:30.404+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:38:30.397+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/__init__.py", line 6, in <module>
+    api.authenticate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/api/kaggle_api_extended.py", line 433, in authenticate
+    raise IOError('Could not find {}. Make sure it\'s located in'
+OSError: Could not find kaggle.json. Make sure it's located in /home/airflow/.config/kaggle. Or use the environment method. See setup instructions at https://github.com/Kaggle/kaggle-api/
+[2025-03-14T11:38:30.405+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:38:30.414+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.060 seconds
+[2025-03-14T11:39:00.691+0000] {processor.py:186} INFO - Started process (PID=344) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:39:00.691+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:39:00.693+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:39:00.693+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:39:00.736+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:39:00.732+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/__init__.py", line 6, in <module>
+    api.authenticate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/api/kaggle_api_extended.py", line 433, in authenticate
+    raise IOError('Could not find {}. Make sure it\'s located in'
+OSError: Could not find kaggle.json. Make sure it's located in /home/airflow/.config/kaggle. Or use the environment method. See setup instructions at https://github.com/Kaggle/kaggle-api/
+[2025-03-14T11:39:00.736+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:39:00.745+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.056 seconds
+[2025-03-14T11:39:30.991+0000] {processor.py:186} INFO - Started process (PID=410) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:39:30.991+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:39:30.992+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:39:30.992+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:39:31.039+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:39:31.030+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/__init__.py", line 6, in <module>
+    api.authenticate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/api/kaggle_api_extended.py", line 433, in authenticate
+    raise IOError('Could not find {}. Make sure it\'s located in'
+OSError: Could not find kaggle.json. Make sure it's located in /home/airflow/.config/kaggle. Or use the environment method. See setup instructions at https://github.com/Kaggle/kaggle-api/
+[2025-03-14T11:39:31.040+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:39:31.047+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.059 seconds
+[2025-03-14T11:40:01.411+0000] {processor.py:186} INFO - Started process (PID=476) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:40:01.411+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:40:01.412+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:40:01.412+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:40:01.454+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:40:01.450+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/__init__.py", line 6, in <module>
+    api.authenticate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/api/kaggle_api_extended.py", line 433, in authenticate
+    raise IOError('Could not find {}. Make sure it\'s located in'
+OSError: Could not find kaggle.json. Make sure it's located in /home/airflow/.config/kaggle. Or use the environment method. See setup instructions at https://github.com/Kaggle/kaggle-api/
+[2025-03-14T11:40:01.455+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:40:01.463+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.055 seconds
+[2025-03-14T11:40:31.785+0000] {processor.py:186} INFO - Started process (PID=542) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:40:31.786+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:40:31.787+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:40:31.787+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:40:31.828+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:40:31.825+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/__init__.py", line 6, in <module>
+    api.authenticate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/api/kaggle_api_extended.py", line 433, in authenticate
+    raise IOError('Could not find {}. Make sure it\'s located in'
+OSError: Could not find kaggle.json. Make sure it's located in /home/airflow/.config/kaggle. Or use the environment method. See setup instructions at https://github.com/Kaggle/kaggle-api/
+[2025-03-14T11:40:31.828+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:40:31.836+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.053 seconds
+[2025-03-14T11:41:02.132+0000] {processor.py:186} INFO - Started process (PID=608) to work on /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:41:02.133+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0273132N.py for tasks to queue
+[2025-03-14T11:41:02.134+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:41:02.134+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:41:02.175+0000] {logging_mixin.py:190} INFO - [2025-03-14T11:41:02.174+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0273132N.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0273132N.py", line 4, in <module>
+    import kaggle
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/__init__.py", line 6, in <module>
+    api.authenticate()
+  File "/home/airflow/.local/lib/python3.12/site-packages/kaggle/api/kaggle_api_extended.py", line 433, in authenticate
+    raise IOError('Could not find {}. Make sure it\'s located in'
+OSError: Could not find kaggle.json. Make sure it's located in /home/airflow/.config/kaggle. Or use the environment method. See setup instructions at https://github.com/Kaggle/kaggle-api/
+[2025-03-14T11:41:02.175+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0273132N.py
+[2025-03-14T11:41:02.184+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0273132N.py took 0.054 seconds
