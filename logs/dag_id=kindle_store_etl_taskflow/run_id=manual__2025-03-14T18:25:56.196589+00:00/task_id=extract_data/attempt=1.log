@@ -1,0 +1,631 @@
+[2025-03-14T18:25:57.771+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-14T18:25:57.777+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kindle_store_etl_taskflow.extract_data manual__2025-03-14T18:25:56.196589+00:00 [queued]>
+[2025-03-14T18:25:57.779+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kindle_store_etl_taskflow.extract_data manual__2025-03-14T18:25:56.196589+00:00 [queued]>
+[2025-03-14T18:25:57.779+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-14T18:25:57.784+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): extract_data> on 2025-03-14 18:25:56.196589+00:00
+[2025-03-14T18:25:57.787+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1467) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-14T18:25:57.787+0000] {standard_task_runner.py:72} INFO - Started process 1468 to run task
+[2025-03-14T18:25:57.788+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kindle_store_etl_taskflow', 'extract_data', 'manual__2025-03-14T18:25:56.196589+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpvh5xqtey']
+[2025-03-14T18:25:57.789+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask extract_data
+[2025-03-14T18:25:57.817+0000] {task_command.py:467} INFO - Running <TaskInstance: kindle_store_etl_taskflow.extract_data manual__2025-03-14T18:25:56.196589+00:00 [running]> on host 76178626723b
+[2025-03-14T18:25:57.844+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kindle_store_etl_taskflow' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-14T18:25:56.196589+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-14T18:25:56.196589+00:00'
+[2025-03-14T18:25:57.844+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-14T18:25:57.845+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-14T18:25:57.845+0000] {logging_mixin.py:190} INFO - Current task name:extract_data state:running start_date:2025-03-14 18:25:57.777461+00:00
+[2025-03-14T18:25:57.845+0000] {logging_mixin.py:190} INFO - Dag name:kindle_store_etl_taskflow and current dag run status:running
+[2025-03-14T18:25:57.845+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-14T18:26:04.580+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   0%|          | 0/25578 [00:00<?, ?ba/s]
+[2025-03-14T18:26:04.681+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   0%|          | 37/25578 [00:00<01:09, 366.01ba/s]
+[2025-03-14T18:26:04.783+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   0%|          | 86/25578 [00:00<00:58, 433.82ba/s]
+[2025-03-14T18:26:04.884+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   1%|          | 144/25578 [00:00<00:51, 496.61ba/s]
+[2025-03-14T18:26:04.985+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   1%|          | 211/25578 [00:00<00:45, 563.47ba/s]
+[2025-03-14T18:26:05.085+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   1%|1         | 274/25578 [00:00<00:43, 586.31ba/s]
+[2025-03-14T18:26:05.194+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   1%|1         | 333/25578 [00:00<00:44, 570.72ba/s]
+[2025-03-14T18:26:05.294+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   2%|1         | 391/25578 [00:00<00:43, 573.34ba/s]
+[2025-03-14T18:26:05.397+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   2%|1         | 449/25578 [00:00<00:44, 569.63ba/s]
+[2025-03-14T18:26:05.510+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   2%|1         | 507/25578 [00:00<00:45, 552.33ba/s]
+[2025-03-14T18:26:05.610+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   2%|2         | 567/25578 [00:01<00:44, 566.09ba/s]
+[2025-03-14T18:26:05.711+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   2%|2         | 634/25578 [00:01<00:41, 594.70ba/s]
+[2025-03-14T18:26:05.812+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   3%|2         | 695/25578 [00:01<00:41, 597.86ba/s]
+[2025-03-14T18:26:05.913+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   3%|2         | 755/25578 [00:01<00:41, 595.78ba/s]
+[2025-03-14T18:26:06.015+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   3%|3         | 815/25578 [00:01<00:41, 594.88ba/s]
+[2025-03-14T18:26:06.122+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   3%|3         | 875/25578 [00:01<00:42, 584.02ba/s]
+[2025-03-14T18:26:06.231+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   4%|3         | 934/25578 [00:01<00:43, 570.14ba/s]
+[2025-03-14T18:26:06.332+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   4%|3         | 998/25578 [00:01<00:41, 588.88ba/s]
+[2025-03-14T18:26:06.441+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   4%|4         | 1058/25578 [00:01<00:42, 577.24ba/s]
+[2025-03-14T18:26:06.551+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   4%|4         | 1116/25578 [00:01<00:43, 561.80ba/s]
+[2025-03-14T18:26:06.666+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   5%|4         | 1173/25578 [00:02<00:45, 540.93ba/s]
+[2025-03-14T18:26:06.766+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   5%|4         | 1232/25578 [00:02<00:43, 554.13ba/s]
+[2025-03-14T18:26:06.869+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   5%|5         | 1288/25578 [00:02<00:43, 552.18ba/s]
+[2025-03-14T18:26:06.973+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   5%|5         | 1344/25578 [00:02<00:44, 548.01ba/s]
+[2025-03-14T18:26:07.074+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   5%|5         | 1403/25578 [00:02<00:43, 557.65ba/s]
+[2025-03-14T18:26:07.174+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   6%|5         | 1460/25578 [00:02<00:42, 561.23ba/s]
+[2025-03-14T18:26:07.275+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   6%|5         | 1518/25578 [00:02<00:42, 565.68ba/s]
+[2025-03-14T18:26:07.376+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   6%|6         | 1578/25578 [00:02<00:41, 573.78ba/s]
+[2025-03-14T18:26:07.483+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   6%|6         | 1636/25578 [00:02<00:42, 564.49ba/s]
+[2025-03-14T18:26:07.583+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   7%|6         | 1706/25578 [00:03<00:39, 602.90ba/s]
+[2025-03-14T18:26:07.706+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   7%|6         | 1767/25578 [00:03<00:41, 567.17ba/s]
+[2025-03-14T18:26:07.807+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   7%|7         | 1829/25578 [00:03<00:40, 580.73ba/s]
+[2025-03-14T18:26:07.939+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   7%|7         | 1888/25578 [00:03<00:44, 534.66ba/s]
+[2025-03-14T18:26:08.040+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   8%|7         | 1945/25578 [00:03<00:43, 541.77ba/s]
+[2025-03-14T18:26:08.169+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   8%|7         | 2000/25578 [00:03<00:46, 503.88ba/s]
+[2025-03-14T18:26:08.273+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   8%|8         | 2052/25578 [00:03<00:46, 502.46ba/s]
+[2025-03-14T18:26:08.395+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   8%|8         | 2103/25578 [00:03<00:49, 475.69ba/s]
+[2025-03-14T18:26:08.527+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   8%|8         | 2152/25578 [00:03<00:53, 440.88ba/s]
+[2025-03-14T18:26:08.659+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   9%|8         | 2197/25578 [00:04<00:57, 409.13ba/s]
+[2025-03-14T18:26:08.806+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   9%|8         | 2239/25578 [00:04<01:03, 367.48ba/s]
+[2025-03-14T18:26:08.916+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   9%|8         | 2277/25578 [00:04<01:04, 361.67ba/s]
+[2025-03-14T18:26:09.018+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   9%|9         | 2324/25578 [00:04<00:59, 387.92ba/s]
+[2025-03-14T18:26:09.119+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   9%|9         | 2376/25578 [00:04<00:55, 421.16ba/s]
+[2025-03-14T18:26:09.221+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  10%|9         | 2431/25578 [00:04<00:50, 454.79ba/s]
+[2025-03-14T18:26:09.328+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  10%|9         | 2478/25578 [00:04<00:51, 449.95ba/s]
+[2025-03-14T18:26:09.430+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  10%|9         | 2528/25578 [00:04<00:49, 462.17ba/s]
+[2025-03-14T18:26:09.531+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  10%|#         | 2579/25578 [00:04<00:48, 473.77ba/s]
+[2025-03-14T18:26:09.635+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  10%|#         | 2627/25578 [00:05<00:48, 470.59ba/s]
+[2025-03-14T18:26:09.740+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  10%|#         | 2675/25578 [00:05<00:49, 466.87ba/s]
+[2025-03-14T18:26:09.846+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  11%|#         | 2722/25578 [00:05<00:49, 459.70ba/s]
+[2025-03-14T18:26:09.947+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  11%|#         | 2777/25578 [00:05<00:47, 483.21ba/s]
+[2025-03-14T18:26:10.049+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  11%|#1        | 2826/25578 [00:05<00:47, 482.65ba/s]
+[2025-03-14T18:26:10.156+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  11%|#1        | 2875/25578 [00:05<00:47, 476.14ba/s]
+[2025-03-14T18:26:10.297+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  11%|#1        | 2923/25578 [00:05<00:53, 425.41ba/s]
+[2025-03-14T18:26:10.408+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  12%|#1        | 2967/25578 [00:05<00:54, 417.23ba/s]
+[2025-03-14T18:26:10.544+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  12%|#1        | 3010/25578 [00:05<00:58, 383.58ba/s]
+[2025-03-14T18:26:10.645+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  12%|#1        | 3060/25578 [00:06<00:54, 413.05ba/s]
+[2025-03-14T18:26:10.746+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  12%|#2        | 3118/25578 [00:06<00:49, 457.21ba/s]
+[2025-03-14T18:26:10.847+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  12%|#2        | 3169/25578 [00:06<00:47, 470.49ba/s]
+[2025-03-14T18:26:10.960+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  13%|#2        | 3217/25578 [00:06<00:49, 456.01ba/s]
+[2025-03-14T18:26:11.060+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  13%|#2        | 3268/25578 [00:06<00:47, 470.92ba/s]
+[2025-03-14T18:26:11.163+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  13%|#2        | 3322/25578 [00:06<00:45, 487.33ba/s]
+[2025-03-14T18:26:11.264+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  13%|#3        | 3377/25578 [00:06<00:44, 503.69ba/s]
+[2025-03-14T18:26:11.373+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  13%|#3        | 3428/25578 [00:06<00:44, 492.89ba/s]
+[2025-03-14T18:26:11.473+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  14%|#3        | 3479/25578 [00:06<00:44, 497.35ba/s]
+[2025-03-14T18:26:11.595+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  14%|#3        | 3529/25578 [00:07<00:47, 467.98ba/s]
+[2025-03-14T18:26:11.695+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  14%|#4        | 3582/25578 [00:07<00:45, 484.90ba/s]
+[2025-03-14T18:26:11.796+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  14%|#4        | 3636/25578 [00:07<00:43, 499.31ba/s]
+[2025-03-14T18:26:11.897+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  14%|#4        | 3692/25578 [00:07<00:42, 516.07ba/s]
+[2025-03-14T18:26:11.998+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  15%|#4        | 3746/25578 [00:07<00:41, 520.67ba/s]
+[2025-03-14T18:26:12.127+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  15%|#4        | 3799/25578 [00:07<00:45, 483.00ba/s]
+[2025-03-14T18:26:12.228+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  15%|#5        | 3855/25578 [00:07<00:43, 503.61ba/s]
+[2025-03-14T18:26:12.328+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  15%|#5        | 3906/25578 [00:07<00:42, 504.44ba/s]
+[2025-03-14T18:26:12.461+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  15%|#5        | 3957/25578 [00:07<00:46, 462.54ba/s]
+[2025-03-14T18:26:12.561+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  16%|#5        | 4023/25578 [00:07<00:41, 516.36ba/s]
+[2025-03-14T18:26:12.662+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  16%|#5        | 4085/25578 [00:08<00:39, 544.34ba/s]
+[2025-03-14T18:26:12.762+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  16%|#6        | 4144/25578 [00:08<00:38, 556.55ba/s]
+[2025-03-14T18:26:12.863+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  16%|#6        | 4206/25578 [00:08<00:37, 573.72ba/s]
+[2025-03-14T18:26:12.969+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  17%|#6        | 4264/25578 [00:08<00:37, 566.33ba/s]
+[2025-03-14T18:26:13.082+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  17%|#6        | 4322/25578 [00:08<00:38, 549.56ba/s]
+[2025-03-14T18:26:13.182+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  17%|#7        | 4382/25578 [00:08<00:37, 563.94ba/s]
+[2025-03-14T18:26:13.283+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  17%|#7        | 4445/25578 [00:08<00:36, 580.67ba/s]
+[2025-03-14T18:26:13.385+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  18%|#7        | 4504/25578 [00:08<00:36, 580.03ba/s]
+[2025-03-14T18:26:13.487+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  18%|#7        | 4563/25578 [00:08<00:36, 580.13ba/s]
+[2025-03-14T18:26:13.589+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  18%|#8        | 4622/25578 [00:09<00:36, 579.27ba/s]
+[2025-03-14T18:26:13.717+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  18%|#8        | 4681/25578 [00:09<00:38, 537.44ba/s]
+[2025-03-14T18:26:13.818+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  19%|#8        | 4744/25578 [00:09<00:37, 562.73ba/s]
+[2025-03-14T18:26:13.918+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  19%|#8        | 4806/25578 [00:09<00:35, 578.78ba/s]
+[2025-03-14T18:26:14.031+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  19%|#9        | 4865/25578 [00:09<00:36, 561.44ba/s]
+[2025-03-14T18:26:14.135+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  19%|#9        | 4926/25578 [00:09<00:36, 568.06ba/s]
+[2025-03-14T18:26:14.237+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  19%|#9        | 4984/25578 [00:09<00:36, 567.87ba/s]
+[2025-03-14T18:26:14.379+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  20%|#9        | 5042/25578 [00:09<00:40, 509.74ba/s]
+[2025-03-14T18:26:14.506+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  20%|#9        | 5095/25578 [00:09<00:42, 480.11ba/s]
+[2025-03-14T18:26:14.617+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  20%|##        | 5145/25578 [00:10<00:43, 471.48ba/s]
+[2025-03-14T18:26:14.718+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  20%|##        | 5212/25578 [00:10<00:38, 523.76ba/s]
+[2025-03-14T18:26:14.819+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  21%|##        | 5278/25578 [00:10<00:36, 559.83ba/s]
+[2025-03-14T18:26:14.920+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  21%|##        | 5345/25578 [00:10<00:34, 590.11ba/s]
+[2025-03-14T18:26:15.024+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  21%|##1       | 5405/25578 [00:10<00:34, 585.43ba/s]
+[2025-03-14T18:26:15.124+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  21%|##1       | 5472/25578 [00:10<00:32, 609.78ba/s]
+[2025-03-14T18:26:15.249+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  22%|##1       | 5534/25578 [00:10<00:35, 570.63ba/s]
+[2025-03-14T18:26:15.350+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  22%|##1       | 5602/25578 [00:10<00:33, 599.95ba/s]
+[2025-03-14T18:26:15.452+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  22%|##2       | 5665/25578 [00:10<00:32, 605.98ba/s]
+[2025-03-14T18:26:15.554+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  22%|##2       | 5732/25578 [00:10<00:31, 620.68ba/s]
+[2025-03-14T18:26:15.655+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  23%|##2       | 5800/25578 [00:11<00:31, 635.51ba/s]
+[2025-03-14T18:26:15.764+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  23%|##2       | 5864/25578 [00:11<00:31, 620.85ba/s]
+[2025-03-14T18:26:15.865+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  23%|##3       | 5930/25578 [00:11<00:31, 630.30ba/s]
+[2025-03-14T18:26:15.990+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  23%|##3       | 5994/25578 [00:11<00:33, 590.17ba/s]
+[2025-03-14T18:26:16.090+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  24%|##3       | 6060/25578 [00:11<00:32, 609.03ba/s]
+[2025-03-14T18:26:16.192+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  24%|##3       | 6129/25578 [00:11<00:30, 629.48ba/s]
+[2025-03-14T18:26:16.292+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  24%|##4       | 6197/25578 [00:11<00:30, 643.97ba/s]
+[2025-03-14T18:26:16.392+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  24%|##4       | 6262/25578 [00:11<00:29, 644.77ba/s]
+[2025-03-14T18:26:16.497+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  25%|##4       | 6327/25578 [00:11<00:30, 637.01ba/s]
+[2025-03-14T18:26:16.597+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  25%|##4       | 6393/25578 [00:12<00:29, 643.31ba/s]
+[2025-03-14T18:26:16.698+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  25%|##5       | 6461/25578 [00:12<00:29, 653.22ba/s]
+[2025-03-14T18:26:16.800+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  26%|##5       | 6527/25578 [00:12<00:29, 650.93ba/s]
+[2025-03-14T18:26:16.902+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  26%|##5       | 6595/25578 [00:12<00:28, 657.48ba/s]
+[2025-03-14T18:26:17.004+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  26%|##6       | 6661/25578 [00:12<00:28, 652.36ba/s]
+[2025-03-14T18:26:17.140+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  26%|##6       | 6727/25578 [00:12<00:31, 592.71ba/s]
+[2025-03-14T18:26:17.240+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  27%|##6       | 6791/25578 [00:12<00:31, 604.50ba/s]
+[2025-03-14T18:26:17.417+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  27%|##6       | 6853/25578 [00:12<00:37, 500.72ba/s]
+[2025-03-14T18:26:17.517+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  27%|##7       | 6915/25578 [00:12<00:35, 530.10ba/s]
+[2025-03-14T18:26:17.618+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  27%|##7       | 6974/25578 [00:13<00:34, 544.67ba/s]
+[2025-03-14T18:26:17.718+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  28%|##7       | 7035/25578 [00:13<00:33, 561.46ba/s]
+[2025-03-14T18:26:17.820+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  28%|##7       | 7099/25578 [00:13<00:31, 581.03ba/s]
+[2025-03-14T18:26:17.921+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  28%|##8       | 7170/25578 [00:13<00:29, 615.24ba/s]
+[2025-03-14T18:26:18.032+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  28%|##8       | 7233/25578 [00:13<00:30, 600.79ba/s]
+[2025-03-14T18:26:18.138+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  29%|##8       | 7294/25578 [00:13<00:30, 593.79ba/s]
+[2025-03-14T18:26:18.238+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  29%|##8       | 7360/25578 [00:13<00:29, 612.04ba/s]
+[2025-03-14T18:26:18.339+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  29%|##9       | 7430/25578 [00:13<00:28, 636.74ba/s]
+[2025-03-14T18:26:18.440+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  29%|##9       | 7495/25578 [00:13<00:28, 637.87ba/s]
+[2025-03-14T18:26:18.548+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  30%|##9       | 7560/25578 [00:13<00:28, 627.29ba/s]
+[2025-03-14T18:26:18.650+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  30%|##9       | 7629/25578 [00:14<00:27, 642.67ba/s]
+[2025-03-14T18:26:18.759+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  30%|###       | 7694/25578 [00:14<00:28, 626.32ba/s]
+[2025-03-14T18:26:18.861+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  30%|###       | 7760/25578 [00:14<00:28, 633.79ba/s]
+[2025-03-14T18:26:18.963+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  31%|###       | 7824/25578 [00:14<00:28, 631.69ba/s]
+[2025-03-14T18:26:19.063+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  31%|###       | 7890/25578 [00:14<00:27, 639.30ba/s]
+[2025-03-14T18:26:19.165+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  31%|###1      | 7955/25578 [00:14<00:27, 638.25ba/s]
+[2025-03-14T18:26:19.314+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  31%|###1      | 8019/25578 [00:14<00:31, 559.13ba/s]
+[2025-03-14T18:26:19.414+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  32%|###1      | 8085/25578 [00:14<00:29, 585.63ba/s]
+[2025-03-14T18:26:19.532+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  32%|###1      | 8146/25578 [00:14<00:30, 563.99ba/s]
+[2025-03-14T18:26:19.634+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  32%|###2      | 8221/25578 [00:15<00:28, 612.72ba/s]
+[2025-03-14T18:26:19.748+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  32%|###2      | 8284/25578 [00:15<00:29, 593.02ba/s]
+[2025-03-14T18:26:19.849+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  33%|###2      | 8349/25578 [00:15<00:28, 607.64ba/s]
+[2025-03-14T18:26:19.951+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  33%|###2      | 8412/25578 [00:15<00:28, 611.29ba/s]
+[2025-03-14T18:26:20.052+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  33%|###3      | 8475/25578 [00:15<00:27, 614.69ba/s]
+[2025-03-14T18:26:20.154+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  33%|###3      | 8550/25578 [00:15<00:26, 650.64ba/s]
+[2025-03-14T18:26:20.254+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  34%|###3      | 8624/25578 [00:15<00:25, 675.02ba/s]
+[2025-03-14T18:26:20.395+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  34%|###3      | 8692/25578 [00:15<00:27, 604.68ba/s]
+[2025-03-14T18:26:20.501+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  34%|###4      | 8754/25578 [00:15<00:28, 598.23ba/s]
+[2025-03-14T18:26:20.606+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  34%|###4      | 8815/25578 [00:16<00:28, 594.22ba/s]
+[2025-03-14T18:26:20.706+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  35%|###4      | 8877/25578 [00:16<00:27, 600.40ba/s]
+[2025-03-14T18:26:20.853+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  35%|###4      | 8938/25578 [00:16<00:31, 532.59ba/s]
+[2025-03-14T18:26:20.954+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  35%|###5      | 9006/25578 [00:16<00:29, 569.97ba/s]
+[2025-03-14T18:26:21.054+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  35%|###5      | 9075/25578 [00:16<00:27, 602.15ba/s]
+[2025-03-14T18:26:21.156+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  36%|###5      | 9141/25578 [00:16<00:26, 616.03ba/s]
+[2025-03-14T18:26:21.259+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  36%|###6      | 9211/25578 [00:16<00:25, 633.67ba/s]
+[2025-03-14T18:26:21.359+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  36%|###6      | 9279/25578 [00:16<00:25, 646.52ba/s]
+[2025-03-14T18:26:21.499+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  37%|###6      | 9345/25578 [00:16<00:27, 583.14ba/s]
+[2025-03-14T18:26:21.600+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  37%|###6      | 9419/25578 [00:17<00:25, 624.56ba/s]
+[2025-03-14T18:26:21.701+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  37%|###7      | 9484/25578 [00:17<00:25, 630.27ba/s]
+[2025-03-14T18:26:21.825+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  37%|###7      | 9549/25578 [00:17<00:26, 593.80ba/s]
+[2025-03-14T18:26:21.938+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  38%|###7      | 9610/25578 [00:17<00:27, 577.74ba/s]
+[2025-03-14T18:26:22.040+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  38%|###7      | 9676/25578 [00:17<00:26, 598.42ba/s]
+[2025-03-14T18:26:22.141+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  38%|###8      | 9744/25578 [00:17<00:25, 619.39ba/s]
+[2025-03-14T18:26:22.241+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  38%|###8      | 9808/25578 [00:17<00:25, 624.38ba/s]
+[2025-03-14T18:26:22.342+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  39%|###8      | 9872/25578 [00:17<00:25, 627.71ba/s]
+[2025-03-14T18:26:22.458+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  39%|###8      | 9936/25578 [00:17<00:25, 602.09ba/s]
+[2025-03-14T18:26:22.559+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  39%|###9      | 10004/25578 [00:17<00:25, 622.68ba/s]
+[2025-03-14T18:26:22.701+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  39%|###9      | 10067/25578 [00:18<00:27, 557.03ba/s]
+[2025-03-14T18:26:22.829+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  40%|###9      | 10125/25578 [00:18<00:29, 525.02ba/s]
+[2025-03-14T18:26:22.929+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  40%|###9      | 10179/25578 [00:18<00:29, 527.74ba/s]
+[2025-03-14T18:26:23.065+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  40%|####      | 10233/25578 [00:18<00:31, 483.47ba/s]
+[2025-03-14T18:26:23.186+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  40%|####      | 10283/25578 [00:18<00:33, 463.28ba/s]
+[2025-03-14T18:26:23.287+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  40%|####      | 10346/25578 [00:18<00:30, 505.65ba/s]
+[2025-03-14T18:26:23.387+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  41%|####      | 10414/25578 [00:18<00:27, 552.82ba/s]
+[2025-03-14T18:26:23.487+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  41%|####      | 10471/25578 [00:18<00:27, 556.68ba/s]
+[2025-03-14T18:26:23.588+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  41%|####1     | 10528/25578 [00:19<00:26, 558.91ba/s]
+[2025-03-14T18:26:23.695+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  41%|####1     | 10585/25578 [00:19<00:27, 552.12ba/s]
+[2025-03-14T18:26:23.797+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  42%|####1     | 10649/25578 [00:19<00:25, 574.38ba/s]
+[2025-03-14T18:26:23.903+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  42%|####1     | 10707/25578 [00:19<00:26, 565.67ba/s]
+[2025-03-14T18:26:24.003+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  42%|####2     | 10774/25578 [00:19<00:24, 595.23ba/s]
+[2025-03-14T18:26:24.104+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  42%|####2     | 10835/25578 [00:19<00:24, 598.59ba/s]
+[2025-03-14T18:26:24.218+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  43%|####2     | 10896/25578 [00:19<00:25, 577.63ba/s]
+[2025-03-14T18:26:24.355+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  43%|####2     | 10955/25578 [00:19<00:27, 524.89ba/s]
+[2025-03-14T18:26:24.472+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  43%|####3     | 11009/25578 [00:19<00:28, 506.60ba/s]
+[2025-03-14T18:26:24.634+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  43%|####3     | 11061/25578 [00:20<00:33, 436.49ba/s]
+[2025-03-14T18:26:24.734+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  43%|####3     | 11123/25578 [00:20<00:30, 481.80ba/s]
+[2025-03-14T18:26:24.835+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  44%|####3     | 11180/25578 [00:20<00:28, 503.73ba/s]
+[2025-03-14T18:26:24.938+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  44%|####3     | 11233/25578 [00:20<00:28, 506.94ba/s]
+[2025-03-14T18:26:25.060+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  44%|####4     | 11286/25578 [00:20<00:29, 484.56ba/s]
+[2025-03-14T18:26:25.161+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  44%|####4     | 11338/25578 [00:20<00:28, 492.52ba/s]
+[2025-03-14T18:26:25.262+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  45%|####4     | 11389/25578 [00:20<00:28, 496.01ba/s]
+[2025-03-14T18:26:25.373+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  45%|####4     | 11440/25578 [00:20<00:29, 485.26ba/s]
+[2025-03-14T18:26:25.490+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  45%|####4     | 11489/25578 [00:20<00:30, 464.07ba/s]
+[2025-03-14T18:26:25.625+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  45%|####5     | 11536/25578 [00:21<00:33, 424.40ba/s]
+[2025-03-14T18:26:25.726+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  45%|####5     | 11582/25578 [00:21<00:32, 432.54ba/s]
+[2025-03-14T18:26:25.828+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  45%|####5     | 11628/25578 [00:21<00:31, 436.98ba/s]
+[2025-03-14T18:26:25.947+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  46%|####5     | 11673/25578 [00:21<00:33, 418.24ba/s]
+[2025-03-14T18:26:26.053+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  46%|####5     | 11716/25578 [00:21<00:33, 415.08ba/s]
+[2025-03-14T18:26:26.156+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  46%|####5     | 11758/25578 [00:21<00:33, 413.67ba/s]
+[2025-03-14T18:26:26.257+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  46%|####6     | 11812/25578 [00:21<00:30, 448.21ba/s]
+[2025-03-14T18:26:26.359+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  46%|####6     | 11861/25578 [00:21<00:29, 457.37ba/s]
+[2025-03-14T18:26:26.468+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  47%|####6     | 11907/25578 [00:21<00:30, 445.55ba/s]
+[2025-03-14T18:26:26.570+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  47%|####6     | 11952/25578 [00:21<00:30, 445.49ba/s]
+[2025-03-14T18:26:26.689+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  47%|####6     | 11997/25578 [00:22<00:32, 423.17ba/s]
+[2025-03-14T18:26:26.790+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  47%|####7     | 12047/25578 [00:22<00:30, 443.83ba/s]
+[2025-03-14T18:26:26.891+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  47%|####7     | 12107/25578 [00:22<00:27, 486.17ba/s]
+[2025-03-14T18:26:26.992+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  48%|####7     | 12163/25578 [00:22<00:26, 506.67ba/s]
+[2025-03-14T18:26:27.092+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  48%|####7     | 12222/25578 [00:22<00:25, 530.77ba/s]
+[2025-03-14T18:26:27.193+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  48%|####8     | 12285/25578 [00:22<00:23, 559.22ba/s]
+[2025-03-14T18:26:27.293+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  48%|####8     | 12350/25578 [00:22<00:22, 585.66ba/s]
+[2025-03-14T18:26:27.393+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  49%|####8     | 12409/25578 [00:22<00:22, 585.78ba/s]
+[2025-03-14T18:26:27.533+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  49%|####8     | 12468/25578 [00:22<00:24, 525.36ba/s]
+[2025-03-14T18:26:27.649+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  49%|####8     | 12522/25578 [00:23<00:25, 507.54ba/s]
+[2025-03-14T18:26:27.796+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  49%|####9     | 12574/25578 [00:23<00:28, 451.87ba/s]
+[2025-03-14T18:26:27.898+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  49%|####9     | 12634/25578 [00:23<00:26, 487.93ba/s]
+[2025-03-14T18:26:27.999+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  50%|####9     | 12690/25578 [00:23<00:25, 505.48ba/s]
+[2025-03-14T18:26:28.114+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  50%|####9     | 12742/25578 [00:23<00:26, 489.18ba/s]
+[2025-03-14T18:26:28.215+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  50%|#####     | 12806/25578 [00:23<00:24, 529.03ba/s]
+[2025-03-14T18:26:28.316+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  50%|#####     | 12870/25578 [00:23<00:22, 559.24ba/s]
+[2025-03-14T18:26:28.416+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  51%|#####     | 12928/25578 [00:23<00:22, 565.07ba/s]
+[2025-03-14T18:26:28.516+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  51%|#####     | 12997/25578 [00:23<00:20, 601.20ba/s]
+[2025-03-14T18:26:28.616+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  51%|#####1    | 13062/25578 [00:24<00:20, 615.18ba/s]
+[2025-03-14T18:26:28.717+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  51%|#####1    | 13130/25578 [00:24<00:19, 632.50ba/s]
+[2025-03-14T18:26:28.825+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  52%|#####1    | 13194/25578 [00:24<00:19, 621.21ba/s]
+[2025-03-14T18:26:28.937+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  52%|#####1    | 13257/25578 [00:24<00:20, 602.67ba/s]
+[2025-03-14T18:26:29.076+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  52%|#####2    | 13318/25578 [00:24<00:22, 542.90ba/s]
+[2025-03-14T18:26:29.190+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  52%|#####2    | 13374/25578 [00:24<00:23, 528.44ba/s]
+[2025-03-14T18:26:29.294+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  52%|#####2    | 13428/25578 [00:24<00:23, 524.92ba/s]
+[2025-03-14T18:26:29.395+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  53%|#####2    | 13495/25578 [00:24<00:21, 563.92ba/s]
+[2025-03-14T18:26:29.496+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  53%|#####3    | 13563/25578 [00:24<00:20, 595.48ba/s]
+[2025-03-14T18:26:29.601+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  53%|#####3    | 13624/25578 [00:25<00:20, 590.70ba/s]
+[2025-03-14T18:26:29.702+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  54%|#####3    | 13685/25578 [00:25<00:20, 594.04ba/s]
+[2025-03-14T18:26:29.804+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  54%|#####3    | 13754/25578 [00:25<00:19, 618.33ba/s]
+[2025-03-14T18:26:29.906+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  54%|#####4    | 13820/25578 [00:25<00:18, 627.85ba/s]
+[2025-03-14T18:26:30.029+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  54%|#####4    | 13883/25578 [00:25<00:19, 588.08ba/s]
+[2025-03-14T18:26:30.130+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  55%|#####4    | 13950/25578 [00:25<00:19, 609.37ba/s]
+[2025-03-14T18:26:30.231+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  55%|#####4    | 14014/25578 [00:25<00:18, 616.92ba/s]
+[2025-03-14T18:26:30.331+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  55%|#####5    | 14084/25578 [00:25<00:17, 639.82ba/s]
+[2025-03-14T18:26:30.450+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  55%|#####5    | 14149/25578 [00:25<00:18, 609.62ba/s]
+[2025-03-14T18:26:30.550+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  56%|#####5    | 14225/25578 [00:25<00:17, 651.84ba/s]
+[2025-03-14T18:26:30.652+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  56%|#####5    | 14298/25578 [00:26<00:16, 671.60ba/s]
+[2025-03-14T18:26:30.753+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  56%|#####6    | 14371/25578 [00:26<00:16, 686.77ba/s]
+[2025-03-14T18:26:30.853+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  56%|#####6    | 14445/25578 [00:26<00:15, 701.50ba/s]
+[2025-03-14T18:26:30.973+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  57%|#####6    | 14516/25578 [00:26<00:16, 664.74ba/s]
+[2025-03-14T18:26:31.076+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  57%|#####7    | 14584/25578 [00:26<00:16, 663.72ba/s]
+[2025-03-14T18:26:31.177+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  57%|#####7    | 14652/25578 [00:26<00:16, 666.36ba/s]
+[2025-03-14T18:26:31.279+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  58%|#####7    | 14721/25578 [00:26<00:16, 669.79ba/s]
+[2025-03-14T18:26:31.380+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  58%|#####7    | 14791/25578 [00:26<00:15, 676.16ba/s]
+[2025-03-14T18:26:31.506+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  58%|#####8    | 14859/25578 [00:26<00:17, 630.08ba/s]
+[2025-03-14T18:26:31.607+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  58%|#####8    | 14929/25578 [00:27<00:16, 647.94ba/s]
+[2025-03-14T18:26:31.760+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  59%|#####8    | 14995/25578 [00:27<00:18, 565.72ba/s]
+[2025-03-14T18:26:31.888+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  59%|#####8    | 15054/25578 [00:27<00:19, 532.09ba/s]
+[2025-03-14T18:26:31.998+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  59%|#####9    | 15109/25578 [00:27<00:19, 524.01ba/s]
+[2025-03-14T18:26:32.105+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  59%|#####9    | 15169/25578 [00:27<00:19, 533.38ba/s]
+[2025-03-14T18:26:32.205+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  60%|#####9    | 15227/25578 [00:27<00:18, 545.94ba/s]
+[2025-03-14T18:26:32.306+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  60%|#####9    | 15296/25578 [00:27<00:17, 585.34ba/s]
+[2025-03-14T18:26:32.406+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  60%|######    | 15376/25578 [00:27<00:15, 645.23ba/s]
+[2025-03-14T18:26:32.517+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  60%|######    | 15442/25578 [00:27<00:16, 630.58ba/s]
+[2025-03-14T18:26:32.641+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  61%|######    | 15506/25578 [00:28<00:17, 591.71ba/s]
+[2025-03-14T18:26:32.770+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  61%|######    | 15567/25578 [00:28<00:18, 553.66ba/s]
+[2025-03-14T18:26:32.870+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  61%|######1   | 15631/25578 [00:28<00:17, 575.68ba/s]
+[2025-03-14T18:26:32.971+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  61%|######1   | 15701/25578 [00:28<00:16, 608.84ba/s]
+[2025-03-14T18:26:33.077+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  62%|######1   | 15763/25578 [00:28<00:16, 602.36ba/s]
+[2025-03-14T18:26:33.200+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  62%|######1   | 15824/25578 [00:28<00:17, 567.48ba/s]
+[2025-03-14T18:26:33.300+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  62%|######2   | 15894/25578 [00:28<00:16, 603.61ba/s]
+[2025-03-14T18:26:33.401+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  62%|######2   | 15968/25578 [00:28<00:15, 640.38ba/s]
+[2025-03-14T18:26:33.502+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  63%|######2   | 16042/25578 [00:28<00:14, 666.45ba/s]
+[2025-03-14T18:26:33.604+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  63%|######2   | 16110/25578 [00:29<00:14, 667.13ba/s]
+[2025-03-14T18:26:33.705+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  63%|######3   | 16182/25578 [00:29<00:13, 680.23ba/s]
+[2025-03-14T18:26:33.814+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  64%|######3   | 16251/25578 [00:29<00:14, 665.92ba/s]
+[2025-03-14T18:26:33.916+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  64%|######3   | 16322/25578 [00:29<00:13, 675.08ba/s]
+[2025-03-14T18:26:34.038+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  64%|######4   | 16390/25578 [00:29<00:14, 635.43ba/s]
+[2025-03-14T18:26:34.191+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  64%|######4   | 16455/25578 [00:29<00:16, 555.99ba/s]
+[2025-03-14T18:26:34.292+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  65%|######4   | 16516/25578 [00:29<00:15, 568.64ba/s]
+[2025-03-14T18:26:34.393+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  65%|######4   | 16583/25578 [00:29<00:15, 594.11ba/s]
+[2025-03-14T18:26:34.494+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  65%|######5   | 16653/25578 [00:29<00:14, 621.48ba/s]
+[2025-03-14T18:26:34.595+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  65%|######5   | 16721/25578 [00:30<00:13, 637.14ba/s]
+[2025-03-14T18:26:34.706+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  66%|######5   | 16786/25578 [00:30<00:14, 621.96ba/s]
+[2025-03-14T18:26:34.817+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  66%|######5   | 16849/25578 [00:30<00:14, 603.95ba/s]
+[2025-03-14T18:26:34.961+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  66%|######6   | 16910/25578 [00:30<00:16, 538.71ba/s]
+[2025-03-14T18:26:35.082+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  66%|######6   | 16966/25578 [00:30<00:16, 515.95ba/s]
+[2025-03-14T18:26:35.201+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  67%|######6   | 17019/25578 [00:30<00:17, 494.47ba/s]
+[2025-03-14T18:26:35.303+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  67%|######6   | 17072/25578 [00:30<00:16, 501.67ba/s]
+[2025-03-14T18:26:35.404+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  67%|######6   | 17126/25578 [00:30<00:16, 510.25ba/s]
+[2025-03-14T18:26:35.505+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  67%|######7   | 17193/25578 [00:30<00:15, 554.23ba/s]
+[2025-03-14T18:26:35.606+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  67%|######7   | 17261/25578 [00:31<00:14, 588.87ba/s]
+[2025-03-14T18:26:35.707+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  68%|######7   | 17331/25578 [00:31<00:13, 618.15ba/s]
+[2025-03-14T18:26:35.818+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  68%|######8   | 17394/25578 [00:31<00:13, 603.02ba/s]
+[2025-03-14T18:26:35.919+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  68%|######8   | 17467/25578 [00:31<00:12, 637.18ba/s]
+[2025-03-14T18:26:36.019+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  69%|######8   | 17540/25578 [00:31<00:12, 664.12ba/s]
+[2025-03-14T18:26:36.125+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  69%|######8   | 17607/25578 [00:31<00:12, 654.94ba/s]
+[2025-03-14T18:26:36.226+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  69%|######9   | 17681/25578 [00:31<00:11, 677.75ba/s]
+[2025-03-14T18:26:36.326+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  69%|######9   | 17757/25578 [00:31<00:11, 700.78ba/s]
+[2025-03-14T18:26:36.429+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  70%|######9   | 17828/25578 [00:31<00:11, 697.07ba/s]
+[2025-03-14T18:26:36.536+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  70%|######9   | 17898/25578 [00:31<00:11, 684.32ba/s]
+[2025-03-14T18:26:36.637+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  70%|#######   | 17970/25578 [00:32<00:10, 692.94ba/s]
+[2025-03-14T18:26:36.741+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  71%|#######   | 18040/25578 [00:32<00:10, 687.25ba/s]
+[2025-03-14T18:26:36.842+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  71%|#######   | 18117/25578 [00:32<00:10, 710.25ba/s]
+[2025-03-14T18:26:36.956+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  71%|#######1  | 18189/25578 [00:32<00:10, 684.83ba/s]
+[2025-03-14T18:26:37.061+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  71%|#######1  | 18258/25578 [00:32<00:10, 674.92ba/s]
+[2025-03-14T18:26:37.239+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  72%|#######1  | 18326/25578 [00:32<00:13, 552.69ba/s]
+[2025-03-14T18:26:37.339+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  72%|#######1  | 18393/25578 [00:32<00:12, 581.86ba/s]
+[2025-03-14T18:26:37.439+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  72%|#######2  | 18460/25578 [00:32<00:11, 604.99ba/s]
+[2025-03-14T18:26:37.540+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  72%|#######2  | 18526/25578 [00:32<00:11, 618.36ba/s]
+[2025-03-14T18:26:37.653+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  73%|#######2  | 18590/25578 [00:33<00:11, 603.56ba/s]
+[2025-03-14T18:26:37.840+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  73%|#######2  | 18652/25578 [00:33<00:14, 489.31ba/s]
+[2025-03-14T18:26:37.981+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  73%|#######3  | 18706/25578 [00:33<00:15, 455.38ba/s]
+[2025-03-14T18:26:38.122+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  73%|#######3  | 18755/25578 [00:33<00:16, 422.49ba/s]
+[2025-03-14T18:26:38.223+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  74%|#######3  | 18808/25578 [00:33<00:15, 446.67ba/s]
+[2025-03-14T18:26:38.324+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  74%|#######3  | 18882/25578 [00:33<00:12, 519.73ba/s]
+[2025-03-14T18:26:38.425+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  74%|#######4  | 18956/25578 [00:33<00:11, 576.57ba/s]
+[2025-03-14T18:26:38.526+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  74%|#######4  | 19029/25578 [00:33<00:10, 617.50ba/s]
+[2025-03-14T18:26:38.634+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  75%|#######4  | 19093/25578 [00:34<00:10, 609.38ba/s]
+[2025-03-14T18:26:38.736+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  75%|#######4  | 19156/25578 [00:34<00:10, 612.63ba/s]
+[2025-03-14T18:26:38.837+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  75%|#######5  | 19224/25578 [00:34<00:10, 630.10ba/s]
+[2025-03-14T18:26:38.937+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  75%|#######5  | 19301/25578 [00:34<00:09, 670.31ba/s]
+[2025-03-14T18:26:39.038+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  76%|#######5  | 19377/25578 [00:34<00:08, 694.18ba/s]
+[2025-03-14T18:26:39.139+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  76%|#######6  | 19454/25578 [00:34<00:08, 715.60ba/s]
+[2025-03-14T18:26:39.240+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  76%|#######6  | 19532/25578 [00:34<00:08, 731.35ba/s]
+[2025-03-14T18:26:39.353+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  77%|#######6  | 19606/25578 [00:34<00:08, 707.70ba/s]
+[2025-03-14T18:26:39.524+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  77%|#######6  | 19678/25578 [00:34<00:10, 588.90ba/s]
+[2025-03-14T18:26:39.677+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  77%|#######7  | 19741/25578 [00:35<00:11, 528.77ba/s]
+[2025-03-14T18:26:39.801+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  77%|#######7  | 19798/25578 [00:35<00:11, 508.59ba/s]
+[2025-03-14T18:26:39.902+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  78%|#######7  | 19863/25578 [00:35<00:10, 542.39ba/s]
+[2025-03-14T18:26:40.003+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  78%|#######7  | 19925/25578 [00:35<00:10, 561.72ba/s]
+[2025-03-14T18:26:40.103+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  78%|#######8  | 19988/25578 [00:35<00:09, 579.40ba/s]
+[2025-03-14T18:26:40.226+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  78%|#######8  | 20048/25578 [00:35<00:10, 549.70ba/s]
+[2025-03-14T18:26:40.327+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  79%|#######8  | 20109/25578 [00:35<00:09, 565.32ba/s]
+[2025-03-14T18:26:40.428+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  79%|#######8  | 20168/25578 [00:35<00:09, 569.74ba/s]
+[2025-03-14T18:26:40.529+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  79%|#######9  | 20235/25578 [00:35<00:08, 597.08ba/s]
+[2025-03-14T18:26:40.630+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  79%|#######9  | 20297/25578 [00:36<00:08, 602.19ba/s]
+[2025-03-14T18:26:40.735+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  80%|#######9  | 20358/25578 [00:36<00:08, 595.55ba/s]
+[2025-03-14T18:26:40.856+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  80%|#######9  | 20418/25578 [00:36<00:09, 562.28ba/s]
+[2025-03-14T18:26:40.961+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  80%|########  | 20475/25578 [00:36<00:09, 557.12ba/s]
+[2025-03-14T18:26:41.062+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  80%|########  | 20547/25578 [00:36<00:08, 602.04ba/s]
+[2025-03-14T18:26:41.163+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  81%|########  | 20611/25578 [00:36<00:08, 610.08ba/s]
+[2025-03-14T18:26:41.265+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  81%|########  | 20673/25578 [00:36<00:08, 609.65ba/s]
+[2025-03-14T18:26:41.366+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  81%|########1 | 20735/25578 [00:36<00:07, 611.06ba/s]
+[2025-03-14T18:26:41.513+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  81%|########1 | 20797/25578 [00:36<00:08, 538.91ba/s]
+[2025-03-14T18:26:41.614+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  82%|########1 | 20874/25578 [00:37<00:07, 599.66ba/s]
+[2025-03-14T18:26:41.715+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  82%|########1 | 20943/25578 [00:37<00:07, 623.05ba/s]
+[2025-03-14T18:26:41.817+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  82%|########2 | 21023/25578 [00:37<00:06, 670.17ba/s]
+[2025-03-14T18:26:41.928+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  82%|########2 | 21092/25578 [00:37<00:06, 654.26ba/s]
+[2025-03-14T18:26:42.029+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  83%|########2 | 21168/25578 [00:37<00:06, 682.21ba/s]
+[2025-03-14T18:26:42.130+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  83%|########3 | 21249/25578 [00:37<00:06, 718.28ba/s]
+[2025-03-14T18:26:42.230+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  83%|########3 | 21324/25578 [00:37<00:05, 726.38ba/s]
+[2025-03-14T18:26:42.332+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  84%|########3 | 21403/25578 [00:37<00:05, 741.66ba/s]
+[2025-03-14T18:26:42.433+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  84%|########3 | 21478/25578 [00:37<00:05, 741.87ba/s]
+[2025-03-14T18:26:42.556+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  84%|########4 | 21553/25578 [00:37<00:05, 697.43ba/s]
+[2025-03-14T18:26:42.657+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  85%|########4 | 21626/25578 [00:38<00:05, 704.50ba/s]
+[2025-03-14T18:26:42.759+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  85%|########4 | 21697/25578 [00:38<00:05, 701.56ba/s]
+[2025-03-14T18:26:42.859+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  85%|########5 | 21774/25578 [00:38<00:05, 720.74ba/s]
+[2025-03-14T18:26:42.966+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  85%|########5 | 21847/25578 [00:38<00:05, 709.35ba/s]
+[2025-03-14T18:26:43.072+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  86%|########5 | 21919/25578 [00:38<00:05, 700.73ba/s]
+[2025-03-14T18:26:43.190+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  86%|########5 | 21990/25578 [00:38<00:05, 667.90ba/s]
+[2025-03-14T18:26:43.307+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  86%|########6 | 22058/25578 [00:38<00:05, 640.66ba/s]
+[2025-03-14T18:26:43.408+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  87%|########6 | 22130/25578 [00:38<00:05, 661.11ba/s]
+[2025-03-14T18:26:43.511+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  87%|########6 | 22197/25578 [00:38<00:05, 658.27ba/s]
+[2025-03-14T18:26:43.626+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  87%|########7 | 22264/25578 [00:39<00:05, 634.42ba/s]
+[2025-03-14T18:26:43.726+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  87%|########7 | 22337/25578 [00:39<00:04, 660.02ba/s]
+[2025-03-14T18:26:43.828+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  88%|########7 | 22414/25578 [00:39<00:04, 689.60ba/s]
+[2025-03-14T18:26:43.928+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  88%|########7 | 22484/25578 [00:39<00:04, 691.62ba/s]
+[2025-03-14T18:26:44.040+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  88%|########8 | 22554/25578 [00:39<00:04, 669.59ba/s]
+[2025-03-14T18:26:44.142+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  88%|########8 | 22626/25578 [00:39<00:04, 681.71ba/s]
+[2025-03-14T18:26:44.246+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  89%|########8 | 22695/25578 [00:39<00:04, 675.21ba/s]
+[2025-03-14T18:26:44.347+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  89%|########9 | 22769/25578 [00:39<00:04, 692.49ba/s]
+[2025-03-14T18:26:44.448+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  89%|########9 | 22846/25578 [00:39<00:03, 712.72ba/s]
+[2025-03-14T18:26:44.551+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  90%|########9 | 22918/25578 [00:39<00:03, 708.72ba/s]
+[2025-03-14T18:26:44.662+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  90%|########9 | 22989/25578 [00:40<00:03, 686.56ba/s]
+[2025-03-14T18:26:44.762+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  90%|######### | 23068/25578 [00:40<00:03, 716.37ba/s]
+[2025-03-14T18:26:44.869+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  90%|######### | 23140/25578 [00:40<00:03, 703.93ba/s]
+[2025-03-14T18:26:44.970+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  91%|######### | 23213/25578 [00:40<00:03, 709.85ba/s]
+[2025-03-14T18:26:45.091+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  91%|#########1| 23285/25578 [00:40<00:03, 670.29ba/s]
+[2025-03-14T18:26:45.192+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  91%|#########1| 23363/25578 [00:40<00:03, 699.74ba/s]
+[2025-03-14T18:26:45.302+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  92%|#########1| 23434/25578 [00:40<00:03, 684.00ba/s]
+[2025-03-14T18:26:45.402+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  92%|#########1| 23507/25578 [00:40<00:02, 696.17ba/s]
+[2025-03-14T18:26:45.503+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  92%|#########2| 23580/25578 [00:40<00:02, 704.79ba/s]
+[2025-03-14T18:26:45.603+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  92%|#########2| 23656/25578 [00:41<00:02, 720.18ba/s]
+[2025-03-14T18:26:45.737+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  93%|#########2| 23729/25578 [00:41<00:02, 657.87ba/s]
+[2025-03-14T18:26:45.838+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  93%|#########3| 23799/25578 [00:41<00:02, 667.23ba/s]
+[2025-03-14T18:26:45.938+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  93%|#########3| 23871/25578 [00:41<00:02, 681.32ba/s]
+[2025-03-14T18:26:46.039+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  94%|#########3| 23952/25578 [00:41<00:02, 716.69ba/s]
+[2025-03-14T18:26:46.140+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  94%|#########3| 24031/25578 [00:41<00:02, 736.26ba/s]
+[2025-03-14T18:26:46.243+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  94%|#########4| 24106/25578 [00:41<00:02, 733.90ba/s]
+[2025-03-14T18:26:46.343+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  95%|#########4| 24180/25578 [00:41<00:01, 734.59ba/s]
+[2025-03-14T18:26:46.445+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  95%|#########4| 24260/25578 [00:41<00:01, 751.45ba/s]
+[2025-03-14T18:26:46.545+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  95%|#########5| 24337/25578 [00:41<00:01, 755.53ba/s]
+[2025-03-14T18:26:46.646+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  95%|#########5| 24415/25578 [00:42<00:01, 762.07ba/s]
+[2025-03-14T18:26:46.765+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  96%|#########5| 24492/25578 [00:42<00:01, 721.78ba/s]
+[2025-03-14T18:26:46.874+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  96%|#########6| 24565/25578 [00:42<00:01, 706.12ba/s]
+[2025-03-14T18:26:46.975+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  96%|#########6| 24639/25578 [00:42<00:01, 713.48ba/s]
+[2025-03-14T18:26:47.076+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  97%|#########6| 24713/25578 [00:42<00:01, 720.72ba/s]
+[2025-03-14T18:26:47.196+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  97%|#########6| 24786/25578 [00:42<00:01, 681.91ba/s]
+[2025-03-14T18:26:47.297+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  97%|#########7| 24857/25578 [00:42<00:01, 689.17ba/s]
+[2025-03-14T18:26:47.397+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  97%|#########7| 24928/25578 [00:42<00:00, 694.25ba/s]
+[2025-03-14T18:26:47.498+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  98%|#########7| 25000/25578 [00:42<00:00, 700.90ba/s]
+[2025-03-14T18:26:47.599+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  98%|#########8| 25073/25578 [00:43<00:00, 707.39ba/s]
+[2025-03-14T18:26:47.710+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  98%|#########8| 25144/25578 [00:43<00:00, 686.03ba/s]
+[2025-03-14T18:26:47.810+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  99%|#########8| 25218/25578 [00:43<00:00, 701.03ba/s]
+[2025-03-14T18:26:47.954+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  99%|#########8| 25289/25578 [00:43<00:00, 623.29ba/s]
+[2025-03-14T18:26:48.055+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  99%|#########9| 25369/25578 [00:43<00:00, 669.03ba/s]
+[2025-03-14T18:26:48.156+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  99%|#########9| 25443/25578 [00:43<00:00, 688.05ba/s]
+[2025-03-14T18:26:48.256+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format: 100%|#########9| 25518/25578 [00:43<00:00, 705.21ba/s]
+[2025-03-14T18:26:48.339+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format: 100%|##########| 25578/25578 [00:43<00:00, 584.52ba/s]
+[2025-03-14T18:26:48.641+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   0%|          | 0/1592 [00:00<?, ?ba/s]
+[2025-03-14T18:26:48.746+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   0%|          | 5/1592 [00:00<00:33, 47.72ba/s]
+[2025-03-14T18:26:48.854+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   1%|          | 13/1592 [00:00<00:24, 63.51ba/s]
+[2025-03-14T18:26:48.966+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   1%|1         | 21/1592 [00:00<00:23, 67.01ba/s]
+[2025-03-14T18:26:49.074+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   2%|1         | 29/1592 [00:00<00:22, 69.84ba/s]
+[2025-03-14T18:26:49.179+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   2%|2         | 37/1592 [00:00<00:21, 72.12ba/s]
+[2025-03-14T18:26:49.312+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   3%|2         | 45/1592 [00:00<00:22, 67.50ba/s]
+[2025-03-14T18:26:49.451+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   3%|3         | 53/1592 [00:00<00:24, 63.78ba/s]
+[2025-03-14T18:26:49.558+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   4%|3         | 61/1592 [00:00<00:22, 67.01ba/s]
+[2025-03-14T18:26:49.667+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   4%|4         | 69/1592 [00:01<00:22, 68.89ba/s]
+[2025-03-14T18:26:49.778+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   5%|4         | 77/1592 [00:01<00:21, 69.88ba/s]
+[2025-03-14T18:26:49.891+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   5%|5         | 85/1592 [00:01<00:21, 70.05ba/s]
+[2025-03-14T18:26:50.007+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   6%|5         | 93/1592 [00:01<00:21, 69.76ba/s]
+[2025-03-14T18:26:50.114+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   6%|6         | 101/1592 [00:01<00:20, 71.24ba/s]
+[2025-03-14T18:26:50.221+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   7%|6         | 109/1592 [00:01<00:20, 72.20ba/s]
+[2025-03-14T18:26:50.335+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   7%|7         | 117/1592 [00:01<00:20, 71.51ba/s]
+[2025-03-14T18:26:50.440+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   8%|7         | 125/1592 [00:01<00:20, 72.98ba/s]
+[2025-03-14T18:26:50.583+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   8%|8         | 133/1592 [00:01<00:21, 66.88ba/s]
+[2025-03-14T18:26:50.689+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   9%|8         | 141/1592 [00:02<00:20, 69.11ba/s]
+[2025-03-14T18:26:50.793+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:   9%|9         | 149/1592 [00:02<00:20, 71.39ba/s]
+[2025-03-14T18:26:50.900+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  10%|9         | 157/1592 [00:02<00:19, 72.42ba/s]
+[2025-03-14T18:26:51.029+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  10%|#         | 165/1592 [00:02<00:20, 68.84ba/s]
+[2025-03-14T18:26:51.130+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  11%|#         | 172/1592 [00:02<00:20, 69.09ba/s]
+[2025-03-14T18:26:51.248+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  11%|#1        | 180/1592 [00:02<00:20, 68.67ba/s]
+[2025-03-14T18:26:51.362+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  12%|#1        | 187/1592 [00:02<00:21, 66.39ba/s]
+[2025-03-14T18:26:51.472+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  12%|#2        | 195/1592 [00:02<00:20, 68.24ba/s]
+[2025-03-14T18:26:51.579+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  13%|#2        | 203/1592 [00:02<00:19, 70.16ba/s]
+[2025-03-14T18:26:51.687+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  13%|#3        | 211/1592 [00:03<00:19, 71.29ba/s]
+[2025-03-14T18:26:51.795+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  14%|#3        | 219/1592 [00:03<00:19, 72.09ba/s]
+[2025-03-14T18:26:51.902+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  14%|#4        | 227/1592 [00:03<00:18, 72.92ba/s]
+[2025-03-14T18:26:52.006+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  15%|#4        | 235/1592 [00:03<00:18, 74.01ba/s]
+[2025-03-14T18:26:52.113+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  15%|#5        | 243/1592 [00:03<00:18, 74.43ba/s]
+[2025-03-14T18:26:52.215+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  16%|#5        | 251/1592 [00:03<00:17, 75.41ba/s]
+[2025-03-14T18:26:52.328+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  16%|#6        | 259/1592 [00:03<00:17, 74.09ba/s]
+[2025-03-14T18:26:52.466+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  17%|#6        | 267/1592 [00:03<00:19, 68.31ba/s]
+[2025-03-14T18:26:52.572+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  17%|#7        | 275/1592 [00:03<00:18, 70.44ba/s]
+[2025-03-14T18:26:52.679+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  18%|#7        | 283/1592 [00:04<00:18, 71.68ba/s]
+[2025-03-14T18:26:52.786+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  18%|#8        | 291/1592 [00:04<00:17, 72.41ba/s]
+[2025-03-14T18:26:52.893+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  19%|#8        | 299/1592 [00:04<00:17, 73.13ba/s]
+[2025-03-14T18:26:52.998+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  19%|#9        | 307/1592 [00:04<00:17, 74.02ba/s]
+[2025-03-14T18:26:53.116+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  20%|#9        | 315/1592 [00:04<00:17, 72.06ba/s]
+[2025-03-14T18:26:53.232+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  20%|##        | 323/1592 [00:04<00:17, 71.15ba/s]
+[2025-03-14T18:26:53.382+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  21%|##        | 331/1592 [00:04<00:19, 64.58ba/s]
+[2025-03-14T18:26:53.490+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  21%|##1       | 339/1592 [00:04<00:18, 67.25ba/s]
+[2025-03-14T18:26:53.595+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  22%|##1       | 347/1592 [00:04<00:17, 69.70ba/s]
+[2025-03-14T18:26:53.702+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  22%|##2       | 355/1592 [00:05<00:17, 71.23ba/s]
+[2025-03-14T18:26:53.803+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  23%|##2       | 363/1592 [00:05<00:16, 73.35ba/s]
+[2025-03-14T18:26:53.912+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  23%|##3       | 371/1592 [00:05<00:16, 73.35ba/s]
+[2025-03-14T18:26:54.035+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  24%|##3       | 379/1592 [00:05<00:17, 70.72ba/s]
+[2025-03-14T18:26:54.137+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  24%|##4       | 387/1592 [00:05<00:16, 72.79ba/s]
+[2025-03-14T18:26:54.245+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  25%|##4       | 395/1592 [00:05<00:16, 73.20ba/s]
+[2025-03-14T18:26:54.353+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  25%|##5       | 403/1592 [00:05<00:16, 73.53ba/s]
+[2025-03-14T18:26:54.456+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  26%|##5       | 411/1592 [00:05<00:15, 74.66ba/s]
+[2025-03-14T18:26:54.561+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  26%|##6       | 419/1592 [00:05<00:15, 75.09ba/s]
+[2025-03-14T18:26:54.667+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  27%|##6       | 427/1592 [00:06<00:15, 75.27ba/s]
+[2025-03-14T18:26:54.787+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  27%|##7       | 435/1592 [00:06<00:15, 72.48ba/s]
+[2025-03-14T18:26:54.898+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  28%|##7       | 443/1592 [00:06<00:15, 72.35ba/s]
+[2025-03-14T18:26:55.003+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  28%|##8       | 451/1592 [00:06<00:15, 73.41ba/s]
+[2025-03-14T18:26:55.124+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  29%|##8       | 459/1592 [00:06<00:15, 71.05ba/s]
+[2025-03-14T18:26:55.231+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  29%|##9       | 467/1592 [00:06<00:15, 72.06ba/s]
+[2025-03-14T18:26:55.339+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  30%|##9       | 475/1592 [00:06<00:15, 72.76ba/s]
+[2025-03-14T18:26:55.445+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  30%|###       | 483/1592 [00:06<00:15, 73.43ba/s]
+[2025-03-14T18:26:55.558+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  31%|###       | 491/1592 [00:06<00:15, 72.75ba/s]
+[2025-03-14T18:26:55.662+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  31%|###1      | 499/1592 [00:07<00:14, 73.90ba/s]
+[2025-03-14T18:26:55.766+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  32%|###1      | 507/1592 [00:07<00:14, 74.74ba/s]
+[2025-03-14T18:26:55.893+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  32%|###2      | 515/1592 [00:07<00:15, 70.83ba/s]
+[2025-03-14T18:26:56.008+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  33%|###2      | 523/1592 [00:07<00:15, 70.39ba/s]
+[2025-03-14T18:26:56.111+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  33%|###3      | 531/1592 [00:07<00:14, 72.41ba/s]
+[2025-03-14T18:26:56.214+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  34%|###3      | 539/1592 [00:07<00:14, 74.00ba/s]
+[2025-03-14T18:26:56.320+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  34%|###4      | 547/1592 [00:07<00:14, 74.35ba/s]
+[2025-03-14T18:26:56.432+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  35%|###4      | 555/1592 [00:07<00:14, 73.54ba/s]
+[2025-03-14T18:26:56.538+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  35%|###5      | 563/1592 [00:07<00:13, 74.02ba/s]
+[2025-03-14T18:26:56.641+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  36%|###5      | 571/1592 [00:07<00:13, 75.15ba/s]
+[2025-03-14T18:26:56.744+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  36%|###6      | 579/1592 [00:08<00:13, 75.81ba/s]
+[2025-03-14T18:26:56.850+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  37%|###6      | 587/1592 [00:08<00:13, 75.74ba/s]
+[2025-03-14T18:26:56.996+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  37%|###7      | 595/1592 [00:08<00:14, 67.96ba/s]
+[2025-03-14T18:26:57.102+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  38%|###7      | 603/1592 [00:08<00:14, 70.09ba/s]
+[2025-03-14T18:26:57.206+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  38%|###8      | 611/1592 [00:08<00:13, 71.92ba/s]
+[2025-03-14T18:26:57.309+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  39%|###8      | 619/1592 [00:08<00:13, 73.71ba/s]
+[2025-03-14T18:26:57.414+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  39%|###9      | 627/1592 [00:08<00:12, 74.41ba/s]
+[2025-03-14T18:26:57.521+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  40%|###9      | 635/1592 [00:08<00:12, 74.45ba/s]
+[2025-03-14T18:26:57.650+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  40%|####      | 643/1592 [00:09<00:13, 70.20ba/s]
+[2025-03-14T18:26:57.770+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  41%|####      | 651/1592 [00:09<00:13, 69.08ba/s]
+[2025-03-14T18:26:57.876+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  41%|####1     | 658/1592 [00:09<00:13, 68.31ba/s]
+[2025-03-14T18:26:58.021+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  42%|####1     | 665/1592 [00:09<00:15, 61.18ba/s]
+[2025-03-14T18:26:58.125+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  42%|####2     | 672/1592 [00:09<00:14, 62.75ba/s]
+[2025-03-14T18:26:58.235+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  43%|####2     | 680/1592 [00:09<00:13, 65.67ba/s]
+[2025-03-14T18:26:58.345+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  43%|####3     | 688/1592 [00:09<00:13, 67.76ba/s]
+[2025-03-14T18:26:58.454+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  44%|####3     | 695/1592 [00:09<00:13, 66.68ba/s]
+[2025-03-14T18:26:58.561+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  44%|####4     | 702/1592 [00:09<00:13, 66.39ba/s]
+[2025-03-14T18:26:58.664+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  45%|####4     | 709/1592 [00:10<00:13, 66.67ba/s]
+[2025-03-14T18:26:58.785+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  45%|####4     | 716/1592 [00:10<00:13, 63.97ba/s]
+[2025-03-14T18:26:58.889+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  45%|####5     | 723/1592 [00:10<00:13, 64.81ba/s]
+[2025-03-14T18:26:58.995+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  46%|####5     | 730/1592 [00:10<00:13, 65.28ba/s]
+[2025-03-14T18:26:59.141+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  46%|####6     | 737/1592 [00:10<00:14, 58.93ba/s]
+[2025-03-14T18:26:59.252+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  47%|####6     | 745/1592 [00:10<00:13, 62.68ba/s]
+[2025-03-14T18:26:59.356+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  47%|####7     | 752/1592 [00:10<00:13, 63.80ba/s]
+[2025-03-14T18:26:59.475+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  48%|####7     | 760/1592 [00:10<00:12, 64.96ba/s]
+[2025-03-14T18:26:59.582+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  48%|####8     | 767/1592 [00:10<00:12, 65.10ba/s]
+[2025-03-14T18:26:59.730+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  49%|####8     | 774/1592 [00:11<00:13, 58.70ba/s]
+[2025-03-14T18:26:59.841+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  49%|####9     | 781/1592 [00:11<00:13, 59.90ba/s]
+[2025-03-14T18:26:59.950+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  50%|####9     | 790/1592 [00:11<00:12, 66.17ba/s]
+[2025-03-14T18:27:00.061+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  50%|#####     | 799/1592 [00:11<00:11, 70.57ba/s]
+[2025-03-14T18:27:00.162+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  51%|#####     | 807/1592 [00:11<00:10, 72.84ba/s]
+[2025-03-14T18:27:00.266+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  51%|#####1    | 816/1592 [00:11<00:10, 76.81ba/s]
+[2025-03-14T18:27:00.375+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  52%|#####1    | 825/1592 [00:11<00:09, 78.67ba/s]
+[2025-03-14T18:27:00.478+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  52%|#####2    | 833/1592 [00:11<00:09, 78.32ba/s]
+[2025-03-14T18:27:00.646+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  53%|#####2    | 841/1592 [00:12<00:11, 65.89ba/s]
+[2025-03-14T18:27:00.749+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  53%|#####3    | 849/1592 [00:12<00:10, 69.06ba/s]
+[2025-03-14T18:27:00.852+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  54%|#####3    | 857/1592 [00:12<00:10, 71.31ba/s]
+[2025-03-14T18:27:00.981+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  54%|#####4    | 865/1592 [00:12<00:10, 68.37ba/s]
+[2025-03-14T18:27:01.149+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  55%|#####4    | 873/1592 [00:12<00:11, 60.54ba/s]
+[2025-03-14T18:27:01.250+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  55%|#####5    | 881/1592 [00:12<00:10, 65.01ba/s]
+[2025-03-14T18:27:01.355+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  56%|#####5    | 889/1592 [00:12<00:10, 68.10ba/s]
+[2025-03-14T18:27:01.457+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  56%|#####6    | 897/1592 [00:12<00:09, 70.87ba/s]
+[2025-03-14T18:27:01.599+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  57%|#####6    | 905/1592 [00:12<00:10, 65.71ba/s]
+[2025-03-14T18:27:01.744+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  57%|#####7    | 912/1592 [00:13<00:11, 59.85ba/s]
+[2025-03-14T18:27:01.848+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  58%|#####7    | 920/1592 [00:13<00:10, 64.25ba/s]
+[2025-03-14T18:27:01.953+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  58%|#####8    | 928/1592 [00:13<00:09, 67.54ba/s]
+[2025-03-14T18:27:02.055+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  59%|#####8    | 936/1592 [00:13<00:09, 70.49ba/s]
+[2025-03-14T18:27:02.158+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  59%|#####9    | 944/1592 [00:13<00:08, 72.57ba/s]
+[2025-03-14T18:27:02.269+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  60%|#####9    | 953/1592 [00:13<00:08, 75.10ba/s]
+[2025-03-14T18:27:02.375+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  60%|######    | 962/1592 [00:13<00:08, 77.97ba/s]
+[2025-03-14T18:27:02.529+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  61%|######    | 970/1592 [00:13<00:09, 68.13ba/s]
+[2025-03-14T18:27:02.776+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  61%|######1   | 978/1592 [00:14<00:11, 51.56ba/s]
+[2025-03-14T18:27:02.879+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  62%|######1   | 986/1592 [00:14<00:10, 57.24ba/s]
+[2025-03-14T18:27:02.989+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  62%|######2   | 994/1592 [00:14<00:09, 61.10ba/s]
+[2025-03-14T18:27:03.125+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  63%|######2   | 1002/1592 [00:14<00:09, 60.31ba/s]
+[2025-03-14T18:27:03.291+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  63%|######3   | 1009/1592 [00:14<00:10, 54.06ba/s]
+[2025-03-14T18:27:03.402+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  64%|######3   | 1018/1592 [00:14<00:09, 60.81ba/s]
+[2025-03-14T18:27:03.505+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  64%|######4   | 1026/1592 [00:14<00:08, 64.95ba/s]
+[2025-03-14T18:27:03.615+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  65%|######5   | 1035/1592 [00:14<00:07, 69.65ba/s]
+[2025-03-14T18:27:03.718+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  66%|######5   | 1043/1592 [00:15<00:07, 71.78ba/s]
+[2025-03-14T18:27:03.862+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  66%|######6   | 1052/1592 [00:15<00:07, 68.42ba/s]
+[2025-03-14T18:27:04.011+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  67%|######6   | 1060/1592 [00:15<00:08, 63.52ba/s]
+[2025-03-14T18:27:04.114+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  67%|######7   | 1068/1592 [00:15<00:07, 67.10ba/s]
+[2025-03-14T18:27:04.224+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  68%|######7   | 1077/1592 [00:15<00:07, 71.16ba/s]
+[2025-03-14T18:27:04.337+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  68%|######8   | 1085/1592 [00:15<00:07, 71.03ba/s]
+[2025-03-14T18:27:04.447+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  69%|######8   | 1094/1592 [00:15<00:06, 74.05ba/s]
+[2025-03-14T18:27:04.549+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  69%|######9   | 1102/1592 [00:15<00:06, 75.25ba/s]
+[2025-03-14T18:27:04.654+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  70%|######9   | 1110/1592 [00:16<00:06, 75.58ba/s]
+[2025-03-14T18:27:04.758+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  70%|#######   | 1118/1592 [00:16<00:06, 75.88ba/s]
+[2025-03-14T18:27:04.861+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  71%|#######   | 1126/1592 [00:16<00:06, 76.48ba/s]
+[2025-03-14T18:27:05.114+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  71%|#######1  | 1134/1592 [00:16<00:08, 53.86ba/s]
+[2025-03-14T18:27:05.216+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  72%|#######1  | 1142/1592 [00:16<00:07, 59.40ba/s]
+[2025-03-14T18:27:05.329+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  72%|#######2  | 1150/1592 [00:16<00:07, 62.41ba/s]
+[2025-03-14T18:27:05.431+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  73%|#######2  | 1158/1592 [00:16<00:06, 66.38ba/s]
+[2025-03-14T18:27:05.536+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  73%|#######3  | 1166/1592 [00:16<00:06, 69.08ba/s]
+[2025-03-14T18:27:05.646+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  74%|#######3  | 1174/1592 [00:17<00:05, 70.11ba/s]
+[2025-03-14T18:27:05.752+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  74%|#######4  | 1182/1592 [00:17<00:05, 71.73ba/s]
+[2025-03-14T18:27:05.861+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  75%|#######4  | 1190/1592 [00:17<00:05, 72.21ba/s]
+[2025-03-14T18:27:06.027+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  75%|#######5  | 1198/1592 [00:17<00:06, 62.73ba/s]
+[2025-03-14T18:27:06.213+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  76%|#######5  | 1205/1592 [00:17<00:07, 53.12ba/s]
+[2025-03-14T18:27:06.315+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  76%|#######6  | 1213/1592 [00:17<00:06, 58.97ba/s]
+[2025-03-14T18:27:06.418+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  77%|#######6  | 1221/1592 [00:17<00:05, 63.70ba/s]
+[2025-03-14T18:27:06.526+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  77%|#######7  | 1229/1592 [00:17<00:05, 66.46ba/s]
+[2025-03-14T18:27:06.632+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  78%|#######7  | 1237/1592 [00:17<00:05, 69.02ba/s]
+[2025-03-14T18:27:06.736+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  78%|#######8  | 1245/1592 [00:18<00:04, 71.15ba/s]
+[2025-03-14T18:27:06.839+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  79%|#######8  | 1253/1592 [00:18<00:04, 73.02ba/s]
+[2025-03-14T18:27:06.944+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  79%|#######9  | 1261/1592 [00:18<00:04, 73.98ba/s]
+[2025-03-14T18:27:07.154+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  80%|#######9  | 1269/1592 [00:18<00:05, 57.62ba/s]
+[2025-03-14T18:27:07.322+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  80%|########  | 1276/1592 [00:18<00:06, 52.21ba/s]
+[2025-03-14T18:27:07.425+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  81%|########  | 1284/1592 [00:18<00:05, 58.07ba/s]
+[2025-03-14T18:27:07.537+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  81%|########1 | 1293/1592 [00:18<00:04, 63.88ba/s]
+[2025-03-14T18:27:07.638+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  82%|########1 | 1300/1592 [00:18<00:04, 65.24ba/s]
+[2025-03-14T18:27:07.742+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  82%|########2 | 1308/1592 [00:19<00:04, 68.40ba/s]
+[2025-03-14T18:27:07.844+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  83%|########2 | 1316/1592 [00:19<00:03, 71.31ba/s]
+[2025-03-14T18:27:07.945+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  83%|########3 | 1325/1592 [00:19<00:03, 76.19ba/s]
+[2025-03-14T18:27:08.051+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  84%|########3 | 1335/1592 [00:19<00:03, 81.69ba/s]
+[2025-03-14T18:27:08.251+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  84%|########4 | 1344/1592 [00:19<00:03, 65.33ba/s]
+[2025-03-14T18:27:08.395+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  85%|########4 | 1352/1592 [00:19<00:03, 62.30ba/s]
+[2025-03-14T18:27:08.501+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  86%|########5 | 1362/1592 [00:19<00:03, 70.26ba/s]
+[2025-03-14T18:27:08.603+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  86%|########6 | 1372/1592 [00:19<00:02, 77.26ba/s]
+[2025-03-14T18:27:08.710+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  87%|########6 | 1382/1592 [00:20<00:02, 81.82ba/s]
+[2025-03-14T18:27:08.813+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  87%|########7 | 1392/1592 [00:20<00:02, 85.85ba/s]
+[2025-03-14T18:27:08.993+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  88%|########8 | 1401/1592 [00:20<00:02, 71.34ba/s]
+[2025-03-14T18:27:09.096+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  89%|########8 | 1411/1592 [00:20<00:02, 77.77ba/s]
+[2025-03-14T18:27:09.206+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  89%|########9 | 1422/1592 [00:20<00:02, 83.99ba/s]
+[2025-03-14T18:27:09.314+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  90%|########9 | 1432/1592 [00:20<00:01, 86.24ba/s]
+[2025-03-14T18:27:09.416+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  91%|######### | 1442/1592 [00:20<00:01, 89.57ba/s]
+[2025-03-14T18:27:09.557+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  91%|#########1| 1452/1592 [00:20<00:01, 82.89ba/s]
+[2025-03-14T18:27:09.691+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  92%|#########1| 1461/1592 [00:21<00:01, 77.99ba/s]
+[2025-03-14T18:27:09.803+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  92%|#########2| 1471/1592 [00:21<00:01, 81.02ba/s]
+[2025-03-14T18:27:09.924+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  93%|#########2| 1480/1592 [00:21<00:01, 79.14ba/s]
+[2025-03-14T18:27:10.034+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  94%|#########3| 1489/1592 [00:21<00:01, 79.83ba/s]
+[2025-03-14T18:27:10.146+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  94%|#########4| 1498/1592 [00:21<00:01, 80.00ba/s]
+[2025-03-14T18:27:10.328+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  95%|#########4| 1507/1592 [00:21<00:01, 67.71ba/s]
+[2025-03-14T18:27:10.434+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  95%|#########5| 1516/1592 [00:21<00:01, 71.97ba/s]
+[2025-03-14T18:27:10.602+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  96%|#########5| 1524/1592 [00:21<00:01, 63.18ba/s]
+[2025-03-14T18:27:10.705+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  96%|#########6| 1533/1592 [00:22<00:00, 69.06ba/s]
+[2025-03-14T18:27:10.815+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  97%|#########6| 1543/1592 [00:22<00:00, 74.87ba/s]
+[2025-03-14T18:27:10.925+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  98%|#########7| 1553/1592 [00:22<00:00, 79.32ba/s]
+[2025-03-14T18:27:11.121+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  98%|#########8| 1562/1592 [00:22<00:00, 65.42ba/s]
+[2025-03-14T18:27:11.228+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  99%|#########8| 1572/1592 [00:22<00:00, 72.39ba/s]
+[2025-03-14T18:27:11.337+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format:  99%|#########9| 1582/1592 [00:22<00:00, 77.49ba/s]
+[2025-03-14T18:27:11.438+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format: 100%|##########| 1592/1592 [00:22<00:00, 82.95ba/s]
+[2025-03-14T18:27:11.438+0000] {logging_mixin.py:190} WARNING - Creating parquet from Arrow format: 100%|##########| 1592/1592 [00:22<00:00, 69.83ba/s]
+[2025-03-14T18:27:11.460+0000] {logging_mixin.py:190} INFO - Extracted data saved to /opt/***/dataset/kindle_reviews and /opt/***/dataset/kindle_metadata
+[2025-03-14T18:27:11.559+0000] {python.py:240} INFO - Done. Returned value was: {'reviews_path': '/opt/***/dataset/kindle_reviews', 'metadata_path': '/opt/***/dataset/kindle_metadata'}
+[2025-03-14T18:27:11.571+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-14T18:27:11.571+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kindle_store_etl_taskflow, task_id=extract_data, run_id=manual__2025-03-14T18:25:56.196589+00:00, execution_date=20250314T182556, start_date=20250314T182557, end_date=20250314T182711
+[2025-03-14T18:27:11.580+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-14T18:27:11.580+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-14T18:27:11.580+0000] {logging_mixin.py:190} INFO - Dag name:kindle_store_etl_taskflow queued_at:2025-03-14 18:25:56.201786+00:00
+[2025-03-14T18:27:11.580+0000] {logging_mixin.py:190} INFO - Task hostname:76178626723b operator:_PythonDecoratedOperator
+[2025-03-14T18:27:11.623+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-14T18:27:11.633+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-14T18:27:11.633+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

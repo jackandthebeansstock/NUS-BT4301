@@ -1,0 +1,54 @@
+[2025-03-18T13:36:47.179+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-18T13:36:47.185+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kindle_store_etl_taskflow.extract_book_data manual__2025-03-18T13:36:43.799986+00:00 [queued]>
+[2025-03-18T13:36:47.190+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kindle_store_etl_taskflow.extract_book_data manual__2025-03-18T13:36:43.799986+00:00 [queued]>
+[2025-03-18T13:36:47.190+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-18T13:36:47.197+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): extract_book_data> on 2025-03-18 13:36:43.799986+00:00
+[2025-03-18T13:36:47.205+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1099) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-18T13:36:47.206+0000] {standard_task_runner.py:72} INFO - Started process 1101 to run task
+[2025-03-18T13:36:47.206+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kindle_store_etl_taskflow', 'extract_book_data', 'manual__2025-03-18T13:36:43.799986+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpa6s97awr']
+[2025-03-18T13:36:47.207+0000] {standard_task_runner.py:105} INFO - Job 32: Subtask extract_book_data
+[2025-03-18T13:36:47.242+0000] {task_command.py:467} INFO - Running <TaskInstance: kindle_store_etl_taskflow.extract_book_data manual__2025-03-18T13:36:43.799986+00:00 [running]> on host 1116547ce33b
+[2025-03-18T13:36:47.271+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kindle_store_etl_taskflow' AIRFLOW_CTX_TASK_ID='extract_book_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-18T13:36:43.799986+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-18T13:36:43.799986+00:00'
+[2025-03-18T13:36:47.272+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-18T13:36:47.272+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-18T13:36:47.272+0000] {logging_mixin.py:190} INFO - Current task name:extract_book_data state:running start_date:2025-03-18 13:36:47.186556+00:00
+[2025-03-18T13:36:47.273+0000] {logging_mixin.py:190} INFO - Dag name:kindle_store_etl_taskflow and current dag run status:running
+[2025-03-18T13:36:47.273+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-18T13:36:51.910+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):   0%|          | 0/1591371 [00:00<?, ? examples/s]
+[2025-03-18T13:36:52.029+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):   4%|3         | 58000/1591371 [00:00<00:03, 489978.92 examples/s]
+[2025-03-18T13:36:52.129+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):   8%|7         | 121000/1591371 [00:00<00:02, 564145.04 examples/s]
+[2025-03-18T13:36:52.281+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):  13%|#2        | 201000/1591371 [00:00<00:02, 543502.53 examples/s]
+[2025-03-18T13:36:52.384+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):  16%|#6        | 259000/1591371 [00:00<00:02, 550968.65 examples/s]
+[2025-03-18T13:36:52.537+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):  21%|##1       | 339000/1591371 [00:00<00:02, 539785.66 examples/s]
+[2025-03-18T13:36:52.690+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):  26%|##5       | 409000/1591371 [00:00<00:02, 508638.94 examples/s]
+[2025-03-18T13:36:52.847+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):  29%|##8       | 461000/1591371 [00:00<00:02, 444969.72 examples/s]
+[2025-03-18T13:36:53.054+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):  33%|###2      | 521000/1591371 [00:01<00:02, 382823.69 examples/s]
+[2025-03-18T13:36:53.156+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):  36%|###6      | 578000/1591371 [00:01<00:02, 421623.34 examples/s]
+[2025-03-18T13:36:53.259+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):  40%|###9      | 634000/1591371 [00:01<00:02, 451037.10 examples/s]
+[2025-03-18T13:36:53.360+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):  44%|####3     | 700000/1591371 [00:01<00:01, 502710.66 examples/s]
+[2025-03-18T13:36:53.460+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/2 shards):  49%|####8     | 778000/1591371 [00:01<00:01, 575202.21 examples/s]
+[2025-03-18T13:36:53.503+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/2 shards):  50%|#####     | 795686/1591371 [00:01<00:01, 575202.21 examples/s]
+[2025-03-18T13:36:53.616+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/2 shards):  55%|#####5    | 876686/1591371 [00:01<00:01, 595948.87 examples/s]
+[2025-03-18T13:36:53.718+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/2 shards):  61%|######    | 967686/1591371 [00:01<00:00, 672994.46 examples/s]
+[2025-03-18T13:36:53.852+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/2 shards):  66%|######5   | 1046686/1591371 [00:01<00:00, 645289.76 examples/s]
+[2025-03-18T13:36:53.954+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/2 shards):  70%|#######   | 1114686/1591371 [00:02<00:00, 650813.47 examples/s]
+[2025-03-18T13:36:54.055+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/2 shards):  76%|#######5  | 1203686/1591371 [00:02<00:00, 712624.26 examples/s]
+[2025-03-18T13:36:54.157+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/2 shards):  81%|########1 | 1293686/1591371 [00:02<00:00, 760319.73 examples/s]
+[2025-03-18T13:36:54.258+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/2 shards):  87%|########7 | 1384686/1591371 [00:02<00:00, 800893.89 examples/s]
+[2025-03-18T13:36:54.359+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/2 shards):  92%|#########2| 1471686/1591371 [00:02<00:00, 818071.87 examples/s]
+[2025-03-18T13:36:54.461+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/2 shards):  98%|#########8| 1566686/1591371 [00:02<00:00, 852139.05 examples/s]
+[2025-03-18T13:36:54.517+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/2 shards): 100%|##########| 1591371/1591371 [00:02<00:00, 852139.05 examples/s]
+[2025-03-18T13:36:54.518+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/2 shards): 100%|##########| 1591371/1591371 [00:02<00:00, 610291.53 examples/s]
+[2025-03-18T13:36:54.519+0000] {logging_mixin.py:190} INFO - Extracted data saved to /opt/***/dataset/kindle_metadata
+[2025-03-18T13:36:54.548+0000] {python.py:240} INFO - Done. Returned value was: {'metadata_path': '/opt/***/dataset/kindle_metadata'}
+[2025-03-18T13:36:54.644+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-18T13:36:54.645+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kindle_store_etl_taskflow, task_id=extract_book_data, run_id=manual__2025-03-18T13:36:43.799986+00:00, execution_date=20250318T133643, start_date=20250318T133647, end_date=20250318T133654
+[2025-03-18T13:36:54.655+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-18T13:36:54.655+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-18T13:36:54.655+0000] {logging_mixin.py:190} INFO - Dag name:kindle_store_etl_taskflow queued_at:2025-03-18 13:36:43.804318+00:00
+[2025-03-18T13:36:54.656+0000] {logging_mixin.py:190} INFO - Task hostname:1116547ce33b operator:_PythonDecoratedOperator
+[2025-03-18T13:36:54.699+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-18T13:36:54.713+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-18T13:36:54.714+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

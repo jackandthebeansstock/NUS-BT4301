@@ -1,0 +1,211 @@
+[2025-03-18T13:14:54.227+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-18T13:14:54.237+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kindle_store_etl_taskflow.transform_book_data manual__2025-03-18T13:01:37.908007+00:00 [queued]>
+[2025-03-18T13:14:54.241+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kindle_store_etl_taskflow.transform_book_data manual__2025-03-18T13:01:37.908007+00:00 [queued]>
+[2025-03-18T13:14:54.241+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-18T13:14:54.246+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): transform_book_data> on 2025-03-18 13:01:37.908007+00:00
+[2025-03-18T13:14:54.252+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=676) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-18T13:14:54.253+0000] {standard_task_runner.py:72} INFO - Started process 677 to run task
+[2025-03-18T13:14:54.254+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kindle_store_etl_taskflow', 'transform_book_data', 'manual__2025-03-18T13:01:37.908007+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpi7gypgao']
+[2025-03-18T13:14:54.255+0000] {standard_task_runner.py:105} INFO - Job 29: Subtask transform_book_data
+[2025-03-18T13:14:54.288+0000] {task_command.py:467} INFO - Running <TaskInstance: kindle_store_etl_taskflow.transform_book_data manual__2025-03-18T13:01:37.908007+00:00 [running]> on host 1116547ce33b
+[2025-03-18T13:14:54.326+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kindle_store_etl_taskflow' AIRFLOW_CTX_TASK_ID='transform_book_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-18T13:01:37.908007+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-18T13:01:37.908007+00:00'
+[2025-03-18T13:14:54.327+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-18T13:14:54.327+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-18T13:14:54.328+0000] {logging_mixin.py:190} INFO - Current task name:transform_book_data state:running start_date:2025-03-18 13:14:54.237337+00:00
+[2025-03-18T13:14:54.328+0000] {logging_mixin.py:190} INFO - Dag name:kindle_store_etl_taskflow and current dag run status:running
+[2025-03-18T13:14:54.328+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-18T13:14:54.524+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):   0%|          | 0/1591371 [00:00<?, ? examples/s]
+[2025-03-18T13:14:54.639+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):   0%|          | 2350/1591371 [00:00<01:17, 20558.04 examples/s]
+[2025-03-18T13:14:54.742+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):   1%|1         | 21808/1591371 [00:00<00:13, 114917.12 examples/s]
+[2025-03-18T13:14:54.844+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):   2%|2         | 39468/1591371 [00:00<00:11, 141036.80 examples/s]
+[2025-03-18T13:14:54.946+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):   3%|3         | 54350/1591371 [00:00<00:10, 142574.24 examples/s]
+[2025-03-18T13:14:55.047+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):   5%|4         | 71663/1591371 [00:00<00:09, 153169.08 examples/s]
+[2025-03-18T13:14:55.147+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):   6%|5         | 89688/1591371 [00:00<00:09, 161949.37 examples/s]
+[2025-03-18T13:14:55.248+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):   7%|6         | 107984/1591371 [00:00<00:08, 168395.74 examples/s]
+[2025-03-18T13:14:55.355+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):   8%|7         | 125495/1591371 [00:00<00:08, 166457.61 examples/s]
+[2025-03-18T13:14:55.462+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):   9%|8         | 142655/1591371 [00:00<00:08, 164681.40 examples/s]
+[2025-03-18T13:14:55.563+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  10%|#         | 160430/1591371 [00:01<00:08, 168360.88 examples/s]
+[2025-03-18T13:14:55.664+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  11%|#1        | 178495/1591371 [00:01<00:08, 171194.75 examples/s]
+[2025-03-18T13:14:55.801+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  12%|#2        | 197097/1591371 [00:01<00:08, 158498.92 examples/s]
+[2025-03-18T13:14:55.901+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  14%|#3        | 221216/1591371 [00:01<00:07, 181015.99 examples/s]
+[2025-03-18T13:14:56.018+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  15%|#5        | 239776/1591371 [00:01<00:07, 174270.01 examples/s]
+[2025-03-18T13:14:56.118+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  16%|#6        | 257839/1591371 [00:01<00:07, 175786.57 examples/s]
+[2025-03-18T13:14:56.221+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  17%|#7        | 276373/1591371 [00:01<00:07, 176955.51 examples/s]
+[2025-03-18T13:14:56.338+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  19%|#8        | 294568/1591371 [00:01<00:07, 170344.58 examples/s]
+[2025-03-18T13:14:56.442+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  20%|#9        | 314331/1591371 [00:01<00:07, 176147.63 examples/s]
+[2025-03-18T13:14:56.547+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  21%|##        | 332284/1591371 [00:02<00:07, 174293.56 examples/s]
+[2025-03-18T13:14:56.648+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  22%|##1       | 349820/1591371 [00:02<00:07, 174394.51 examples/s]
+[2025-03-18T13:14:56.748+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  23%|##3       | 367497/1591371 [00:02<00:06, 175033.96 examples/s]
+[2025-03-18T13:14:56.851+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  24%|##4       | 385500/1591371 [00:02<00:06, 174820.35 examples/s]
+[2025-03-18T13:14:56.954+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  25%|##5       | 403656/1591371 [00:02<00:06, 175408.35 examples/s]
+[2025-03-18T13:14:57.055+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  27%|##6       | 421805/1591371 [00:02<00:06, 176383.13 examples/s]
+[2025-03-18T13:14:57.155+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  28%|##7       | 439895/1591371 [00:02<00:06, 177566.04 examples/s]
+[2025-03-18T13:14:57.278+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  29%|##8       | 458355/1591371 [00:02<00:06, 168304.22 examples/s]
+[2025-03-18T13:14:57.389+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  30%|##9       | 476485/1591371 [00:02<00:06, 166932.74 examples/s]
+[2025-03-18T13:14:57.497+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  31%|###1      | 496656/1591371 [00:02<00:06, 173055.48 examples/s]
+[2025-03-18T13:14:57.600+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  32%|###2      | 514078/1591371 [00:03<00:06, 171673.13 examples/s]
+[2025-03-18T13:14:57.701+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  34%|###3      | 534090/1591371 [00:03<00:05, 179200.53 examples/s]
+[2025-03-18T13:14:57.813+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  35%|###4      | 552451/1591371 [00:03<00:05, 174341.36 examples/s]
+[2025-03-18T13:14:57.922+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  36%|###5      | 571492/1591371 [00:03<00:05, 174481.46 examples/s]
+[2025-03-18T13:14:58.025+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  37%|###7      | 591853/1591371 [00:03<00:05, 181137.08 examples/s]
+[2025-03-18T13:14:58.150+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  38%|###8      | 610591/1591371 [00:03<00:05, 170918.63 examples/s]
+[2025-03-18T13:14:58.253+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  40%|###9      | 629841/1591371 [00:03<00:05, 176404.93 examples/s]
+[2025-03-18T13:14:58.366+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  41%|####      | 647702/1591371 [00:03<00:05, 170013.68 examples/s]
+[2025-03-18T13:14:58.476+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  42%|####1     | 665925/1591371 [00:03<00:05, 168655.59 examples/s]
+[2025-03-18T13:14:58.578+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  43%|####3     | 685210/1591371 [00:04<00:05, 174529.64 examples/s]
+[2025-03-18T13:14:58.686+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  44%|####4     | 703339/1591371 [00:04<00:05, 172375.56 examples/s]
+[2025-03-18T13:14:58.796+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  45%|####5     | 720765/1591371 [00:04<00:05, 168035.85 examples/s]
+[2025-03-18T13:14:58.897+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  46%|####6     | 739575/1591371 [00:04<00:04, 173333.42 examples/s]
+[2025-03-18T13:14:59.004+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  48%|####7     | 757346/1591371 [00:04<00:04, 170972.99 examples/s]
+[2025-03-18T13:14:59.113+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  49%|####8     | 774844/1591371 [00:04<00:04, 167680.68 examples/s]
+[2025-03-18T13:14:59.222+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  50%|####9     | 794945/1591371 [00:04<00:04, 173074.38 examples/s]
+[2025-03-18T13:14:59.322+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  51%|#####1    | 812471/1591371 [00:04<00:04, 173579.35 examples/s]
+[2025-03-18T13:14:59.425+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  52%|#####2    | 829899/1591371 [00:04<00:04, 172346.55 examples/s]
+[2025-03-18T13:14:59.545+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  53%|#####3    | 847175/1591371 [00:05<00:04, 163178.66 examples/s]
+[2025-03-18T13:14:59.650+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  54%|#####4    | 863986/1591371 [00:05<00:04, 161903.75 examples/s]
+[2025-03-18T13:14:59.768+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  55%|#####5    | 880269/1591371 [00:05<00:04, 154568.64 examples/s]
+[2025-03-18T13:14:59.898+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  56%|#####6    | 895888/1591371 [00:05<00:04, 143012.27 examples/s]
+[2025-03-18T13:15:00.017+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  57%|#####7    | 912834/1591371 [00:05<00:04, 142740.09 examples/s]
+[2025-03-18T13:15:00.122+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  59%|#####8    | 931636/1591371 [00:05<00:04, 152896.86 examples/s]
+[2025-03-18T13:15:00.263+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  60%|#####9    | 947292/1591371 [00:05<00:04, 138120.58 examples/s]
+[2025-03-18T13:15:00.372+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  61%|######1   | 976108/1591371 [00:05<00:03, 173296.21 examples/s]
+[2025-03-18T13:15:00.479+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  62%|######2   | 994129/1591371 [00:05<00:03, 171848.90 examples/s]
+[2025-03-18T13:15:00.587+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  64%|######3   | 1011843/1591371 [00:06<00:03, 169716.94 examples/s]
+[2025-03-18T13:15:00.697+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  65%|######4   | 1029227/1591371 [00:06<00:03, 166366.20 examples/s]
+[2025-03-18T13:15:00.856+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  66%|######5   | 1046391/1591371 [00:06<00:03, 143966.51 examples/s]
+[2025-03-18T13:15:00.957+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  68%|######7   | 1074623/1591371 [00:06<00:02, 179017.33 examples/s]
+[2025-03-18T13:15:01.260+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  69%|######8   | 1093772/1591371 [00:06<00:04, 118361.19 examples/s]
+[2025-03-18T13:15:01.367+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  72%|#######1  | 1143945/1591371 [00:06<00:02, 191544.23 examples/s]
+[2025-03-18T13:15:01.554+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  73%|#######3  | 1168858/1591371 [00:07<00:02, 171360.40 examples/s]
+[2025-03-18T13:15:01.754+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  75%|#######4  | 1190485/1591371 [00:07<00:02, 149734.52 examples/s]
+[2025-03-18T13:15:01.862+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  76%|#######6  | 1212740/1591371 [00:07<00:02, 161895.22 examples/s]
+[2025-03-18T13:15:01.972+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  77%|#######7  | 1231902/1591371 [00:07<00:02, 164283.28 examples/s]
+[2025-03-18T13:15:02.082+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  79%|#######8  | 1250452/1591371 [00:07<00:02, 165517.77 examples/s]
+[2025-03-18T13:15:02.189+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  80%|#######9  | 1268436/1591371 [00:07<00:01, 165986.08 examples/s]
+[2025-03-18T13:15:02.304+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  81%|########  | 1286044/1591371 [00:07<00:01, 162520.61 examples/s]
+[2025-03-18T13:15:02.417+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  82%|########1 | 1303283/1591371 [00:07<00:01, 159889.64 examples/s]
+[2025-03-18T13:15:02.522+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  83%|########2 | 1320812/1591371 [00:07<00:01, 161582.30 examples/s]
+[2025-03-18T13:15:02.625+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  84%|########4 | 1338856/1591371 [00:08<00:01, 165347.87 examples/s]
+[2025-03-18T13:15:02.745+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  85%|########5 | 1355890/1591371 [00:08<00:01, 157852.81 examples/s]
+[2025-03-18T13:15:02.846+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  86%|########6 | 1373755/1591371 [00:08<00:01, 163234.37 examples/s]
+[2025-03-18T13:15:02.975+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  87%|########7 | 1390672/1591371 [00:08<00:01, 152419.19 examples/s]
+[2025-03-18T13:15:03.086+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  89%|########8 | 1408667/1591371 [00:08<00:01, 155234.00 examples/s]
+[2025-03-18T13:15:03.189+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  90%|########9 | 1425832/1591371 [00:08<00:01, 158460.35 examples/s]
+[2025-03-18T13:15:03.300+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  91%|######### | 1442311/1591371 [00:08<00:00, 155680.26 examples/s]
+[2025-03-18T13:15:03.407+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  92%|#########1| 1458549/1591371 [00:08<00:00, 154569.72 examples/s]
+[2025-03-18T13:15:03.781+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  93%|#########2| 1474168/1591371 [00:09<00:01, 87458.72 examples/s] 
+[2025-03-18T13:15:03.884+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  97%|#########6| 1537848/1591371 [00:09<00:00, 188211.11 examples/s]
+[2025-03-18T13:15:04.120+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16):  98%|#########8| 1566056/1591371 [00:09<00:00, 161789.55 examples/s]
+[2025-03-18T13:15:04.377+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16): 100%|#########9| 1588889/1591371 [00:09<00:00, 134648.33 examples/s]
+[2025-03-18T13:15:04.476+0000] {logging_mixin.py:190} WARNING - Map (num_proc=16): 100%|##########| 1591371/1591371 [00:09<00:00, 159908.48 examples/s]
+[2025-03-18T13:15:04.577+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/etl.py", line 174, in transform_book_data
+    metadata_dataset.save_to_disk(metadata_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 1493, in save_to_disk
+    raise PermissionError(
+PermissionError: Tried to overwrite /opt/***/dataset/kindle_metadata but a dataset can't overwrite itself.
+[2025-03-18T13:15:04.587+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-03-18T13:15:04.587+0000] {logging_mixin.py:190} INFO - Task start:2025-03-18 13:14:54.237337+00:00 end:2025-03-18 13:15:04.586810+00:00 duration:10.349473
+[2025-03-18T13:15:04.587+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): transform_book_data> dag:<DAG: kindle_store_etl_taskflow> dagrun:<DagRun kindle_store_etl_taskflow @ 2025-03-18 13:01:37.908007+00:00: manual__2025-03-18T13:01:37.908007+00:00, state:running, queued_at: 2025-03-18 13:01:37.913497+00:00. externally triggered: True>
+[2025-03-18T13:15:04.588+0000] {logging_mixin.py:190} INFO - Failure caused by Tried to overwrite /opt/***/dataset/kindle_metadata but a dataset can't overwrite itself.
+[2025-03-18T13:15:04.588+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=kindle_store_etl_taskflow, task_id=transform_book_data, run_id=manual__2025-03-18T13:01:37.908007+00:00, execution_date=20250318T130137, start_date=20250318T131454, end_date=20250318T131504
+[2025-03-18T13:15:04.601+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-18T13:15:04.602+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 29 for task transform_book_data (Tried to overwrite /opt/***/dataset/kindle_metadata but a dataset can't overwrite itself.; 677)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/etl.py", line 174, in transform_book_data
+    metadata_dataset.save_to_disk(metadata_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/datasets/arrow_dataset.py", line 1493, in save_to_disk
+    raise PermissionError(
+PermissionError: Tried to overwrite /opt/***/dataset/kindle_metadata but a dataset can't overwrite itself.
+[2025-03-18T13:15:04.652+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-03-18T13:15:04.663+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-18T13:15:04.665+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,314 @@
+[2025-03-18T13:36:47.177+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-18T13:36:47.184+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kindle_store_etl_taskflow.extract_review_data manual__2025-03-18T13:36:43.799986+00:00 [queued]>
+[2025-03-18T13:36:47.188+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kindle_store_etl_taskflow.extract_review_data manual__2025-03-18T13:36:43.799986+00:00 [queued]>
+[2025-03-18T13:36:47.189+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-18T13:36:47.195+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): extract_review_data> on 2025-03-18 13:36:43.799986+00:00
+[2025-03-18T13:36:47.204+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1098) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-18T13:36:47.205+0000] {standard_task_runner.py:72} INFO - Started process 1100 to run task
+[2025-03-18T13:36:47.206+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kindle_store_etl_taskflow', 'extract_review_data', 'manual__2025-03-18T13:36:43.799986+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpwy46__0k']
+[2025-03-18T13:36:47.206+0000] {standard_task_runner.py:105} INFO - Job 31: Subtask extract_review_data
+[2025-03-18T13:36:47.235+0000] {task_command.py:467} INFO - Running <TaskInstance: kindle_store_etl_taskflow.extract_review_data manual__2025-03-18T13:36:43.799986+00:00 [running]> on host 1116547ce33b
+[2025-03-18T13:36:47.271+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kindle_store_etl_taskflow' AIRFLOW_CTX_TASK_ID='extract_review_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-18T13:36:43.799986+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-18T13:36:43.799986+00:00'
+[2025-03-18T13:36:47.272+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-18T13:36:47.272+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-18T13:36:47.272+0000] {logging_mixin.py:190} INFO - Current task name:extract_review_data state:running start_date:2025-03-18 13:36:47.185076+00:00
+[2025-03-18T13:36:47.272+0000] {logging_mixin.py:190} INFO - Dag name:kindle_store_etl_taskflow and current dag run status:running
+[2025-03-18T13:36:47.273+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-18T13:36:53.828+0000] {logging_mixin.py:190} INFO - Number of users after filtering: 5335161
+[2025-03-18T13:36:53.852+0000] {logging_mixin.py:190} INFO - First few entries: {'rating': [5.0, 5.0, 4.0, 5.0, 5.0], 'title': ['Hats off to Fern Michaels for all her great accomplishments❗', 'Add to legend f Arthur', 'MEMORIES', 'What a woman!', 'Enjoyed!'], 'text': ['I have been a fan of this author for many years, never know what to expect! I lived in North and South Carolina, and I love how Fern helps lots of folks and animals out. Kudos 💗💗', 'Good twist on the ledgen of King<br />Arthur ! Most interested in where the story goes! Looking forward to book 3&4.', 'Brought back a lot of  memories. Reading sci-fi from a bygone era! A real treat, lotsa fun for an old guy like me!', 'Enjoyed the story! Marveled at the characters adaptability. The "friendly" completion with her and the Sentinile. The interaction at those who try to control or kill her, without success. Is this the last Sorrillo story? .kinda hope not, but, hey it happens!', "Fascinating story! Dragons, elves, Orcs, evil kings, frogs.......wonder what's next. Looking forward to the next part with anticipation! Well done, IMO!"], 'images': [[], [], [], [], []], 'asin': ['B07QVH25KX', 'B08M993CNC', 'B004NNVWL6', 'B094CHNKCK', 'B08PY23N5S'], 'parent_asin': ['B07QVH25KX', 'B08M993CNC', 'B004NNVWL6', 'B094CHNKCK', 'B08PY23N5S'], 'user_id': ['AHFY2QSS6PK5MHSYZFI6TXUYNPLQ', 'AFWHJ6O3PV4JC7PVOJH6CPULO2KQ', 'AFWHJ6O3PV4JC7PVOJH6CPULO2KQ', 'AFWHJ6O3PV4JC7PVOJH6CPULO2KQ', 'AFWHJ6O3PV4JC7PVOJH6CPULO2KQ'], 'timestamp': [1644883955777, 1637557512064, 1637134078567, 1632291278732, 1614145710980], 'helpful_vote': [0, 0, 0, 0, 0], 'verified_purchase': [True, True, True, True, True]}
+[2025-03-18T13:37:12.331+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   0%|          | 0/5335161 [00:00<?, ? examples/s]
+[2025-03-18T13:37:12.690+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   0%|          | 1000/5335161 [00:00<31:52, 2789.05 examples/s]
+[2025-03-18T13:37:12.808+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   0%|          | 4000/5335161 [00:00<08:51, 10037.10 examples/s]
+[2025-03-18T13:37:12.936+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   0%|          | 6000/5335161 [00:00<07:28, 11882.07 examples/s]
+[2025-03-18T13:37:13.106+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   0%|          | 9000/5335161 [00:00<06:17, 14125.37 examples/s]
+[2025-03-18T13:37:13.374+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   0%|          | 12000/5335161 [00:01<06:57, 12756.77 examples/s]
+[2025-03-18T13:37:13.526+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   0%|          | 15000/5335161 [00:01<06:02, 14659.24 examples/s]
+[2025-03-18T13:37:13.662+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   0%|          | 20000/5335161 [00:01<04:20, 20407.48 examples/s]
+[2025-03-18T13:37:13.997+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   0%|          | 24000/5335161 [00:01<05:24, 16354.67 examples/s]
+[2025-03-18T13:37:14.117+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   1%|          | 31000/5335161 [00:01<03:35, 24605.13 examples/s]
+[2025-03-18T13:37:14.302+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   1%|          | 36000/5335161 [00:01<03:29, 25312.12 examples/s]
+[2025-03-18T13:37:14.559+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   1%|          | 42000/5335161 [00:02<03:35, 24602.03 examples/s]
+[2025-03-18T13:37:14.769+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   1%|          | 45000/5335161 [00:02<04:06, 21465.58 examples/s]
+[2025-03-18T13:37:14.887+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   1%|          | 50000/5335161 [00:02<03:26, 25575.93 examples/s]
+[2025-03-18T13:37:14.998+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   1%|1         | 55000/5335161 [00:02<02:58, 29617.01 examples/s]
+[2025-03-18T13:37:15.185+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   1%|1         | 59000/5335161 [00:02<03:16, 26848.11 examples/s]
+[2025-03-18T13:37:15.388+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   1%|1         | 65000/5335161 [00:03<03:09, 27808.56 examples/s]
+[2025-03-18T13:37:15.489+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   1%|1         | 71000/5335161 [00:03<02:35, 33943.46 examples/s]
+[2025-03-18T13:37:15.606+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   2%|1         | 86000/5335161 [00:03<01:32, 57018.62 examples/s]
+[2025-03-18T13:37:15.711+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   2%|1         | 97000/5335161 [00:03<01:16, 68312.52 examples/s]
+[2025-03-18T13:37:15.816+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   2%|2         | 111000/5335161 [00:03<01:01, 84857.64 examples/s]
+[2025-03-18T13:37:15.929+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   2%|2         | 127000/5335161 [00:03<00:51, 100792.13 examples/s]
+[2025-03-18T13:37:16.034+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   3%|2         | 143000/5335161 [00:03<00:45, 114839.99 examples/s]
+[2025-03-18T13:37:16.136+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   3%|2         | 160000/5335161 [00:03<00:40, 128882.27 examples/s]
+[2025-03-18T13:37:16.247+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   3%|3         | 177000/5335161 [00:03<00:37, 136445.82 examples/s]
+[2025-03-18T13:37:16.351+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   4%|3         | 195000/5335161 [00:04<00:35, 146763.11 examples/s]
+[2025-03-18T13:37:16.461+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   4%|3         | 212000/5335161 [00:04<00:34, 149247.15 examples/s]
+[2025-03-18T13:37:16.616+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   4%|4         | 234000/5335161 [00:04<00:34, 146374.56 examples/s]
+[2025-03-18T13:37:16.722+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   5%|4         | 249000/5335161 [00:04<00:35, 144965.48 examples/s]
+[2025-03-18T13:37:16.834+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   5%|4         | 266000/5335161 [00:04<00:34, 146895.65 examples/s]
+[2025-03-18T13:37:16.946+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   5%|5         | 284000/5335161 [00:04<00:33, 150988.30 examples/s]
+[2025-03-18T13:37:17.108+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   6%|5         | 307000/5335161 [00:04<00:34, 147722.51 examples/s]
+[2025-03-18T13:37:17.272+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   6%|6         | 324000/5335161 [00:04<00:37, 132181.07 examples/s]
+[2025-03-18T13:37:17.379+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   6%|6         | 342000/5335161 [00:05<00:35, 140929.77 examples/s]
+[2025-03-18T13:37:17.487+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   7%|6         | 359000/5335161 [00:05<00:34, 145298.35 examples/s]
+[2025-03-18T13:37:17.594+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   7%|7         | 375000/5335161 [00:05<00:33, 146530.74 examples/s]
+[2025-03-18T13:37:17.696+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   7%|7         | 390000/5335161 [00:05<00:33, 146524.26 examples/s]
+[2025-03-18T13:37:17.802+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   8%|7         | 405000/5335161 [00:05<00:33, 145320.85 examples/s]
+[2025-03-18T13:37:17.914+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   8%|7         | 422000/5335161 [00:05<00:33, 147221.74 examples/s]
+[2025-03-18T13:37:18.021+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   8%|8         | 437000/5335161 [00:05<00:33, 144920.67 examples/s]
+[2025-03-18T13:37:18.128+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   8%|8         | 452000/5335161 [00:05<00:33, 143712.12 examples/s]
+[2025-03-18T13:37:18.299+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   9%|8         | 474000/5335161 [00:05<00:35, 137694.56 examples/s]
+[2025-03-18T13:37:18.406+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):   9%|9         | 491000/5335161 [00:06<00:33, 143395.33 examples/s]
+[2025-03-18T13:37:18.509+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  10%|9         | 509000/5335161 [00:06<00:31, 151508.07 examples/s]
+[2025-03-18T13:37:18.616+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  10%|9         | 529000/5335161 [00:06<00:29, 161600.68 examples/s]
+[2025-03-18T13:37:18.719+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  10%|#         | 548000/5335161 [00:06<00:28, 167891.50 examples/s]
+[2025-03-18T13:37:18.824+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  11%|#         | 566000/5335161 [00:06<00:28, 169294.10 examples/s]
+[2025-03-18T13:37:18.980+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  11%|#1        | 592000/5335161 [00:06<00:28, 168250.39 examples/s]
+[2025-03-18T13:37:19.087+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  11%|#1        | 609000/5335161 [00:06<00:28, 165449.28 examples/s]
+[2025-03-18T13:37:19.256+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  12%|#1        | 630000/5335161 [00:06<00:31, 150041.37 examples/s]
+[2025-03-18T13:37:19.359+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  12%|#2        | 648000/5335161 [00:07<00:30, 155857.02 examples/s]
+[2025-03-18T13:37:19.472+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  12%|#2        | 666000/5335161 [00:07<00:29, 156874.88 examples/s]
+[2025-03-18T13:37:19.581+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  13%|#2        | 685000/5335161 [00:07<00:28, 161791.53 examples/s]
+[2025-03-18T13:37:19.683+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  13%|#3        | 702000/5335161 [00:07<00:28, 162996.25 examples/s]
+[2025-03-18T13:37:19.787+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  13%|#3        | 719000/5335161 [00:07<00:28, 163333.28 examples/s]
+[2025-03-18T13:37:19.894+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  14%|#3        | 736000/5335161 [00:07<00:28, 161982.53 examples/s]
+[2025-03-18T13:37:19.999+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  14%|#4        | 753000/5335161 [00:07<00:28, 161991.92 examples/s]
+[2025-03-18T13:37:20.102+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  14%|#4        | 770000/5335161 [00:07<00:27, 163080.30 examples/s]
+[2025-03-18T13:37:20.206+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  15%|#4        | 787000/5335161 [00:07<00:27, 162836.87 examples/s]
+[2025-03-18T13:37:20.462+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  15%|#5        | 804000/5335161 [00:08<00:39, 113795.81 examples/s]
+[2025-03-18T13:37:20.621+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  16%|#5        | 827000/5335161 [00:08<00:36, 123541.73 examples/s]
+[2025-03-18T13:37:20.726+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  16%|#5        | 846000/5335161 [00:08<00:32, 136439.14 examples/s]
+[2025-03-18T13:37:20.832+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  16%|#6        | 865000/5335161 [00:08<00:30, 146989.13 examples/s]
+[2025-03-18T13:37:20.996+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  17%|#6        | 890000/5335161 [00:08<00:29, 148915.97 examples/s]
+[2025-03-18T13:37:21.100+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  17%|#7        | 908000/5335161 [00:08<00:28, 154649.03 examples/s]
+[2025-03-18T13:37:21.212+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  17%|#7        | 928000/5335161 [00:08<00:27, 161226.52 examples/s]
+[2025-03-18T13:37:21.320+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  18%|#7        | 946000/5335161 [00:08<00:26, 162834.54 examples/s]
+[2025-03-18T13:37:21.423+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  18%|#8        | 966000/5335161 [00:09<00:25, 171160.33 examples/s]
+[2025-03-18T13:37:21.691+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  19%|#8        | 989000/5335161 [00:09<00:33, 128459.66 examples/s]
+[2025-03-18T13:37:21.805+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  19%|#8        | 1005000/5335161 [00:09<00:32, 131313.21 examples/s]
+[2025-03-18T13:37:21.967+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  19%|#9        | 1027000/5335161 [00:09<00:32, 132579.86 examples/s]
+[2025-03-18T13:37:22.072+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  20%|#9        | 1042000/5335161 [00:09<00:31, 134994.12 examples/s]
+[2025-03-18T13:37:22.179+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/5 shards):  20%|#9        | 1057000/5335161 [00:09<00:31, 136313.36 examples/s]
+[2025-03-18T13:37:22.264+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  20%|##        | 1067033/5335161 [00:09<00:31, 136313.36 examples/s]
+[2025-03-18T13:37:22.367+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  20%|##        | 1075033/5335161 [00:10<00:35, 120695.45 examples/s]
+[2025-03-18T13:37:22.469+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  20%|##        | 1089033/5335161 [00:10<00:34, 124421.87 examples/s]
+[2025-03-18T13:37:22.573+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  21%|##        | 1107033/5335161 [00:10<00:30, 136632.25 examples/s]
+[2025-03-18T13:37:22.678+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  21%|##1       | 1125033/5335161 [00:10<00:28, 146077.33 examples/s]
+[2025-03-18T13:37:22.784+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  21%|##1       | 1143033/5335161 [00:10<00:27, 152480.68 examples/s]
+[2025-03-18T13:37:22.890+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  22%|##1       | 1164033/5335161 [00:10<00:25, 165766.60 examples/s]
+[2025-03-18T13:37:22.995+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  22%|##2       | 1185033/5335161 [00:10<00:23, 175564.27 examples/s]
+[2025-03-18T13:37:23.100+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  23%|##2       | 1204033/5335161 [00:10<00:23, 177127.71 examples/s]
+[2025-03-18T13:37:23.256+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  23%|##3       | 1228033/5335161 [00:10<00:24, 168196.59 examples/s]
+[2025-03-18T13:37:23.418+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  23%|##3       | 1252033/5335161 [00:11<00:25, 160737.47 examples/s]
+[2025-03-18T13:37:23.581+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  24%|##3       | 1273033/5335161 [00:11<00:27, 150028.78 examples/s]
+[2025-03-18T13:37:23.687+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  24%|##4       | 1292033/5335161 [00:11<00:25, 156898.76 examples/s]
+[2025-03-18T13:37:23.794+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  25%|##4       | 1310033/5335161 [00:11<00:25, 159894.29 examples/s]
+[2025-03-18T13:37:23.902+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  25%|##4       | 1328033/5335161 [00:11<00:24, 161902.65 examples/s]
+[2025-03-18T13:37:24.005+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  25%|##5       | 1346033/5335161 [00:11<00:24, 165003.64 examples/s]
+[2025-03-18T13:37:24.111+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  26%|##5       | 1366033/5335161 [00:11<00:23, 171763.69 examples/s]
+[2025-03-18T13:37:24.218+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  26%|##5       | 1386033/5335161 [00:11<00:22, 176424.83 examples/s]
+[2025-03-18T13:37:24.326+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  26%|##6       | 1408033/5335161 [00:11<00:21, 184324.01 examples/s]
+[2025-03-18T13:37:24.491+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  27%|##6       | 1433033/5335161 [00:12<00:22, 171389.84 examples/s]
+[2025-03-18T13:37:24.656+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  27%|##7       | 1457033/5335161 [00:12<00:23, 162150.84 examples/s]
+[2025-03-18T13:37:24.822+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  28%|##7       | 1478033/5335161 [00:12<00:25, 150095.63 examples/s]
+[2025-03-18T13:37:24.925+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  28%|##8       | 1495033/5335161 [00:12<00:25, 153567.75 examples/s]
+[2025-03-18T13:37:25.035+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  28%|##8       | 1513033/5335161 [00:12<00:24, 156245.33 examples/s]
+[2025-03-18T13:37:25.143+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  29%|##8       | 1531033/5335161 [00:12<00:23, 158809.74 examples/s]
+[2025-03-18T13:37:25.255+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  29%|##9       | 1550033/5335161 [00:12<00:23, 161985.98 examples/s]
+[2025-03-18T13:37:25.360+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  29%|##9       | 1569033/5335161 [00:13<00:22, 167481.71 examples/s]
+[2025-03-18T13:37:25.467+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  30%|##9       | 1590033/5335161 [00:13<00:21, 175355.51 examples/s]
+[2025-03-18T13:37:25.575+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  30%|###       | 1610033/5335161 [00:13<00:20, 178384.13 examples/s]
+[2025-03-18T13:37:25.687+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  31%|###       | 1629033/5335161 [00:13<00:21, 175934.06 examples/s]
+[2025-03-18T13:37:25.848+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  31%|###       | 1653033/5335161 [00:13<00:22, 165479.87 examples/s]
+[2025-03-18T13:37:26.001+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  31%|###1      | 1677033/5335161 [00:13<00:22, 162555.29 examples/s]
+[2025-03-18T13:37:26.109+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  32%|###1      | 1695033/5335161 [00:13<00:22, 163708.47 examples/s]
+[2025-03-18T13:37:26.218+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  32%|###2      | 1713033/5335161 [00:13<00:22, 164157.28 examples/s]
+[2025-03-18T13:37:26.322+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  32%|###2      | 1730033/5335161 [00:13<00:21, 163934.89 examples/s]
+[2025-03-18T13:37:26.423+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  33%|###2      | 1748033/5335161 [00:14<00:21, 167578.94 examples/s]
+[2025-03-18T13:37:26.529+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  33%|###3      | 1765033/5335161 [00:14<00:21, 165354.06 examples/s]
+[2025-03-18T13:37:26.687+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  34%|###3      | 1791033/5335161 [00:14<00:21, 165171.27 examples/s]
+[2025-03-18T13:37:26.792+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  34%|###3      | 1810033/5335161 [00:14<00:20, 169460.64 examples/s]
+[2025-03-18T13:37:26.897+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  34%|###4      | 1829033/5335161 [00:14<00:20, 172488.65 examples/s]
+[2025-03-18T13:37:27.003+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  35%|###4      | 1847033/5335161 [00:14<00:20, 171955.63 examples/s]
+[2025-03-18T13:37:27.161+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  35%|###5      | 1872033/5335161 [00:14<00:20, 166852.97 examples/s]
+[2025-03-18T13:37:27.322+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  36%|###5      | 1895033/5335161 [00:14<00:21, 158056.59 examples/s]
+[2025-03-18T13:37:27.440+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  36%|###5      | 1912033/5335161 [00:15<00:22, 154575.10 examples/s]
+[2025-03-18T13:37:27.546+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  36%|###6      | 1930033/5335161 [00:15<00:21, 158356.77 examples/s]
+[2025-03-18T13:37:27.650+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  37%|###6      | 1948033/5335161 [00:15<00:20, 162177.90 examples/s]
+[2025-03-18T13:37:27.812+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  37%|###6      | 1972033/5335161 [00:15<00:21, 157033.85 examples/s]
+[2025-03-18T13:37:27.919+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  37%|###7      | 1988033/5335161 [00:15<00:21, 155045.35 examples/s]
+[2025-03-18T13:37:28.023+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  38%|###7      | 2006033/5335161 [00:15<00:20, 159790.34 examples/s]
+[2025-03-18T13:37:28.129+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  38%|###7      | 2027033/5335161 [00:15<00:19, 170407.23 examples/s]
+[2025-03-18T13:37:28.239+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  38%|###8      | 2047033/5335161 [00:15<00:18, 174023.93 examples/s]
+[2025-03-18T13:37:28.343+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  39%|###8      | 2067033/5335161 [00:16<00:18, 178772.42 examples/s]
+[2025-03-18T13:37:28.508+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  39%|###9      | 2089033/5335161 [00:16<00:20, 161292.00 examples/s]
+[2025-03-18T13:37:28.614+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  40%|###9      | 2108033/5335161 [00:16<00:19, 165789.95 examples/s]
+[2025-03-18T13:37:28.771+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/5 shards):  40%|###9      | 2128033/5335161 [00:16<00:21, 152143.88 examples/s]
+[2025-03-18T13:37:28.860+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  40%|####      | 2134065/5335161 [00:16<00:21, 152143.88 examples/s]
+[2025-03-18T13:37:29.016+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  40%|####      | 2149065/5335161 [00:16<00:25, 122802.54 examples/s]
+[2025-03-18T13:37:29.124+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  41%|####      | 2167065/5335161 [00:16<00:23, 132372.49 examples/s]
+[2025-03-18T13:37:29.230+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  41%|####      | 2186065/5335161 [00:16<00:21, 143281.83 examples/s]
+[2025-03-18T13:37:29.336+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  41%|####1     | 2204065/5335161 [00:17<00:20, 149961.01 examples/s]
+[2025-03-18T13:37:29.439+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  42%|####1     | 2221065/5335161 [00:17<00:20, 153764.19 examples/s]
+[2025-03-18T13:37:29.665+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  42%|####1     | 2240065/5335161 [00:17<00:25, 122756.39 examples/s]
+[2025-03-18T13:37:29.773+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  42%|####2     | 2256065/5335161 [00:17<00:23, 128664.03 examples/s]
+[2025-03-18T13:37:29.884+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  43%|####2     | 2271065/5335161 [00:17<00:23, 130206.97 examples/s]
+[2025-03-18T13:37:29.991+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  43%|####2     | 2286065/5335161 [00:17<00:22, 132878.14 examples/s]
+[2025-03-18T13:37:30.153+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  43%|####3     | 2306065/5335161 [00:17<00:23, 129545.85 examples/s]
+[2025-03-18T13:37:30.423+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  44%|####3     | 2325065/5335161 [00:18<00:29, 102143.63 examples/s]
+[2025-03-18T13:37:30.530+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  44%|####3     | 2339065/5335161 [00:18<00:27, 108142.27 examples/s]
+[2025-03-18T13:37:30.637+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  44%|####4     | 2355065/5335161 [00:18<00:25, 117654.79 examples/s]
+[2025-03-18T13:37:30.740+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  44%|####4     | 2374065/5335161 [00:18<00:22, 133519.92 examples/s]
+[2025-03-18T13:37:30.851+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  45%|####4     | 2392065/5335161 [00:18<00:20, 141111.12 examples/s]
+[2025-03-18T13:37:30.955+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  45%|####5     | 2411065/5335161 [00:18<00:19, 152169.98 examples/s]
+[2025-03-18T13:37:31.120+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  46%|####5     | 2431065/5335161 [00:18<00:20, 140738.03 examples/s]
+[2025-03-18T13:37:31.275+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  46%|####5     | 2449065/5335161 [00:18<00:21, 132285.55 examples/s]
+[2025-03-18T13:37:31.441+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  46%|####6     | 2468065/5335161 [00:19<00:22, 126325.49 examples/s]
+[2025-03-18T13:37:31.545+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  47%|####6     | 2483065/5335161 [00:19<00:21, 130447.31 examples/s]
+[2025-03-18T13:37:31.650+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  47%|####6     | 2499065/5335161 [00:19<00:20, 136099.63 examples/s]
+[2025-03-18T13:37:31.753+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  47%|####7     | 2516065/5335161 [00:19<00:19, 143577.42 examples/s]
+[2025-03-18T13:37:31.862+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  48%|####7     | 2535065/5335161 [00:19<00:18, 152053.30 examples/s]
+[2025-03-18T13:37:31.968+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  48%|####7     | 2553065/5335161 [00:19<00:17, 157302.65 examples/s]
+[2025-03-18T13:37:32.076+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  48%|####8     | 2573065/5335161 [00:19<00:16, 165233.07 examples/s]
+[2025-03-18T13:37:32.235+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  49%|####8     | 2595065/5335161 [00:19<00:17, 155248.77 examples/s]
+[2025-03-18T13:37:32.341+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  49%|####8     | 2611065/5335161 [00:20<00:17, 153817.87 examples/s]
+[2025-03-18T13:37:32.506+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  49%|####9     | 2632065/5335161 [00:20<00:18, 144244.10 examples/s]
+[2025-03-18T13:37:32.614+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  50%|####9     | 2647065/5335161 [00:20<00:18, 142623.00 examples/s]
+[2025-03-18T13:37:32.720+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  50%|####9     | 2666065/5335161 [00:20<00:17, 152392.41 examples/s]
+[2025-03-18T13:37:32.823+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  50%|#####     | 2684065/5335161 [00:20<00:16, 158315.98 examples/s]
+[2025-03-18T13:37:32.930+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  51%|#####     | 2704065/5335161 [00:20<00:15, 166750.51 examples/s]
+[2025-03-18T13:37:33.036+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  51%|#####1    | 2724065/5335161 [00:20<00:15, 172843.45 examples/s]
+[2025-03-18T13:37:33.143+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  51%|#####1    | 2744065/5335161 [00:20<00:14, 176826.51 examples/s]
+[2025-03-18T13:37:33.252+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  52%|#####1    | 2762065/5335161 [00:20<00:14, 173688.46 examples/s]
+[2025-03-18T13:37:33.409+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  52%|#####2    | 2787065/5335161 [00:21<00:15, 167924.10 examples/s]
+[2025-03-18T13:37:33.515+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  53%|#####2    | 2804065/5335161 [00:21<00:15, 166166.04 examples/s]
+[2025-03-18T13:37:33.624+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  53%|#####2    | 2821065/5335161 [00:21<00:15, 163087.10 examples/s]
+[2025-03-18T13:37:33.728+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  53%|#####3    | 2838065/5335161 [00:21<00:15, 163100.84 examples/s]
+[2025-03-18T13:37:33.889+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  54%|#####3    | 2859065/5335161 [00:21<00:16, 150653.07 examples/s]
+[2025-03-18T13:37:33.995+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  54%|#####3    | 2876065/5335161 [00:21<00:16, 153531.91 examples/s]
+[2025-03-18T13:37:34.102+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  54%|#####4    | 2895065/5335161 [00:21<00:15, 159934.30 examples/s]
+[2025-03-18T13:37:34.213+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  55%|#####4    | 2912065/5335161 [00:21<00:15, 157949.52 examples/s]
+[2025-03-18T13:37:34.316+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  55%|#####4    | 2930065/5335161 [00:21<00:14, 162721.21 examples/s]
+[2025-03-18T13:37:34.419+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  55%|#####5    | 2950065/5335161 [00:22<00:13, 171778.05 examples/s]
+[2025-03-18T13:37:34.577+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  56%|#####5    | 2976065/5335161 [00:22<00:13, 168855.48 examples/s]
+[2025-03-18T13:37:34.685+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  56%|#####6    | 2999065/5335161 [00:22<00:12, 181108.86 examples/s]
+[2025-03-18T13:37:34.789+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  57%|#####6    | 3019065/5335161 [00:22<00:12, 183718.37 examples/s]
+[2025-03-18T13:37:34.951+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  57%|#####7    | 3045065/5335161 [00:22<00:13, 175321.32 examples/s]
+[2025-03-18T13:37:35.105+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  58%|#####7    | 3069065/5335161 [00:22<00:13, 168653.04 examples/s]
+[2025-03-18T13:37:35.265+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  58%|#####8    | 3095065/5335161 [00:22<00:13, 166352.61 examples/s]
+[2025-03-18T13:37:35.372+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  58%|#####8    | 3114065/5335161 [00:23<00:13, 169143.05 examples/s]
+[2025-03-18T13:37:35.479+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  59%|#####8    | 3134065/5335161 [00:23<00:12, 173709.04 examples/s]
+[2025-03-18T13:37:35.585+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  59%|#####9    | 3155065/5335161 [00:23<00:12, 180399.46 examples/s]
+[2025-03-18T13:37:35.690+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  60%|#####9    | 3178065/5335161 [00:23<00:11, 190709.93 examples/s]
+[2025-03-18T13:37:35.796+0000] {logging_mixin.py:190} WARNING - Saving the dataset (2/5 shards):  60%|#####9    | 3200065/5335161 [00:23<00:10, 195876.62 examples/s]
+[2025-03-18T13:37:35.837+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  60%|######    | 3201097/5335161 [00:23<00:10, 195876.62 examples/s]
+[2025-03-18T13:37:35.989+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  60%|######    | 3224097/5335161 [00:23<00:12, 165321.49 examples/s]
+[2025-03-18T13:37:36.093+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  61%|######    | 3242097/5335161 [00:23<00:12, 167339.67 examples/s]
+[2025-03-18T13:37:36.253+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  61%|######1   | 3265097/5335161 [00:23<00:12, 159238.65 examples/s]
+[2025-03-18T13:37:36.358+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  62%|######1   | 3283097/5335161 [00:24<00:12, 162173.74 examples/s]
+[2025-03-18T13:37:36.542+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  62%|######1   | 3300097/5335161 [00:24<00:15, 135310.40 examples/s]
+[2025-03-18T13:37:36.646+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  62%|######2   | 3318097/5335161 [00:24<00:13, 144199.98 examples/s]
+[2025-03-18T13:37:36.752+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  63%|######2   | 3338097/5335161 [00:24<00:12, 155888.36 examples/s]
+[2025-03-18T13:37:36.857+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  63%|######2   | 3356097/5335161 [00:24<00:12, 160020.53 examples/s]
+[2025-03-18T13:37:36.963+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  63%|######3   | 3374097/5335161 [00:24<00:12, 162557.24 examples/s]
+[2025-03-18T13:37:37.069+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  64%|######3   | 3394097/5335161 [00:24<00:11, 170150.71 examples/s]
+[2025-03-18T13:37:37.175+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  64%|######3   | 3414097/5335161 [00:24<00:10, 175490.27 examples/s]
+[2025-03-18T13:37:37.280+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  64%|######4   | 3434097/5335161 [00:24<00:10, 179379.69 examples/s]
+[2025-03-18T13:37:37.385+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  65%|######4   | 3455097/5335161 [00:25<00:10, 185792.18 examples/s]
+[2025-03-18T13:37:37.488+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  65%|######5   | 3477097/5335161 [00:25<00:09, 193669.78 examples/s]
+[2025-03-18T13:37:37.590+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  66%|######5   | 3498097/5335161 [00:25<00:09, 197284.40 examples/s]
+[2025-03-18T13:37:37.746+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  66%|######6   | 3523097/5335161 [00:25<00:09, 183089.85 examples/s]
+[2025-03-18T13:37:37.902+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  67%|######6   | 3549097/5335161 [00:25<00:10, 177021.51 examples/s]
+[2025-03-18T13:37:38.005+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  67%|######6   | 3569097/5335161 [00:25<00:09, 181466.72 examples/s]
+[2025-03-18T13:37:38.109+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  67%|######7   | 3593097/5335161 [00:25<00:08, 194635.36 examples/s]
+[2025-03-18T13:37:38.213+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  68%|######7   | 3615097/5335161 [00:25<00:08, 198946.20 examples/s]
+[2025-03-18T13:37:38.315+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  68%|######8   | 3636097/5335161 [00:25<00:08, 201272.87 examples/s]
+[2025-03-18T13:37:38.468+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  69%|######8   | 3666097/5335161 [00:26<00:08, 199029.67 examples/s]
+[2025-03-18T13:37:38.572+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  69%|######9   | 3688097/5335161 [00:26<00:08, 202672.82 examples/s]
+[2025-03-18T13:37:38.731+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  70%|######9   | 3717097/5335161 [00:26<00:08, 195139.91 examples/s]
+[2025-03-18T13:37:38.838+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  70%|#######   | 3739097/5335161 [00:26<00:08, 197741.04 examples/s]
+[2025-03-18T13:37:38.940+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  70%|#######   | 3760097/5335161 [00:26<00:07, 200182.08 examples/s]
+[2025-03-18T13:37:39.043+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  71%|#######   | 3783097/5335161 [00:26<00:07, 206177.39 examples/s]
+[2025-03-18T13:37:39.149+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  71%|#######1  | 3806097/5335161 [00:26<00:07, 209250.86 examples/s]
+[2025-03-18T13:37:39.306+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  72%|#######1  | 3837097/5335161 [00:26<00:07, 205142.40 examples/s]
+[2025-03-18T13:37:39.468+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  72%|#######2  | 3867097/5335161 [00:27<00:07, 197784.38 examples/s]
+[2025-03-18T13:37:39.619+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  73%|#######3  | 3898097/5335161 [00:27<00:07, 200179.40 examples/s]
+[2025-03-18T13:37:39.771+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  73%|#######3  | 3921097/5335161 [00:27<00:07, 184599.74 examples/s]
+[2025-03-18T13:37:39.947+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  74%|#######3  | 3944097/5335161 [00:27<00:08, 166052.31 examples/s]
+[2025-03-18T13:37:40.056+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  74%|#######4  | 3963097/5335161 [00:27<00:08, 168030.94 examples/s]
+[2025-03-18T13:37:40.157+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  75%|#######4  | 3984097/5335161 [00:27<00:07, 177599.35 examples/s]
+[2025-03-18T13:37:40.262+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  75%|#######5  | 4005097/5335161 [00:27<00:07, 183129.63 examples/s]
+[2025-03-18T13:37:40.367+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  75%|#######5  | 4024097/5335161 [00:28<00:07, 182644.50 examples/s]
+[2025-03-18T13:37:40.474+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  76%|#######5  | 4043097/5335161 [00:28<00:07, 181522.71 examples/s]
+[2025-03-18T13:37:40.633+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  76%|#######6  | 4071097/5335161 [00:28<00:07, 179374.24 examples/s]
+[2025-03-18T13:37:40.738+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  77%|#######6  | 4091097/5335161 [00:28<00:06, 182309.38 examples/s]
+[2025-03-18T13:37:40.904+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  77%|#######7  | 4119097/5335161 [00:28<00:06, 176989.96 examples/s]
+[2025-03-18T13:37:41.063+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  78%|#######7  | 4145097/5335161 [00:28<00:06, 172509.26 examples/s]
+[2025-03-18T13:37:41.225+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  78%|#######8  | 4166097/5335161 [00:28<00:07, 158354.96 examples/s]
+[2025-03-18T13:37:41.387+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  78%|#######8  | 4187097/5335161 [00:29<00:07, 149265.95 examples/s]
+[2025-03-18T13:37:41.542+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  79%|#######8  | 4210097/5335161 [00:29<00:07, 149025.31 examples/s]
+[2025-03-18T13:37:41.645+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  79%|#######9  | 4228097/5335161 [00:29<00:07, 154833.86 examples/s]
+[2025-03-18T13:37:41.751+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  80%|#######9  | 4246097/5335161 [00:29<00:06, 158676.04 examples/s]
+[2025-03-18T13:37:41.858+0000] {logging_mixin.py:190} WARNING - Saving the dataset (3/5 shards):  80%|#######9  | 4263097/5335161 [00:29<00:06, 158628.77 examples/s]
+[2025-03-18T13:37:41.924+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  80%|########  | 4268129/5335161 [00:29<00:06, 158628.77 examples/s]
+[2025-03-18T13:37:42.262+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  80%|########  | 4287129/5335161 [00:29<00:10, 100471.91 examples/s]
+[2025-03-18T13:37:42.368+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  81%|########  | 4303129/5335161 [00:30<00:09, 109517.79 examples/s]
+[2025-03-18T13:37:42.475+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  81%|########  | 4321129/5335161 [00:30<00:08, 121598.81 examples/s]
+[2025-03-18T13:37:42.578+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  81%|########1 | 4340129/5335161 [00:30<00:07, 135440.98 examples/s]
+[2025-03-18T13:37:42.684+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  82%|########1 | 4362129/5335161 [00:30<00:06, 153230.27 examples/s]
+[2025-03-18T13:37:42.784+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  82%|########2 | 4384129/5335161 [00:30<00:05, 169609.58 examples/s]
+[2025-03-18T13:37:42.893+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  83%|########2 | 4405129/5335161 [00:30<00:05, 176164.01 examples/s]
+[2025-03-18T13:37:42.999+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  83%|########2 | 4424129/5335161 [00:30<00:05, 177112.77 examples/s]
+[2025-03-18T13:37:43.166+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  83%|########3 | 4449129/5335161 [00:30<00:05, 166580.92 examples/s]
+[2025-03-18T13:37:43.323+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  84%|########3 | 4477129/5335161 [00:30<00:05, 170562.57 examples/s]
+[2025-03-18T13:37:43.429+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  84%|########4 | 4497129/5335161 [00:31<00:04, 175232.76 examples/s]
+[2025-03-18T13:37:43.531+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  85%|########4 | 4518129/5335161 [00:31<00:04, 182810.48 examples/s]
+[2025-03-18T13:37:43.639+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  85%|########5 | 4537129/5335161 [00:31<00:04, 180902.41 examples/s]
+[2025-03-18T13:37:43.799+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  86%|########5 | 4563129/5335161 [00:31<00:04, 173922.62 examples/s]
+[2025-03-18T13:37:43.954+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  86%|########6 | 4589129/5335161 [00:31<00:04, 171950.52 examples/s]
+[2025-03-18T13:37:44.058+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  86%|########6 | 4614129/5335161 [00:31<00:03, 188741.05 examples/s]
+[2025-03-18T13:37:44.159+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  87%|########6 | 4636129/5335161 [00:31<00:03, 195961.16 examples/s]
+[2025-03-18T13:37:44.264+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  87%|########7 | 4660129/5335161 [00:31<00:03, 204850.98 examples/s]
+[2025-03-18T13:37:44.369+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  88%|########7 | 4682129/5335161 [00:32<00:03, 206219.45 examples/s]
+[2025-03-18T13:37:44.474+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  88%|########8 | 4704129/5335161 [00:32<00:03, 207517.37 examples/s]
+[2025-03-18T13:37:44.581+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  89%|########8 | 4726129/5335161 [00:32<00:02, 206791.09 examples/s]
+[2025-03-18T13:37:44.685+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  89%|########8 | 4747129/5335161 [00:32<00:02, 205192.27 examples/s]
+[2025-03-18T13:37:44.791+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  89%|########9 | 4768129/5335161 [00:32<00:02, 203171.34 examples/s]
+[2025-03-18T13:37:44.897+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  90%|########9 | 4790129/5335161 [00:32<00:02, 204741.11 examples/s]
+[2025-03-18T13:37:45.057+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  90%|######### | 4817129/5335161 [00:32<00:02, 190363.97 examples/s]
+[2025-03-18T13:37:45.219+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  91%|######### | 4845129/5335161 [00:32<00:02, 184247.26 examples/s]
+[2025-03-18T13:37:45.372+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  91%|#########1| 4873129/5335161 [00:33<00:02, 183719.05 examples/s]
+[2025-03-18T13:37:45.480+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  92%|#########1| 4894129/5335161 [00:33<00:02, 186257.28 examples/s]
+[2025-03-18T13:37:45.587+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  92%|#########2| 4914129/5335161 [00:33<00:02, 186746.88 examples/s]
+[2025-03-18T13:37:45.689+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  92%|#########2| 4933129/5335161 [00:33<00:02, 186299.14 examples/s]
+[2025-03-18T13:37:45.847+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  93%|#########2| 4961129/5335161 [00:33<00:02, 183192.29 examples/s]
+[2025-03-18T13:37:46.002+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  94%|#########3| 4989129/5335161 [00:33<00:01, 182141.93 examples/s]
+[2025-03-18T13:37:46.106+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  94%|#########3| 5011129/5335161 [00:33<00:01, 189523.13 examples/s]
+[2025-03-18T13:37:46.211+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  94%|#########4| 5032129/5335161 [00:33<00:01, 192157.04 examples/s]
+[2025-03-18T13:37:46.367+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  95%|#########4| 5061129/5335161 [00:34<00:01, 190209.70 examples/s]
+[2025-03-18T13:37:46.523+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  95%|#########5| 5090129/5335161 [00:34<00:01, 188503.07 examples/s]
+[2025-03-18T13:37:46.631+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  96%|#########5| 5110129/5335161 [00:34<00:01, 187679.81 examples/s]
+[2025-03-18T13:37:46.736+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  96%|#########6| 5131129/5335161 [00:34<00:01, 190922.14 examples/s]
+[2025-03-18T13:37:46.841+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  97%|#########6| 5151129/5335161 [00:34<00:00, 190634.71 examples/s]
+[2025-03-18T13:37:47.003+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  97%|#########7| 5178129/5335161 [00:34<00:00, 181823.68 examples/s]
+[2025-03-18T13:37:47.158+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  98%|#########7| 5206129/5335161 [00:34<00:00, 181554.40 examples/s]
+[2025-03-18T13:37:47.262+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  98%|#########7| 5225129/5335161 [00:34<00:00, 181652.67 examples/s]
+[2025-03-18T13:37:47.422+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  98%|#########8| 5249129/5335161 [00:35<00:00, 170562.39 examples/s]
+[2025-03-18T13:37:47.581+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  99%|#########8| 5275129/5335161 [00:35<00:00, 168352.64 examples/s]
+[2025-03-18T13:37:47.737+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards):  99%|#########9| 5300129/5335161 [00:35<00:00, 165686.08 examples/s]
+[2025-03-18T13:37:47.842+0000] {logging_mixin.py:190} WARNING - Saving the dataset (4/5 shards): 100%|#########9| 5318129/5335161 [00:35<00:00, 166943.09 examples/s]
+[2025-03-18T13:37:47.962+0000] {logging_mixin.py:190} WARNING - Saving the dataset (5/5 shards): 100%|##########| 5335161/5335161 [00:35<00:00, 166943.09 examples/s]
+[2025-03-18T13:37:47.963+0000] {logging_mixin.py:190} WARNING - Saving the dataset (5/5 shards): 100%|##########| 5335161/5335161 [00:35<00:00, 149734.77 examples/s]
+[2025-03-18T13:37:47.973+0000] {logging_mixin.py:190} INFO - Extracted data saved to /opt/***/dataset/kindle_reviews
+[2025-03-18T13:37:48.168+0000] {python.py:240} INFO - Done. Returned value was: {'reviews_path': '/opt/***/dataset/kindle_reviews'}
+[2025-03-18T13:37:48.248+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-18T13:37:48.248+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kindle_store_etl_taskflow, task_id=extract_review_data, run_id=manual__2025-03-18T13:36:43.799986+00:00, execution_date=20250318T133643, start_date=20250318T133647, end_date=20250318T133748
+[2025-03-18T13:37:48.257+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-18T13:37:48.257+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-18T13:37:48.257+0000] {logging_mixin.py:190} INFO - Dag name:kindle_store_etl_taskflow queued_at:2025-03-18 13:36:43.804318+00:00
+[2025-03-18T13:37:48.257+0000] {logging_mixin.py:190} INFO - Task hostname:1116547ce33b operator:_PythonDecoratedOperator
+[2025-03-18T13:37:48.311+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-18T13:37:48.327+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-18T13:37:48.327+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

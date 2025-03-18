@@ -1,0 +1,147 @@
+[2025-03-16T01:29:03.318+0000] {processor.py:186} INFO - Started process (PID=8666) to work on /opt/airflow/dags/etl.py
+[2025-03-16T01:29:03.319+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T01:29:03.320+0000] {logging_mixin.py:190} INFO - [2025-03-16T01:29:03.320+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T01:29:03.449+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T01:29:03.460+0000] {logging_mixin.py:190} INFO - [2025-03-16T01:29:03.460+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T01:29:03.471+0000] {logging_mixin.py:190} INFO - [2025-03-16T01:29:03.471+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T01:29:03.484+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.169 seconds
+[2025-03-16T02:50:13.490+0000] {processor.py:186} INFO - Started process (PID=8733) to work on /opt/airflow/dags/etl.py
+[2025-03-16T02:50:13.491+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T02:50:13.492+0000] {logging_mixin.py:190} INFO - [2025-03-16T02:50:13.491+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T02:50:13.615+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T02:50:13.627+0000] {logging_mixin.py:190} INFO - [2025-03-16T02:50:13.626+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T02:50:13.637+0000] {logging_mixin.py:190} INFO - [2025-03-16T02:50:13.636+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T02:50:13.646+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.158 seconds
+[2025-03-16T04:04:20.217+0000] {processor.py:186} INFO - Started process (PID=8799) to work on /opt/airflow/dags/etl.py
+[2025-03-16T04:04:20.217+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T04:04:20.219+0000] {logging_mixin.py:190} INFO - [2025-03-16T04:04:20.219+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T04:04:20.526+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T04:04:20.539+0000] {logging_mixin.py:190} INFO - [2025-03-16T04:04:20.539+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T04:04:20.552+0000] {logging_mixin.py:190} INFO - [2025-03-16T04:04:20.552+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T04:04:20.588+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.375 seconds
+[2025-03-16T05:14:52.284+0000] {processor.py:186} INFO - Started process (PID=8864) to work on /opt/airflow/dags/etl.py
+[2025-03-16T05:14:52.284+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T05:14:52.287+0000] {logging_mixin.py:190} INFO - [2025-03-16T05:14:52.286+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T05:14:52.418+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T05:14:52.429+0000] {logging_mixin.py:190} INFO - [2025-03-16T05:14:52.429+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T05:14:52.440+0000] {logging_mixin.py:190} INFO - [2025-03-16T05:14:52.440+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T05:14:52.447+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.166 seconds
+[2025-03-16T06:06:44.732+0000] {processor.py:186} INFO - Started process (PID=8930) to work on /opt/airflow/dags/etl.py
+[2025-03-16T06:06:44.743+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T06:06:44.744+0000] {logging_mixin.py:190} INFO - [2025-03-16T06:06:44.744+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T06:06:44.869+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T06:06:44.880+0000] {logging_mixin.py:190} INFO - [2025-03-16T06:06:44.880+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T06:06:44.890+0000] {logging_mixin.py:190} INFO - [2025-03-16T06:06:44.890+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T06:06:44.897+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.168 seconds
+[2025-03-16T07:16:47.838+0000] {processor.py:186} INFO - Started process (PID=8996) to work on /opt/airflow/dags/etl.py
+[2025-03-16T07:16:47.840+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T07:16:47.841+0000] {logging_mixin.py:190} INFO - [2025-03-16T07:16:47.841+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T07:16:47.966+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T07:16:47.977+0000] {logging_mixin.py:190} INFO - [2025-03-16T07:16:47.977+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T07:16:47.989+0000] {logging_mixin.py:190} INFO - [2025-03-16T07:16:47.989+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T07:16:47.999+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.164 seconds
+[2025-03-16T08:08:40.153+0000] {processor.py:186} INFO - Started process (PID=9061) to work on /opt/airflow/dags/etl.py
+[2025-03-16T08:08:40.153+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T08:08:40.154+0000] {logging_mixin.py:190} INFO - [2025-03-16T08:08:40.154+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T08:08:40.278+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T08:08:40.290+0000] {logging_mixin.py:190} INFO - [2025-03-16T08:08:40.290+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T08:08:40.300+0000] {logging_mixin.py:190} INFO - [2025-03-16T08:08:40.300+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T08:08:40.307+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.157 seconds
+[2025-03-16T09:18:50.182+0000] {processor.py:186} INFO - Started process (PID=9126) to work on /opt/airflow/dags/etl.py
+[2025-03-16T09:18:50.183+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T09:18:50.184+0000] {logging_mixin.py:190} INFO - [2025-03-16T09:18:50.184+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T09:18:50.304+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T09:18:50.313+0000] {logging_mixin.py:190} INFO - [2025-03-16T09:18:50.313+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T09:18:50.326+0000] {logging_mixin.py:190} INFO - [2025-03-16T09:18:50.325+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T09:18:50.334+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.154 seconds
+[2025-03-16T10:37:09.183+0000] {processor.py:186} INFO - Started process (PID=9192) to work on /opt/airflow/dags/etl.py
+[2025-03-16T10:37:09.183+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T10:37:09.184+0000] {logging_mixin.py:190} INFO - [2025-03-16T10:37:09.184+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T10:37:09.303+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T10:37:09.313+0000] {logging_mixin.py:190} INFO - [2025-03-16T10:37:09.313+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T10:37:09.323+0000] {logging_mixin.py:190} INFO - [2025-03-16T10:37:09.323+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T10:37:09.331+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.151 seconds
+[2025-03-16T11:55:35.268+0000] {processor.py:186} INFO - Started process (PID=9258) to work on /opt/airflow/dags/etl.py
+[2025-03-16T11:55:35.268+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T11:55:35.270+0000] {logging_mixin.py:190} INFO - [2025-03-16T11:55:35.270+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T11:55:35.391+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T11:55:35.399+0000] {logging_mixin.py:190} INFO - [2025-03-16T11:55:35.399+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T11:55:35.412+0000] {logging_mixin.py:190} INFO - [2025-03-16T11:55:35.412+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T11:55:35.422+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.156 seconds
+[2025-03-16T13:22:46.976+0000] {processor.py:186} INFO - Started process (PID=9324) to work on /opt/airflow/dags/etl.py
+[2025-03-16T13:22:46.977+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T13:22:46.978+0000] {logging_mixin.py:190} INFO - [2025-03-16T13:22:46.978+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T13:22:47.099+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T13:22:47.108+0000] {logging_mixin.py:190} INFO - [2025-03-16T13:22:47.108+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T13:22:47.118+0000] {logging_mixin.py:190} INFO - [2025-03-16T13:22:47.117+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T13:22:47.127+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.155 seconds
+[2025-03-16T14:21:34.169+0000] {processor.py:186} INFO - Started process (PID=9390) to work on /opt/airflow/dags/etl.py
+[2025-03-16T14:21:34.170+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T14:21:34.172+0000] {logging_mixin.py:190} INFO - [2025-03-16T14:21:34.172+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T14:21:34.438+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T14:21:34.458+0000] {logging_mixin.py:190} INFO - [2025-03-16T14:21:34.458+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T14:21:34.476+0000] {logging_mixin.py:190} INFO - [2025-03-16T14:21:34.476+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T14:21:34.535+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.369 seconds
+[2025-03-16T15:24:54.340+0000] {processor.py:186} INFO - Started process (PID=9456) to work on /opt/airflow/dags/etl.py
+[2025-03-16T15:24:54.340+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T15:24:54.342+0000] {logging_mixin.py:190} INFO - [2025-03-16T15:24:54.342+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T15:24:54.466+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T15:24:54.478+0000] {logging_mixin.py:190} INFO - [2025-03-16T15:24:54.478+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T15:24:54.490+0000] {logging_mixin.py:190} INFO - [2025-03-16T15:24:54.490+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T15:24:54.505+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.168 seconds
+[2025-03-16T15:28:41.234+0000] {processor.py:186} INFO - Started process (PID=9521) to work on /opt/airflow/dags/etl.py
+[2025-03-16T15:28:41.234+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T15:28:41.235+0000] {logging_mixin.py:190} INFO - [2025-03-16T15:28:41.235+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T15:28:41.359+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T15:28:41.371+0000] {logging_mixin.py:190} INFO - [2025-03-16T15:28:41.371+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T15:28:41.382+0000] {logging_mixin.py:190} INFO - [2025-03-16T15:28:41.382+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T15:28:41.389+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.158 seconds
+[2025-03-16T15:47:18.064+0000] {processor.py:186} INFO - Started process (PID=9587) to work on /opt/airflow/dags/etl.py
+[2025-03-16T15:47:18.065+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T15:47:18.066+0000] {logging_mixin.py:190} INFO - [2025-03-16T15:47:18.066+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T15:47:18.190+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T15:47:18.201+0000] {logging_mixin.py:190} INFO - [2025-03-16T15:47:18.201+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T15:47:18.215+0000] {logging_mixin.py:190} INFO - [2025-03-16T15:47:18.215+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T15:47:18.230+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.169 seconds
+[2025-03-16T16:34:21.156+0000] {processor.py:186} INFO - Started process (PID=9653) to work on /opt/airflow/dags/etl.py
+[2025-03-16T16:34:21.157+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T16:34:21.158+0000] {logging_mixin.py:190} INFO - [2025-03-16T16:34:21.158+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T16:34:21.283+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T16:34:21.293+0000] {logging_mixin.py:190} INFO - [2025-03-16T16:34:21.293+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T16:34:21.304+0000] {logging_mixin.py:190} INFO - [2025-03-16T16:34:21.304+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T16:34:21.319+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.165 seconds
+[2025-03-16T17:31:54.600+0000] {processor.py:186} INFO - Started process (PID=9718) to work on /opt/airflow/dags/etl.py
+[2025-03-16T17:31:54.601+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T17:31:54.602+0000] {logging_mixin.py:190} INFO - [2025-03-16T17:31:54.602+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T17:31:54.752+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T17:31:54.769+0000] {logging_mixin.py:190} INFO - [2025-03-16T17:31:54.769+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T17:31:54.788+0000] {logging_mixin.py:190} INFO - [2025-03-16T17:31:54.787+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T17:31:54.802+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.205 seconds
+[2025-03-16T19:10:47.134+0000] {processor.py:186} INFO - Started process (PID=9784) to work on /opt/airflow/dags/etl.py
+[2025-03-16T19:10:47.134+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T19:10:47.135+0000] {logging_mixin.py:190} INFO - [2025-03-16T19:10:47.135+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T19:10:47.260+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T19:10:47.272+0000] {logging_mixin.py:190} INFO - [2025-03-16T19:10:47.272+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T19:10:47.283+0000] {logging_mixin.py:190} INFO - [2025-03-16T19:10:47.283+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T19:10:47.290+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.159 seconds
+[2025-03-16T20:34:15.436+0000] {processor.py:186} INFO - Started process (PID=9850) to work on /opt/airflow/dags/etl.py
+[2025-03-16T20:34:15.436+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T20:34:15.439+0000] {logging_mixin.py:190} INFO - [2025-03-16T20:34:15.438+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T20:34:15.579+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T20:34:15.591+0000] {logging_mixin.py:190} INFO - [2025-03-16T20:34:15.591+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T20:34:15.603+0000] {logging_mixin.py:190} INFO - [2025-03-16T20:34:15.603+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T20:34:15.609+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.179 seconds
+[2025-03-16T22:12:55.393+0000] {processor.py:186} INFO - Started process (PID=9915) to work on /opt/airflow/dags/etl.py
+[2025-03-16T22:12:55.397+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T22:12:55.398+0000] {logging_mixin.py:190} INFO - [2025-03-16T22:12:55.398+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T22:12:55.519+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T22:12:55.527+0000] {logging_mixin.py:190} INFO - [2025-03-16T22:12:55.527+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T22:12:55.535+0000] {logging_mixin.py:190} INFO - [2025-03-16T22:12:55.535+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T22:12:55.631+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.241 seconds
+[2025-03-16T23:22:35.491+0000] {processor.py:186} INFO - Started process (PID=9980) to work on /opt/airflow/dags/etl.py
+[2025-03-16T23:22:35.491+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl.py for tasks to queue
+[2025-03-16T23:22:35.493+0000] {logging_mixin.py:190} INFO - [2025-03-16T23:22:35.493+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl.py
+[2025-03-16T23:22:35.615+0000] {processor.py:925} INFO - DAG(s) 'kindle_store_etl_taskflow' retrieved from /opt/airflow/dags/etl.py
+[2025-03-16T23:22:35.626+0000] {logging_mixin.py:190} INFO - [2025-03-16T23:22:35.626+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-03-16T23:22:35.726+0000] {logging_mixin.py:190} INFO - [2025-03-16T23:22:35.725+0000] {dag.py:4180} INFO - Setting next_dagrun for kindle_store_etl_taskflow to 2025-03-16 00:00:00+00:00, run_after=2025-03-23 00:00:00+00:00
+[2025-03-16T23:22:35.737+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl.py took 0.249 seconds

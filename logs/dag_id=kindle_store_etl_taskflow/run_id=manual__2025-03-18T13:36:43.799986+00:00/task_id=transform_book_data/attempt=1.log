@@ -1,0 +1,128 @@
+[2025-03-18T13:36:58.781+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-18T13:36:58.790+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kindle_store_etl_taskflow.transform_book_data manual__2025-03-18T13:36:43.799986+00:00 [queued]>
+[2025-03-18T13:36:58.794+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kindle_store_etl_taskflow.transform_book_data manual__2025-03-18T13:36:43.799986+00:00 [queued]>
+[2025-03-18T13:36:58.794+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-18T13:36:58.799+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): transform_book_data> on 2025-03-18 13:36:43.799986+00:00
+[2025-03-18T13:36:58.806+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1135) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-18T13:36:58.807+0000] {standard_task_runner.py:72} INFO - Started process 1136 to run task
+[2025-03-18T13:36:58.807+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kindle_store_etl_taskflow', 'transform_book_data', 'manual__2025-03-18T13:36:43.799986+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp4vumvodl']
+[2025-03-18T13:36:58.808+0000] {standard_task_runner.py:105} INFO - Job 33: Subtask transform_book_data
+[2025-03-18T13:36:58.837+0000] {task_command.py:467} INFO - Running <TaskInstance: kindle_store_etl_taskflow.transform_book_data manual__2025-03-18T13:36:43.799986+00:00 [running]> on host 1116547ce33b
+[2025-03-18T13:36:58.872+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kindle_store_etl_taskflow' AIRFLOW_CTX_TASK_ID='transform_book_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-18T13:36:43.799986+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-18T13:36:43.799986+00:00'
+[2025-03-18T13:36:58.872+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-18T13:36:58.872+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-18T13:36:58.873+0000] {logging_mixin.py:190} INFO - Current task name:transform_book_data state:running start_date:2025-03-18 13:36:58.790469+00:00
+[2025-03-18T13:36:58.873+0000] {logging_mixin.py:190} INFO - Dag name:kindle_store_etl_taskflow and current dag run status:running
+[2025-03-18T13:36:58.873+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-18T13:36:59.578+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   0%|          | 0/1591371 [00:00<?, ? examples/s]
+[2025-03-18T13:37:04.041+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   0%|          | 163/1591371 [00:04<11:56:47, 37.00 examples/s]
+[2025-03-18T13:37:04.102+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   0%|          | 2079/1591371 [00:04<41:46, 634.01 examples/s] 
+[2025-03-18T13:37:04.217+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   1%|          | 15689/1591371 [00:04<04:06, 6379.57 examples/s]
+[2025-03-18T13:37:04.323+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   2%|1         | 29802/1591371 [00:04<01:51, 14028.77 examples/s]
+[2025-03-18T13:37:04.450+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   3%|3         | 49294/1591371 [00:04<00:56, 27087.56 examples/s]
+[2025-03-18T13:37:04.587+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   4%|3         | 60806/1591371 [00:05<00:44, 34273.78 examples/s]
+[2025-03-18T13:37:04.689+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   6%|5         | 94124/1591371 [00:05<00:21, 68841.40 examples/s]
+[2025-03-18T13:37:04.807+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   7%|7         | 112032/1591371 [00:05<00:17, 82463.80 examples/s]
+[2025-03-18T13:37:04.943+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   8%|8         | 128863/1591371 [00:05<00:16, 91194.31 examples/s]
+[2025-03-18T13:37:05.106+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):   9%|9         | 144303/1591371 [00:05<00:15, 92129.95 examples/s]
+[2025-03-18T13:37:05.207+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  10%|9         | 158064/1591371 [00:05<00:14, 100610.63 examples/s]
+[2025-03-18T13:37:05.308+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  11%|#         | 175003/1591371 [00:05<00:12, 114881.76 examples/s]
+[2025-03-18T13:37:05.410+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  12%|#1        | 189769/1591371 [00:05<00:11, 122115.24 examples/s]
+[2025-03-18T13:37:05.525+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  13%|#2        | 204469/1591371 [00:05<00:11, 123733.42 examples/s]
+[2025-03-18T13:37:05.636+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  14%|#3        | 218702/1591371 [00:06<00:10, 124790.54 examples/s]
+[2025-03-18T13:37:05.737+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  15%|#4        | 235710/1591371 [00:06<00:09, 136504.81 examples/s]
+[2025-03-18T13:37:05.838+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  16%|#5        | 251023/1591371 [00:06<00:09, 140256.80 examples/s]
+[2025-03-18T13:37:05.959+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  17%|#6        | 265816/1591371 [00:06<00:09, 134671.76 examples/s]
+[2025-03-18T13:37:06.074+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  18%|#7        | 279872/1591371 [00:06<00:10, 130912.15 examples/s]
+[2025-03-18T13:37:06.266+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  18%|#8        | 293455/1591371 [00:06<00:12, 105800.57 examples/s]
+[2025-03-18T13:37:06.373+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  19%|#9        | 305222/1591371 [00:06<00:12, 106734.57 examples/s]
+[2025-03-18T13:37:06.473+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  20%|##        | 318796/1591371 [00:06<00:11, 113976.37 examples/s]
+[2025-03-18T13:37:06.576+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  21%|##        | 332223/1591371 [00:06<00:10, 118595.46 examples/s]
+[2025-03-18T13:37:06.677+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  22%|##1       | 346872/1591371 [00:07<00:09, 125700.10 examples/s]
+[2025-03-18T13:37:06.779+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  23%|##2       | 360062/1591371 [00:07<00:09, 126564.13 examples/s]
+[2025-03-18T13:37:06.884+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  24%|##3       | 373988/1591371 [00:07<00:09, 128517.56 examples/s]
+[2025-03-18T13:37:06.984+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  24%|##4       | 387095/1591371 [00:07<00:09, 129074.42 examples/s]
+[2025-03-18T13:37:07.087+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  25%|##5       | 403140/1591371 [00:07<00:08, 136937.96 examples/s]
+[2025-03-18T13:37:07.191+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  26%|##6       | 418181/1591371 [00:07<00:08, 139479.74 examples/s]
+[2025-03-18T13:37:07.327+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  27%|##7       | 432329/1591371 [00:07<00:09, 126872.69 examples/s]
+[2025-03-18T13:37:07.432+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  28%|##8       | 452296/1591371 [00:07<00:07, 144656.82 examples/s]
+[2025-03-18T13:37:07.536+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  29%|##9       | 469285/1591371 [00:07<00:07, 150043.14 examples/s]
+[2025-03-18T13:37:07.645+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  30%|###       | 484521/1591371 [00:08<00:07, 146914.79 examples/s]
+[2025-03-18T13:37:07.777+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  31%|###1      | 499597/1591371 [00:08<00:08, 135575.42 examples/s]
+[2025-03-18T13:37:07.881+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  32%|###2      | 514164/1591371 [00:08<00:07, 137162.19 examples/s]
+[2025-03-18T13:37:07.987+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  33%|###3      | 529807/1591371 [00:08<00:07, 140106.29 examples/s]
+[2025-03-18T13:37:08.087+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  34%|###4      | 546268/1591371 [00:08<00:07, 146886.36 examples/s]
+[2025-03-18T13:37:08.189+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  35%|###5      | 561451/1591371 [00:08<00:06, 147379.92 examples/s]
+[2025-03-18T13:37:08.325+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  36%|###6      | 576833/1591371 [00:08<00:07, 135250.57 examples/s]
+[2025-03-18T13:37:08.426+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  38%|###7      | 598736/1591371 [00:08<00:06, 157540.12 examples/s]
+[2025-03-18T13:37:08.529+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  39%|###8      | 615523/1591371 [00:08<00:06, 159514.62 examples/s]
+[2025-03-18T13:37:08.673+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  40%|###9      | 631876/1591371 [00:09<00:06, 142527.53 examples/s]
+[2025-03-18T13:37:08.777+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  41%|####      | 646859/1591371 [00:09<00:06, 143088.64 examples/s]
+[2025-03-18T13:37:08.894+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  42%|####1     | 661654/1591371 [00:09<00:06, 137856.53 examples/s]
+[2025-03-18T13:37:09.021+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  42%|####2     | 675972/1591371 [00:09<00:07, 129784.96 examples/s]
+[2025-03-18T13:37:09.254+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  43%|####3     | 689229/1591371 [00:09<00:09, 96479.71 examples/s] 
+[2025-03-18T13:37:09.357+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  46%|####6     | 733591/1591371 [00:09<00:05, 171373.32 examples/s]
+[2025-03-18T13:37:09.658+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  47%|####7     | 754407/1591371 [00:10<00:06, 131301.31 examples/s]
+[2025-03-18T13:37:09.874+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  48%|####8     | 771348/1591371 [00:10<00:07, 105370.26 examples/s]
+[2025-03-18T13:37:09.975+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  51%|#####1    | 813319/1591371 [00:10<00:04, 160727.59 examples/s]
+[2025-03-18T13:37:10.118+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  53%|#####2    | 835672/1591371 [00:10<00:04, 159626.57 examples/s]
+[2025-03-18T13:37:10.230+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  54%|#####3    | 857228/1591371 [00:10<00:04, 167154.76 examples/s]
+[2025-03-18T13:37:10.369+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  55%|#####5    | 877234/1591371 [00:10<00:04, 160458.70 examples/s]
+[2025-03-18T13:37:10.662+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  56%|#####6    | 895509/1591371 [00:11<00:06, 114796.78 examples/s]
+[2025-03-18T13:37:10.803+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  57%|#####7    | 910336/1591371 [00:11<00:06, 112502.59 examples/s]
+[2025-03-18T13:37:10.926+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  58%|#####8    | 923928/1591371 [00:11<00:05, 111945.39 examples/s]
+[2025-03-18T13:37:11.190+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  59%|#####8    | 936811/1591371 [00:11<00:07, 85783.34 examples/s] 
+[2025-03-18T13:37:11.298+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  61%|######1   | 976085/1591371 [00:11<00:04, 140025.44 examples/s]
+[2025-03-18T13:37:11.399+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  65%|######4   | 1034104/1591371 [00:11<00:02, 229726.65 examples/s]
+[2025-03-18T13:37:11.593+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  67%|######6   | 1063956/1591371 [00:12<00:02, 202327.43 examples/s]
+[2025-03-18T13:37:11.769+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  68%|######8   | 1089581/1591371 [00:12<00:02, 184171.32 examples/s]
+[2025-03-18T13:37:11.915+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  70%|######9   | 1111850/1591371 [00:12<00:02, 175756.92 examples/s]
+[2025-03-18T13:37:12.044+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  71%|#######1  | 1132403/1591371 [00:12<00:02, 171337.30 examples/s]
+[2025-03-18T13:37:12.165+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  72%|#######2  | 1151541/1591371 [00:12<00:02, 168122.04 examples/s]
+[2025-03-18T13:37:12.297+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  73%|#######3  | 1169651/1591371 [00:12<00:02, 159000.22 examples/s]
+[2025-03-18T13:37:12.416+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  75%|#######4  | 1186412/1591371 [00:12<00:02, 154276.67 examples/s]
+[2025-03-18T13:37:12.527+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  76%|#######5  | 1202486/1591371 [00:12<00:02, 151794.68 examples/s]
+[2025-03-18T13:37:12.635+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  77%|#######6  | 1218169/1591371 [00:13<00:02, 150161.56 examples/s]
+[2025-03-18T13:37:12.736+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  78%|#######7  | 1233689/1591371 [00:13<00:02, 150934.52 examples/s]
+[2025-03-18T13:37:12.847+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  78%|#######8  | 1249139/1591371 [00:13<00:02, 147287.54 examples/s]
+[2025-03-18T13:37:12.977+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  79%|#######9  | 1264365/1591371 [00:13<00:02, 137523.20 examples/s]
+[2025-03-18T13:37:13.080+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  81%|########  | 1284695/1591371 [00:13<00:01, 153934.85 examples/s]
+[2025-03-18T13:37:13.182+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  82%|########1 | 1300729/1591371 [00:13<00:01, 154573.79 examples/s]
+[2025-03-18T13:37:13.286+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  83%|########2 | 1316895/1591371 [00:13<00:01, 154870.35 examples/s]
+[2025-03-18T13:37:13.397+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  84%|########3 | 1332621/1591371 [00:13<00:01, 150735.84 examples/s]
+[2025-03-18T13:37:13.499+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  85%|########4 | 1347824/1591371 [00:13<00:01, 150300.24 examples/s]
+[2025-03-18T13:37:13.608+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  86%|########5 | 1362952/1591371 [00:14<00:01, 146936.44 examples/s]
+[2025-03-18T13:37:13.882+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  87%|########6 | 1377979/1591371 [00:14<00:02, 98815.71 examples/s] 
+[2025-03-18T13:37:13.982+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  88%|########7 | 1399757/1591371 [00:14<00:01, 124241.23 examples/s]
+[2025-03-18T13:37:14.085+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  90%|######### | 1436188/1591371 [00:14<00:00, 179317.57 examples/s]
+[2025-03-18T13:37:14.238+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  92%|#########1| 1457450/1591371 [00:14<00:00, 165700.02 examples/s]
+[2025-03-18T13:37:14.401+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  93%|#########2| 1476649/1591371 [00:14<00:00, 149284.52 examples/s]
+[2025-03-18T13:37:14.511+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  94%|#########3| 1493483/1591371 [00:14<00:00, 150445.96 examples/s]
+[2025-03-18T13:37:14.631+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  95%|#########4| 1509930/1591371 [00:15<00:00, 146640.43 examples/s]
+[2025-03-18T13:37:14.790+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  96%|#########5| 1525595/1591371 [00:15<00:00, 129991.25 examples/s]
+[2025-03-18T13:37:14.896+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  97%|#########6| 1539662/1591371 [00:15<00:00, 130693.99 examples/s]
+[2025-03-18T13:37:15.006+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  98%|#########7| 1553426/1591371 [00:15<00:00, 129263.21 examples/s]
+[2025-03-18T13:37:15.193+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  98%|#########8| 1566960/1591371 [00:15<00:00, 106831.61 examples/s]
+[2025-03-18T13:37:15.327+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32):  99%|#########9| 1579011/1591371 [00:15<00:00, 102061.32 examples/s]
+[2025-03-18T13:37:15.494+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32): 100%|#########9| 1590398/1591371 [00:15<00:00, 90521.77 examples/s] 
+[2025-03-18T13:37:15.607+0000] {logging_mixin.py:190} WARNING - Map (num_proc=32): 100%|##########| 1591371/1591371 [00:16<00:00, 99284.10 examples/s]
+[2025-03-18T13:37:15.895+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/1 shards):   0%|          | 0/1591371 [00:00<?, ? examples/s]
+[2025-03-18T13:37:16.007+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/1 shards):  19%|#9        | 306000/1591371 [00:00<00:00, 2750834.87 examples/s]
+[2025-03-18T13:37:16.108+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/1 shards):  40%|####      | 643000/1591371 [00:00<00:00, 3092789.51 examples/s]
+[2025-03-18T13:37:16.208+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/1 shards):  62%|######1   | 980000/1591371 [00:00<00:00, 3209477.42 examples/s]
+[2025-03-18T13:37:16.308+0000] {logging_mixin.py:190} WARNING - Saving the dataset (0/1 shards):  83%|########3 | 1328000/1591371 [00:00<00:00, 3312777.84 examples/s]
+[2025-03-18T13:37:16.385+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/1 shards): 100%|##########| 1591371/1591371 [00:00<00:00, 3312777.84 examples/s]
+[2025-03-18T13:37:16.386+0000] {logging_mixin.py:190} WARNING - Saving the dataset (1/1 shards): 100%|##########| 1591371/1591371 [00:00<00:00, 3251005.06 examples/s]
+[2025-03-18T13:37:16.388+0000] {logging_mixin.py:190} INFO - Transformed data saved to /opt/***/dataset/transformed_books
+[2025-03-18T13:37:16.399+0000] {python.py:240} INFO - Done. Returned value was: {'metadata_path': '/opt/***/dataset/transformed_books'}
+[2025-03-18T13:37:16.411+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-18T13:37:16.412+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=kindle_store_etl_taskflow, task_id=transform_book_data, run_id=manual__2025-03-18T13:36:43.799986+00:00, execution_date=20250318T133643, start_date=20250318T133658, end_date=20250318T133716
+[2025-03-18T13:37:16.422+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-18T13:37:16.422+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-18T13:37:16.422+0000] {logging_mixin.py:190} INFO - Dag name:kindle_store_etl_taskflow queued_at:2025-03-18 13:36:43.804318+00:00
+[2025-03-18T13:37:16.422+0000] {logging_mixin.py:190} INFO - Task hostname:1116547ce33b operator:_PythonDecoratedOperator
+[2025-03-18T13:37:16.468+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-18T13:37:16.479+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-18T13:37:16.479+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
