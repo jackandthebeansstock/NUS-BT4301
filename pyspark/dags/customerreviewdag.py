@@ -3,7 +3,6 @@ from airflow.decorators import dag, task
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from datetime import datetime
 
-
 @dag(
     schedule_interval=None,
     start_date=datetime(2025, 1, 1),
@@ -12,7 +11,7 @@ from datetime import datetime
 def customer_review_dag():
     read_data = SparkSubmitOperator(
         task_id="read_data",
-        application="./include/scripts/read.py",
+        application="./include/scripts/preprocess_customers.py",
         conn_id="spark",
         verbose=True, #get information if something goes wrong
     )
