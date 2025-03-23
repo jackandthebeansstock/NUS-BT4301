@@ -3036,3 +3036,1081 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'matplotlib'
 [2025-03-18T15:54:31.548+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
 [2025-03-18T15:54:31.561+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.021 seconds
+[2025-03-18T15:55:02.015+0000] {processor.py:186} INFO - Started process (PID=14368) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:55:02.015+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T15:55:02.016+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:55:02.016+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:55:02.023+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:55:02.022+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T15:55:02.023+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:55:02.034+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.022 seconds
+[2025-03-18T15:55:32.454+0000] {processor.py:186} INFO - Started process (PID=14434) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:55:32.454+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T15:55:32.455+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:55:32.455+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:55:32.465+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:55:32.463+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T15:55:32.465+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:55:32.480+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.028 seconds
+[2025-03-18T15:56:02.650+0000] {processor.py:186} INFO - Started process (PID=14500) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:56:02.650+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T15:56:02.651+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:56:02.650+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:56:02.661+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:56:02.660+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T15:56:02.661+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:56:02.679+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.032 seconds
+[2025-03-18T15:56:33.086+0000] {processor.py:186} INFO - Started process (PID=14566) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:56:33.087+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T15:56:33.088+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:56:33.087+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:56:33.095+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:56:33.094+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T15:56:33.095+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:56:33.105+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.021 seconds
+[2025-03-18T15:57:03.491+0000] {processor.py:186} INFO - Started process (PID=14632) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:57:03.492+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T15:57:03.492+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:57:03.492+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:57:03.496+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:57:03.495+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T15:57:03.496+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:57:03.507+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.018 seconds
+[2025-03-18T15:57:33.965+0000] {processor.py:186} INFO - Started process (PID=14698) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:57:33.965+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T15:57:33.966+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:57:33.966+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:57:33.970+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:57:33.969+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T15:57:33.970+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:57:33.981+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.019 seconds
+[2025-03-18T15:58:04.471+0000] {processor.py:186} INFO - Started process (PID=14764) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:58:04.471+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T15:58:04.472+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:58:04.472+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:58:04.480+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:58:04.479+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T15:58:04.481+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:58:04.494+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.026 seconds
+[2025-03-18T15:58:34.979+0000] {processor.py:186} INFO - Started process (PID=14830) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:58:34.979+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T15:58:34.980+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:58:34.980+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:58:34.984+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:58:34.983+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T15:58:34.985+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:58:34.996+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.020 seconds
+[2025-03-18T15:59:05.227+0000] {processor.py:186} INFO - Started process (PID=14896) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:59:05.228+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T15:59:05.229+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:59:05.229+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:59:05.236+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:59:05.233+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T15:59:05.237+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:59:05.249+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.025 seconds
+[2025-03-18T15:59:35.776+0000] {processor.py:186} INFO - Started process (PID=14962) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:59:35.777+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T15:59:35.777+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:59:35.777+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:59:35.782+0000] {logging_mixin.py:190} INFO - [2025-03-18T15:59:35.780+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T15:59:35.782+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T15:59:35.794+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.020 seconds
+[2025-03-18T16:00:06.185+0000] {processor.py:186} INFO - Started process (PID=15028) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:00:06.185+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:00:06.186+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:00:06.186+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:00:06.194+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:00:06.190+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:00:06.194+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:00:06.204+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.022 seconds
+[2025-03-18T16:00:36.346+0000] {processor.py:186} INFO - Started process (PID=15094) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:00:36.347+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:00:36.347+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:00:36.347+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:00:36.351+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:00:36.350+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:00:36.351+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:00:36.360+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:01:06.747+0000] {processor.py:186} INFO - Started process (PID=15159) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:01:06.748+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:01:06.748+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:01:06.748+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:01:06.753+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:01:06.751+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:01:06.754+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:01:06.765+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.020 seconds
+[2025-03-18T16:01:36.785+0000] {processor.py:186} INFO - Started process (PID=15225) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:01:36.786+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:01:36.786+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:01:36.786+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:01:36.789+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:01:36.788+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:01:36.789+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:01:36.798+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:02:07.103+0000] {processor.py:186} INFO - Started process (PID=15291) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:02:07.103+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:02:07.104+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:02:07.104+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:02:07.107+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:02:07.107+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:02:07.108+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:02:07.121+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.021 seconds
+[2025-03-18T16:02:37.603+0000] {processor.py:186} INFO - Started process (PID=15357) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:02:37.603+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:02:37.604+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:02:37.603+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:02:37.607+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:02:37.606+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:02:37.608+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:02:37.618+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.018 seconds
+[2025-03-18T16:03:07.638+0000] {processor.py:186} INFO - Started process (PID=15423) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:03:07.639+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:03:07.639+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:03:07.639+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:03:07.642+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:03:07.642+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:03:07.643+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:03:07.652+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:03:38.380+0000] {processor.py:186} INFO - Started process (PID=15489) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:03:38.380+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:03:38.381+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:03:38.381+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:03:38.385+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:03:38.384+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:03:38.385+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:03:38.400+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.023 seconds
+[2025-03-18T16:04:08.420+0000] {processor.py:186} INFO - Started process (PID=15555) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:04:08.420+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:04:08.421+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:04:08.420+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:04:08.424+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:04:08.423+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:04:08.424+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:04:08.433+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:04:38.794+0000] {processor.py:186} INFO - Started process (PID=15621) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:04:38.794+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:04:38.795+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:04:38.795+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:04:38.798+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:04:38.797+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:04:38.798+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:04:38.806+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:05:08.918+0000] {processor.py:186} INFO - Started process (PID=15687) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:05:08.919+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:05:08.919+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:05:08.919+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:05:08.922+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:05:08.922+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:05:08.923+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:05:08.932+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:05:39.141+0000] {processor.py:186} INFO - Started process (PID=15753) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:05:39.141+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:05:39.142+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:05:39.142+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:05:39.145+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:05:39.144+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:05:39.145+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:05:39.154+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:06:09.348+0000] {processor.py:186} INFO - Started process (PID=15819) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:06:09.349+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:06:09.349+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:06:09.349+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:06:09.353+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:06:09.352+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:06:09.353+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:06:09.362+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.017 seconds
+[2025-03-18T16:06:39.571+0000] {processor.py:186} INFO - Started process (PID=15885) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:06:39.571+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:06:39.572+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:06:39.572+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:06:39.574+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:06:39.574+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:06:39.575+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:06:39.584+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:07:09.844+0000] {processor.py:186} INFO - Started process (PID=15951) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:07:09.844+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:07:09.845+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:07:09.845+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:07:09.847+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:07:09.847+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:07:09.848+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:07:09.856+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:07:40.112+0000] {processor.py:186} INFO - Started process (PID=16017) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:07:40.113+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:07:40.114+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:07:40.113+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:07:40.117+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:07:40.116+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:07:40.117+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:07:40.126+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:08:10.354+0000] {processor.py:186} INFO - Started process (PID=16083) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:08:10.354+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:08:10.355+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:08:10.355+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:08:10.358+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:08:10.357+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:08:10.358+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:08:10.367+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:08:40.618+0000] {processor.py:186} INFO - Started process (PID=16148) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:08:40.618+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:08:40.619+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:08:40.619+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:08:40.622+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:08:40.621+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:08:40.622+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:08:40.631+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:09:10.935+0000] {processor.py:186} INFO - Started process (PID=16214) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:09:10.935+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:09:10.936+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:09:10.936+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:09:10.938+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:09:10.938+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:09:10.939+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:09:10.947+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:09:41.018+0000] {processor.py:186} INFO - Started process (PID=16280) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:09:41.019+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:09:41.019+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:09:41.019+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:09:41.022+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:09:41.022+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:09:41.023+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:09:41.032+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:10:11.417+0000] {processor.py:186} INFO - Started process (PID=16346) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:10:11.418+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:10:11.418+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:10:11.418+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:10:11.421+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:10:11.420+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:10:11.421+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:10:11.430+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:10:41.723+0000] {processor.py:186} INFO - Started process (PID=16412) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:10:41.724+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:10:41.724+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:10:41.724+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:10:41.734+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:10:41.728+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:10:41.736+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:10:41.745+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.024 seconds
+[2025-03-18T16:11:12.019+0000] {processor.py:186} INFO - Started process (PID=16477) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:11:12.019+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:11:12.020+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:11:12.019+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:11:12.022+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:11:12.022+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:11:12.023+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:11:12.031+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:11:42.412+0000] {processor.py:186} INFO - Started process (PID=16543) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:11:42.413+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:11:42.413+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:11:42.413+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:11:42.416+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:11:42.415+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:11:42.416+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:11:42.425+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:12:12.876+0000] {processor.py:186} INFO - Started process (PID=16609) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:12:12.876+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:12:12.877+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:12:12.877+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:12:12.880+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:12:12.879+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:12:12.880+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:12:12.890+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:12:43.452+0000] {processor.py:186} INFO - Started process (PID=16675) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:12:43.452+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:12:43.453+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:12:43.453+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:12:43.455+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:12:43.455+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:12:43.456+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:12:43.464+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:13:13.865+0000] {processor.py:186} INFO - Started process (PID=16740) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:13:13.865+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:13:13.866+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:13:13.866+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:13:13.869+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:13:13.868+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:13:13.869+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:13:13.878+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:13:44.192+0000] {processor.py:186} INFO - Started process (PID=16806) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:13:44.193+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:13:44.193+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:13:44.193+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:13:44.196+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:13:44.195+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:13:44.196+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:13:44.205+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:14:14.552+0000] {processor.py:186} INFO - Started process (PID=16872) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:14:14.552+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:14:14.553+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:14:14.553+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:14:14.556+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:14:14.555+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:14:14.556+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:14:14.564+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:14:45.216+0000] {processor.py:186} INFO - Started process (PID=16938) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:14:45.216+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:14:45.217+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:14:45.217+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:14:45.220+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:14:45.219+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:14:45.220+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:14:45.229+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:15:15.283+0000] {processor.py:186} INFO - Started process (PID=17004) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:15:15.284+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:15:15.285+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:15:15.284+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:15:15.288+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:15:15.287+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:15:15.288+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:15:15.298+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.017 seconds
+[2025-03-18T16:15:45.611+0000] {processor.py:186} INFO - Started process (PID=17070) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:15:45.611+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:15:45.612+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:15:45.612+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:15:45.615+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:15:45.614+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:15:45.615+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:15:45.624+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:16:16.060+0000] {processor.py:186} INFO - Started process (PID=17136) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:16:16.060+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:16:16.061+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:16:16.061+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:16:16.064+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:16:16.063+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:16:16.064+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:16:16.073+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:16:46.172+0000] {processor.py:186} INFO - Started process (PID=17202) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:16:46.173+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:16:46.173+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:16:46.173+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:16:46.176+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:16:46.176+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:16:46.177+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:16:46.188+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.018 seconds
+[2025-03-18T16:17:16.208+0000] {processor.py:186} INFO - Started process (PID=17274) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:17:16.208+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:17:16.209+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:17:16.209+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:17:16.212+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:17:16.211+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:17:16.212+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:17:16.221+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:17:46.397+0000] {processor.py:186} INFO - Started process (PID=17340) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:17:46.398+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:17:46.398+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:17:46.398+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:17:46.401+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:17:46.400+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:17:46.401+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:17:46.410+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:18:16.894+0000] {processor.py:186} INFO - Started process (PID=17406) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:18:16.895+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:18:16.895+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:18:16.895+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:18:16.898+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:18:16.897+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:18:16.898+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:18:16.907+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:18:47.386+0000] {processor.py:186} INFO - Started process (PID=17472) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:18:47.387+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:18:47.387+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:18:47.387+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:18:47.390+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:18:47.390+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:18:47.391+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:18:47.400+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:19:17.908+0000] {processor.py:186} INFO - Started process (PID=17538) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:19:17.908+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:19:17.909+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:19:17.908+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:19:17.911+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:19:17.911+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:19:17.912+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:19:17.920+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:19:48.472+0000] {processor.py:186} INFO - Started process (PID=17604) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:19:48.472+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:19:48.473+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:19:48.473+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:19:48.476+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:19:48.475+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:19:48.476+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:19:48.485+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:20:18.750+0000] {processor.py:186} INFO - Started process (PID=17670) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:20:18.751+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:20:18.751+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:20:18.751+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:20:18.754+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:20:18.753+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:20:18.754+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:20:18.763+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:20:49.019+0000] {processor.py:186} INFO - Started process (PID=17736) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:20:49.020+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:20:49.020+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:20:49.020+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:20:49.023+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:20:49.023+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:20:49.024+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:20:49.033+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:21:19.513+0000] {processor.py:186} INFO - Started process (PID=17802) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:21:19.513+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:21:19.514+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:21:19.514+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:21:19.517+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:21:19.516+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:21:19.517+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:21:19.526+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:21:49.870+0000] {processor.py:186} INFO - Started process (PID=17867) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:21:49.871+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:21:49.871+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:21:49.871+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:21:49.874+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:21:49.874+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:21:49.875+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:21:49.884+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:22:20.341+0000] {processor.py:186} INFO - Started process (PID=17933) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:22:20.341+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:22:20.342+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:22:20.342+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:22:20.345+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:22:20.344+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:22:20.345+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:22:20.353+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:22:50.776+0000] {processor.py:186} INFO - Started process (PID=17999) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:22:50.776+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:22:50.777+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:22:50.777+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:22:50.780+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:22:50.779+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:22:50.780+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:22:50.789+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:23:21.202+0000] {processor.py:186} INFO - Started process (PID=18065) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:23:21.203+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:23:21.203+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:23:21.203+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:23:21.206+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:23:21.206+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:23:21.207+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:23:21.216+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.017 seconds
+[2025-03-18T16:23:51.450+0000] {processor.py:186} INFO - Started process (PID=18131) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:23:51.450+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:23:51.451+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:23:51.451+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:23:51.454+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:23:51.453+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:23:51.454+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:23:51.463+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:24:21.750+0000] {processor.py:186} INFO - Started process (PID=18197) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:24:21.751+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:24:21.751+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:24:21.751+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:24:21.754+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:24:21.753+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:24:21.754+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:24:21.763+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:24:52.133+0000] {processor.py:186} INFO - Started process (PID=18263) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:24:52.134+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:24:52.134+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:24:52.134+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:24:52.137+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:24:52.136+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:24:52.137+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:24:52.146+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:25:22.536+0000] {processor.py:186} INFO - Started process (PID=18329) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:25:22.537+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:25:22.538+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:25:22.537+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:25:22.540+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:25:22.540+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:25:22.540+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:25:22.549+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:25:53.093+0000] {processor.py:186} INFO - Started process (PID=18395) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:25:53.094+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:25:53.095+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:25:53.094+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:25:53.098+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:25:53.097+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:25:53.098+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:25:53.107+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:26:23.326+0000] {processor.py:186} INFO - Started process (PID=18461) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:26:23.326+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:26:23.327+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:26:23.327+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:26:23.330+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:26:23.329+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:26:23.330+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:26:23.338+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:26:53.710+0000] {processor.py:186} INFO - Started process (PID=18527) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:26:53.710+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:26:53.711+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:26:53.711+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:26:53.714+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:26:53.713+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:26:53.714+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:26:53.723+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:27:23.830+0000] {processor.py:186} INFO - Started process (PID=18593) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:27:23.830+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:27:23.831+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:27:23.831+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:27:23.834+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:27:23.833+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:27:23.834+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:27:23.843+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.015 seconds
+[2025-03-18T16:27:54.356+0000] {processor.py:186} INFO - Started process (PID=18659) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:27:54.356+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:27:54.357+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:27:54.357+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:27:54.360+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:27:54.359+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:27:54.360+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:27:54.369+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.016 seconds
+[2025-03-18T16:33:27.118+0000] {processor.py:186} INFO - Started process (PID=98) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:33:27.121+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:33:27.122+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:33:27.121+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:33:27.129+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:33:27.128+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:33:27.133+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:33:27.143+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.027 seconds
+[2025-03-18T16:33:57.335+0000] {processor.py:186} INFO - Started process (PID=163) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:33:57.335+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:33:57.336+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:33:57.336+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:33:57.343+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:33:57.340+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:33:57.344+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:33:57.358+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.026 seconds
+[2025-03-18T16:34:28.132+0000] {processor.py:186} INFO - Started process (PID=229) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:34:28.132+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:34:28.134+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:34:28.134+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:34:28.138+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:34:28.137+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:34:28.139+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:34:28.152+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.022 seconds
+[2025-03-18T16:34:58.199+0000] {processor.py:186} INFO - Started process (PID=295) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:34:58.200+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:34:58.201+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:34:58.201+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:34:58.211+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:34:58.210+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:34:58.211+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:34:58.222+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.025 seconds
+[2025-03-18T16:35:28.908+0000] {processor.py:186} INFO - Started process (PID=361) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:35:28.908+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:35:28.909+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:35:28.909+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:35:28.918+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:35:28.916+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:35:28.919+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:35:28.932+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.028 seconds
+[2025-03-18T16:35:59.631+0000] {processor.py:186} INFO - Started process (PID=427) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:35:59.632+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:35:59.633+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:35:59.633+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:35:59.637+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:35:59.636+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:35:59.637+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:35:59.648+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.020 seconds
+[2025-03-18T16:36:29.714+0000] {processor.py:186} INFO - Started process (PID=493) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:36:29.715+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:36:29.716+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:36:29.716+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:36:29.722+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:36:29.719+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:36:29.722+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:36:29.734+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.022 seconds
+[2025-03-18T16:37:00.032+0000] {processor.py:186} INFO - Started process (PID=559) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:37:00.032+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:37:00.034+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:37:00.034+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:37:00.040+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:37:00.037+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:37:00.040+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:37:00.053+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.023 seconds
+[2025-03-18T16:37:30.389+0000] {processor.py:186} INFO - Started process (PID=625) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:37:30.390+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:37:30.392+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:37:30.392+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:37:30.399+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:37:30.396+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:37:30.400+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:37:30.410+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.023 seconds
+[2025-03-18T16:38:00.639+0000] {processor.py:186} INFO - Started process (PID=691) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:38:00.640+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:38:00.641+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:38:00.641+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:38:00.649+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:38:00.648+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:38:00.649+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:38:00.664+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.028 seconds
+[2025-03-18T16:38:31.058+0000] {processor.py:186} INFO - Started process (PID=757) to work on /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:38:31.059+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/A0265912B.py for tasks to queue
+[2025-03-18T16:38:31.061+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:38:31.061+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:38:31.068+0000] {logging_mixin.py:190} INFO - [2025-03-18T16:38:31.068+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/A0265912B.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/A0265912B.py", line 7, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[2025-03-18T16:38:31.069+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/A0265912B.py
+[2025-03-18T16:38:31.081+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/A0265912B.py took 0.026 seconds

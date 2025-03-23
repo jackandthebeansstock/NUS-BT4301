@@ -1,3 +1,6 @@
+# Ignore logs
+logs/
+
 # Ignore Excel files
 *.xlsx
 
@@ -16,6 +19,7 @@ airflow_settings.yaml
 __pycache__/
 astro
 .venv
+*.json
 airflow-webserver.pid
 webserver_config.py
 airflow.cfg

@@ -10,11 +10,17 @@ import json
 from ast import literal_eval
 from transformers import pipeline
 import torch
+from google.cloud import bigquery
+from collections import Counter
+import random
+from google.oauth2 import service_account
 
 # Directory to save extracted and transformed data
 OUTPUT_DIR = os.path.join(os.getcwd(), "dataset")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 TRAINING_CUTOFF_DATE = dt.datetime(2019,1,1)
+TRAINING_CUTOFF_REVIEWS_LOWER = 10
+TRAINING_CUTOFF_REVIEWS_UPPER = 50
 
 @dag(
     dag_id='kindle_store_etl_taskflow',
@@ -28,21 +34,21 @@ def kindle_store_etl():
     @task
     def extract_review_data():
         """Extract Kindle Store reviews from Hugging Face."""
-        
+        print(torch.backends.mps.is_available()) 
         # Load Kindle Store reviews
         reviews_dataset = load_dataset("McAuley-Lab/Amazon-Reviews-2023", "raw_review_Kindle_Store", trust_remote_code=True,num_proc=64,split = 'full')
         training_yr = time.mktime(TRAINING_CUTOFF_DATE.timetuple())*1000        
 
         reviews_path = os.path.join(OUTPUT_DIR, "kindle_reviews")
         
-        filtered_review = reviews_dataset.filter(lambda example: example['timestamp'] > training_yr and example['verified_purchase'])
+        # filtered_review = reviews_dataset.filter(lambda example: example['timestamp'] > training_yr and example['verified_purchase'])
 
         # Print some info about the filtered dataset
-        print(f"Number of users after filtering: {len(filtered_review)}")
-        print("First few entries:", filtered_review[:5])
+        # print(f"Number of users after filtering: {len(filtered_review)}")
+        # print("First few entries:", filtered_review[:5])
 
-        columns_to_keep = ['rating', 'title', 'text', 'parent_asin', 'user_id', 'timestamp']
-        filtered_review = filtered_review.select_columns(columns_to_keep)
+        columns_to_keep = ['rating', 'title', 'text', 'parent_asin', 'user_id', 'timestamp','verified_purchase']
+        filtered_review = reviews_dataset.select_columns(columns_to_keep)
 
         filtered_review.save_to_disk(reviews_path)
         
@@ -70,50 +76,65 @@ def kindle_store_etl():
         return {"metadata_path": metadata_path}
 
     @task
-    def transform_review_data(file_path: dict, batch_size=1024, device=None):
+    def transform_review_data(file_path: dict, batch_size=128, device=None):
         """Loads a dataset from disk, applies sentiment analysis in batches, and saves the transformed dataset efficiently."""
         reviews_path = file_path.get('reviews_path')
         transformed_review_path = os.path.join(OUTPUT_DIR, "transformed_reviews")
 
         # Load dataset directly in Arrow format
         reviews_dataset = load_from_disk(reviews_path)
+        training_yr = time.mktime(TRAINING_CUTOFF_DATE.timetuple())*1000
+        transformed_dataset = reviews_dataset.filter(lambda example: (example['timestamp'] > training_yr) and example['verified_purchase'])
 
-        # Auto-detect device
-        if device is None:
-            device = "cuda" if torch.cuda.is_available() else "cpu"
-        print(f"Using device: {device}")
+        user_counts = Counter(transformed_dataset['user_id'])
+        eligible_users = [user for user, count in user_counts.items() if (count >= TRAINING_CUTOFF_REVIEWS_LOWER and count < TRAINING_CUTOFF_REVIEWS_UPPER)]
+        eligible_users = set(eligible_users)
+        transformed_dataset = transformed_dataset.filter(lambda example: example['user_id'] in eligible_users)
 
-        # Load sentiment analysis model
-        model_name = "distilbert-base-uncased-finetuned-sst-2-english"
-        sentiment_analyzer = pipeline(
-            "sentiment-analysis",
-            model=model_name,
-            tokenizer=model_name,
-            device=0 if device == 'cuda' else -1,  # Use GPU if available
-            batch_size=batch_size
-        )
+        columns_to_keep = ['rating', 'title', 'text', 'parent_asin', 'user_id', 'timestamp']
+        transformed_dataset = transformed_dataset.select_columns(columns_to_keep)
+        num_users = len(set(transformed_dataset['user_id']))
+        num_reviews = len(transformed_dataset)
+        print(f"Final dataset: {num_reviews} reviews from {num_users} unique users")
+        print(f"Average reviews per user: {num_reviews / num_users:.2f}")
 
-        # Define function to process text in batches
-        def compute_sentiment(batch):
-        # Combine title and text, ensuring missing values don't break the pipeline
-            combined_texts = [
-                ((t if t is not None else "") + " " + (r if r is not None else ""))[:500]
-                for t, r in zip(batch["title"], batch["text"])
-            ]
-            results = sentiment_analyzer(combined_texts)
+        # # Auto-detect device
+        # if device is None:
+        #     device = torch.device("mps") if torch.backends.mps.is_available() else torch.device("cpu")
+        # device_id =  0 if device.type == 'mps' else -1
+        # print(f"Using device: {device}")
 
-            # Convert POSITIVE/NEGATIVE to a numeric score
-            batch["sentiment_score"] = [
-                res["score"] if res["label"] == "POSITIVE" else (1 - res["score"]) for res in results
-            ]
+        # # Load sentiment analysis model
+        # model_name = "distilbert-base-uncased-finetuned-sst-2-english"
+        # sentiment_analyzer = pipeline(
+        #     "sentiment-analysis",
+        #     model=model_name,
+        #     tokenizer=model_name,
+        #     device=device_id,
+        #     batch_size=batch_size
+        # )
 
-            # Remove title and text while keeping other columns
-            batch.pop("title", None)
-            batch.pop("text", None)
-            return batch
+        # # Define function to process text in batches
+        # def compute_sentiment(batch):
+        # # Combine title and text, ensuring missing values don't break the pipeline
+        #     combined_texts = [
+        #         ((t if t is not None else "") + " " + (r if r is not None else ""))[:500]
+        #         for t, r in zip(batch["title"], batch["text"])
+        #     ]
+        #     results = sentiment_analyzer(combined_texts)
 
-        # Apply transformation efficiently using map() with batched=True
-        transformed_dataset = reviews_dataset.map(compute_sentiment, batched=True, batch_size=batch_size)
+        #     # Convert POSITIVE/NEGATIVE to a numeric score
+        #     batch["sentiment_score"] = [
+        #         res["score"] if res["label"] == "POSITIVE" else (1 - res["score"]) for res in results
+        #     ]
+
+        #     # Remove title and text while keeping other columns
+        #     batch.pop("title", None)
+        #     batch.pop("text", None)
+        #     return batch
+
+        # # Apply transformation efficiently using map() with batched=True
+        # transformed_dataset = transformed_dataset.map(compute_sentiment, batched=True, batch_size=batch_size)
 
         transformed_dataset.save_to_disk(transformed_review_path)
 
@@ -179,83 +200,79 @@ def kindle_store_etl():
         # Return file paths for downstream tasks
         return {"metadata_path": transformed_book_path}
 
-    # @task
-    # def load_data(file_paths: dict):
-    #     """Load transformed Kindle Store data into Google BigQuery."""
-    #     from google.cloud import bigquery
-    #     import pandas as pd
-    #     from datasets import load_from_disk
-
-    #     # Initialize BigQuery client
-    #     client = bigquery.Client()
-
-    #     # Define table schemas
-    #     review_schema = [
-    #         bigquery.SchemaField("rating", "FLOAT"),
-    #         bigquery.SchemaField("title", "STRING"),
-    #         bigquery.SchemaField("text", "STRING"),
-    #         bigquery.SchemaField("parent_asin", "STRING"),
-    #         bigquery.SchemaField("user_id", "STRING"),
-    #         bigquery.SchemaField("timestamp", "TIMESTAMP"),
-    #         bigquery.SchemaField("sentiment_score", "FLOAT"),
-    #     ]
-
-    #     metadata_schema = [
-    #         bigquery.SchemaField("title", "STRING"),
-    #         bigquery.SchemaField("average_rating", "FLOAT"),
-    #         bigquery.SchemaField("rating_number", "INTEGER"),
-    #         bigquery.SchemaField("price", "FLOAT"),
-    #         bigquery.SchemaField("store", "STRING"),
-    #         bigquery.SchemaField("genre", "STRING"),
-    #         bigquery.SchemaField("parent_asin", "STRING"),
-    #         bigquery.SchemaField("publisher", "STRING"),
-    #         bigquery.SchemaField("publication_date", "STRING"),
-    #         bigquery.SchemaField("language", "STRING"),
-    #     ]
-
-    #     # Load datasets from disk
-    #     reviews_dataset = load_from_disk(file_paths["reviews_path"])
-    #     metadata_dataset = load_from_disk(file_paths["metadata_path"])
-
-    #     # Convert to pandas DataFrames
-    #     reviews_df = reviews_dataset.to_pandas()
-    #     metadata_df = metadata_dataset.to_pandas()
-
-    #     # Convert timestamp to datetime (assuming it's in milliseconds)
-    #     reviews_df["timestamp"] = pd.to_datetime(reviews_df["timestamp"], unit="ms")
-
-    #     # Define BigQuery table references
-    #     project_id = "your-project-id"  # Replace with your GCP project ID
-    #     dataset_id = "kindle_store"
-    #     reviews_table_id = f"{project_id}.{dataset_id}.reviews"
-    #     metadata_table_id = f"{project_id}.{dataset_id}.metadata"
-
-    #     # Load reviews data
-    #     reviews_job_config = bigquery.LoadJobConfig(
-    #         schema=review_schema,
-    #         write_disposition="WRITE_TRUNCATE",  # Overwrite table if it exists
-    #     )
-    #     reviews_load_job = client.load_table_from_dataframe(reviews_df, reviews_table_id, job_config=reviews_job_config)
-    #     reviews_load_job.result()  # Wait for the job to complete
-    #     print(f"Loaded {reviews_load_job.output_rows} rows into {reviews_table_id}")
-
-    #     # Load metadata data
-    #     metadata_job_config = bigquery.LoadJobConfig(
-    #         schema=metadata_schema,
-    #         write_disposition="WRITE_TRUNCATE",
-    #     )
-    #     metadata_load_job = client.load_table_from_dataframe(metadata_df, metadata_table_id, job_config=metadata_job_config)
-    #     metadata_load_job.result()
-    #     print(f"Loaded {metadata_load_job.output_rows} rows into {metadata_table_id}")
-
     @task
-    def load_data(file_path_review: dict, file_path_book: dict):
-        """Load the transformed data (example: log completion)."""
-        reviews_path = file_path_review["reviews_path"]
-        metadata_path = file_path_book["metadata_path"]
+    def load_data(review_file_path: dict, books_file_path: dict):
+        """Load transformed Kindle Store data into Google BigQuery."""
+        credentials = service_account.Credentials.from_service_account_file("/opt/airflow/secrets/big-query-key.json")
+        client = bigquery.Client(credentials=credentials, project="bt4301-454516")
+
+        # Define table schemas
+        review_schema = [
+            bigquery.SchemaField("rating", "FLOAT"),
+            bigquery.SchemaField("title", "STRING"),
+            bigquery.SchemaField("text", "STRING"),
+            bigquery.SchemaField("parent_asin", "STRING"),
+            bigquery.SchemaField("user_id", "STRING"),
+            bigquery.SchemaField("timestamp", "TIMESTAMP")
+        ]
+
+        metadata_schema = [
+            bigquery.SchemaField("title", "STRING"),
+            bigquery.SchemaField("average_rating", "FLOAT"),
+            bigquery.SchemaField("rating_number", "INTEGER"),
+            bigquery.SchemaField("price", "FLOAT"),
+            bigquery.SchemaField("store", "STRING"),
+            bigquery.SchemaField("genre", "STRING"),
+            bigquery.SchemaField("parent_asin", "STRING"),
+            bigquery.SchemaField("publisher", "STRING"),
+            bigquery.SchemaField("publication_date", "STRING"),
+            bigquery.SchemaField("language", "STRING"),
+        ]
+
+        # Load datasets from disk
+        reviews_dataset = load_from_disk(review_file_path["reviews_path"])
+        metadata_dataset = load_from_disk(books_file_path["metadata_path"])
+
+        # Convert to pandas DataFrames
+        reviews_df = reviews_dataset.to_pandas()
+        metadata_df = metadata_dataset.to_pandas()
+
+        # Convert timestamp to datetime (assuming it's in milliseconds)
+        reviews_df["timestamp"] = pd.to_datetime(reviews_df["timestamp"], unit="ms")
+        metadata_df['price'] = pd.to_numeric(metadata_df['price'], errors='coerce')
+        metadata_df['price'].fillna(0.0, inplace=True)
+        # Define BigQuery table references
+        project_id = "bt4301-454516"  # Replace with your GCP project ID
+        dataset_id = "kindle_store"
+        reviews_table_id = f"{project_id}.{dataset_id}.reviews"
+        metadata_table_id = f"{project_id}.{dataset_id}.metadata"
+
+        # Load reviews data
+        reviews_job_config = bigquery.LoadJobConfig(
+            schema=review_schema,
+            write_disposition="WRITE_TRUNCATE",  # Overwrite table if it exists
+        )
+        reviews_load_job = client.load_table_from_dataframe(reviews_df, reviews_table_id, job_config=reviews_job_config)
+        reviews_load_job.result()  # Wait for the job to complete
+        print(f"Loaded {reviews_load_job.output_rows} rows into {reviews_table_id}")
+
+        # Load metadata data
+        metadata_job_config = bigquery.LoadJobConfig(
+            schema=metadata_schema,
+            write_disposition="WRITE_TRUNCATE",
+        )
+        metadata_load_job = client.load_table_from_dataframe(metadata_df, metadata_table_id, job_config=metadata_job_config)
+        metadata_load_job.result()
+        print(f"Loaded {metadata_load_job.output_rows} rows into {metadata_table_id}")
+
+    # @task
+    # def load_data(file_path_review: dict, file_path_book: dict):
+    #     """Load the transformed data (example: log completion)."""
+    #     reviews_path = file_path_review["reviews_path"]
+    #     metadata_path = file_path_book["metadata_path"]
         
-        print(f"Data loaded from {reviews_path} and {metadata_path}")
-        # Add logic here to load into a database or other destination if needed
+    #     print(f"Data loaded from {reviews_path} and {metadata_path}")
+    #     # Add logic here to load into a database or other destination if needed
     
     # Define task flow
     extracted_book_path = extract_book_data()
@@ -264,5 +281,6 @@ def kindle_store_etl():
     transformed_review_path = transform_review_data(extracted_review_path)
     load_data(transformed_review_path, transformed_book_path)
 
+    
 # Instantiate the DAG
 kindle_dag = kindle_store_etl()
