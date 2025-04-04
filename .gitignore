@@ -1,8 +1,14 @@
+# ignore logs
+logs/
+
 # Ignore Excel files
 *.xlsx
 
 # Ignore CSV files
 *.csv
+
+# Ignore json files
+*.json
 
 # Ignore Parquet files
 *.parquet
