@@ -1,0 +1,63 @@
+===========================
+Filename
+===========================
+
+gmm_cli.py
+
+---------------------------
+Description
+---------------------------
+
+Command-line interface for the GmmClustering class defined in gmm.py. Allows fitting,
+saving/loading models, assigning clusters to new users, and generating visualisations.
+
+---------------------------
+Available Commands
+---------------------------
+
+1. fit <csv> [--n_components N] [--save_model path]
+   Fit a GMM model on CSV data and save the model.
+
+2. assign <model> <json>
+   Assign a single new user (in JSON file) to a cluster.
+
+3. assign_batch <model> <csv>
+   Assign clusters to multiple new users from a CSV.
+
+4. visualise <model> <csv>
+   Generate PDF visualisations for a fitted model and dataset.
+
+---------------------------
+Example Usage
+---------------------------
+
+# Fit model and save
+python gmm_cli.py fit user_data.csv --n_components 4 --save_model gmm_model.pkl
+
+# Assign single user (must be JSON)
+python gmm_cli.py assign gmm_model.pkl new_user.json
+
+# Assign cluster to a batch of users
+python gmm_cli.py assign_batch gmm_model.pkl new_users.csv
+
+# Visualise clustering (generates a PDF)
+python gmm_cli.py visualise gmm_model.pkl clustered_users.csv
+
+---------------------------
+Sample Input Files
+---------------------------
+
+new_user.json
+-------------
+{
+  "user_id": "XYZ999",
+  "diversity": 4,
+  "total_spent": 80.5,
+  "total_purchased": 3
+}
+
+new_users.csv
+-------------
+user_id,diversity,total_spent,total_purchased
+A1,5,120.0,4
+B2,2,50.5,1
