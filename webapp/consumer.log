@@ -1,0 +1,757 @@
+2025-04-11 11:53:30,817 - WARNING - Configured api_version (2, 6, 0) not supported; using (2, 6)
+2025-04-11 11:53:30,817 - INFO - Updating subscribed topics to: ('user_interactions', 'metrics_topic')
+2025-04-11 11:53:30,817 - INFO - Successfully connected to Kafka for topics: ['user_interactions', 'metrics_topic']
+2025-04-11 11:53:30,830 - INFO - server listening on 127.0.0.1:8765
+2025-04-11 11:53:30,830 - INFO - server listening on [::1]:8765
+2025-04-11 11:53:30,830 - INFO - WebSocket server started on ws://localhost:8765
+2025-04-11 11:53:30,830 - INFO - Starting to consume messages from 'user_interactions' and 'metrics_topic'...
+2025-04-11 11:53:30,831 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 11:53:30,831 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 11:53:30,840 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 11:53:30,944 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 11:53:30,944 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2025-04-11 11:53:31,056 - INFO - Group coordinator for dashboard_group is BrokerMetadata(nodeId='coordinator-1', host='localhost', port=9092, rack=None)
+2025-04-11 11:53:31,056 - INFO - Discovered coordinator coordinator-1 for group dashboard_group
+2025-04-11 11:53:31,057 - INFO - Starting new heartbeat thread
+2025-04-11 11:53:31,057 - INFO - Revoking previously assigned partitions set() for group dashboard_group
+2025-04-11 11:53:31,059 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=coordinator-1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 11:53:31,166 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=coordinator-1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 11:53:31,272 - INFO - (Re-)joining group dashboard_group
+2025-04-11 11:53:34,297 - INFO - Elected group leader -- performing partition assignments using range
+2025-04-11 11:53:34,308 - INFO - Successfully joined group dashboard_group with generation 8
+2025-04-11 11:53:34,309 - INFO - Updated partition assignment: [TopicPartition(topic='metrics_topic', partition=0), TopicPartition(topic='user_interactions', partition=0)]
+2025-04-11 11:53:34,309 - INFO - Setting newly assigned partitions {TopicPartition(topic='metrics_topic', partition=0), TopicPartition(topic='user_interactions', partition=0)} for group dashboard_group
+2025-04-11 11:53:53,524 - WARNING - Configured api_version (2, 6, 0) not supported; using (2, 6)
+2025-04-11 11:53:53,525 - INFO - Updating subscribed topics to: ('user_interactions', 'metrics_topic')
+2025-04-11 11:53:53,525 - INFO - Successfully connected to Kafka for topics: ['user_interactions', 'metrics_topic']
+2025-04-11 11:53:53,537 - ERROR - Fatal error in consumer: [Errno 48] error while attempting to bind on address ('127.0.0.1', 8765): address already in use
+Traceback (most recent call last):
+  File "/Users/jacky/Downloads/current sem/friday BT4221/webapp/consumer.py", line 107, in <module>
+    asyncio.run(main())
+  File "/Users/jacky/anaconda3/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/jacky/anaconda3/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jacky/anaconda3/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/jacky/Downloads/current sem/friday BT4221/webapp/consumer.py", line 100, in main
+    websocket_server = await websockets.serve(websocket_handler, "localhost", 8765)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jacky/anaconda3/lib/python3.11/site-packages/websockets/asyncio/server.py", line 831, in __await_impl__
+    server = await self.create_server
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jacky/anaconda3/lib/python3.11/asyncio/base_events.py", line 1525, in create_server
+    raise OSError(err.errno, 'error while attempting '
+OSError: [Errno 48] error while attempting to bind on address ('127.0.0.1', 8765): address already in use
+2025-04-11 11:54:03,000 - WARNING - Configured api_version (2, 6, 0) not supported; using (2, 6)
+2025-04-11 11:54:03,000 - INFO - Updating subscribed topics to: ('user_interactions', 'metrics_topic')
+2025-04-11 11:54:03,000 - INFO - Successfully connected to Kafka for topics: ['user_interactions', 'metrics_topic']
+2025-04-11 11:54:03,008 - INFO - server listening on 127.0.0.1:8765
+2025-04-11 11:54:03,008 - INFO - server listening on [::1]:8765
+2025-04-11 11:54:03,008 - INFO - WebSocket server started on ws://localhost:8765
+2025-04-11 11:54:03,008 - INFO - Starting to consume messages from 'user_interactions' and 'metrics_topic'...
+2025-04-11 11:54:03,009 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 11:54:03,009 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 11:54:03,030 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 11:54:03,132 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 11:54:03,133 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2025-04-11 11:54:03,245 - INFO - Group coordinator for dashboard_group is BrokerMetadata(nodeId='coordinator-1', host='localhost', port=9092, rack=None)
+2025-04-11 11:54:03,245 - INFO - Discovered coordinator coordinator-1 for group dashboard_group
+2025-04-11 11:54:03,246 - INFO - Starting new heartbeat thread
+2025-04-11 11:54:03,246 - INFO - Revoking previously assigned partitions set() for group dashboard_group
+2025-04-11 11:54:03,248 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=coordinator-1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 11:54:03,356 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=coordinator-1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 11:54:03,462 - INFO - (Re-)joining group dashboard_group
+2025-04-11 11:54:09,338 - INFO - Elected group leader -- performing partition assignments using range
+2025-04-11 11:54:09,350 - INFO - Successfully joined group dashboard_group with generation 9
+2025-04-11 11:54:09,351 - INFO - Updated partition assignment: [TopicPartition(topic='metrics_topic', partition=0), TopicPartition(topic='user_interactions', partition=0)]
+2025-04-11 11:54:09,351 - INFO - Setting newly assigned partitions {TopicPartition(topic='metrics_topic', partition=0), TopicPartition(topic='user_interactions', partition=0)} for group dashboard_group
+2025-04-11 12:02:24,855 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 358]: {'book_id': 'B00DVQ53OI', 'event_type': 'click', 'timestamp': '2025-04-11T12:02:24.729828'}
+2025-04-11 12:24:09,073 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 359]: {'book_id': 'B00DVQ53OI', 'event_type': 'click', 'timestamp': '2025-04-11T12:24:09.051834'}
+2025-04-11 12:26:13,801 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 360]: {'book_id': 'B00JGZ0JF6', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:13.687932'}
+2025-04-11 12:26:14,232 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 389]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:13.718022'}
+2025-04-11 12:26:14,341 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 361]: {'book_id': 'B00I3UQSFA', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:14.238564'}
+2025-04-11 12:26:14,342 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 390]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:14.251832'}
+2025-04-11 12:26:14,452 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 362]: {'book_id': 'B00I3UQSFA', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:14.346844'}
+2025-04-11 12:26:14,453 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 391]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:14.350738'}
+2025-04-11 12:26:14,631 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 363]: {'book_id': 'B00I3UQSFA', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:14.624478'}
+2025-04-11 12:26:14,740 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 392]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:14.630701'}
+2025-04-11 12:26:20,628 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 364]: {'book_id': 'B00FW6WKUA', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:20.622192'}
+2025-04-11 12:26:20,736 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 393]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:20.627783'}
+2025-04-11 12:26:20,850 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 365]: {'book_id': 'B00FW6WKUA', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:20.846613'}
+2025-04-11 12:26:20,960 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 394]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:20.850361'}
+2025-04-11 12:26:21,123 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 366]: {'book_id': 'B003V4BPP6', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:21.119641'}
+2025-04-11 12:26:21,236 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 395]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:21.123515'}
+2025-04-11 12:26:23,446 - INFO - connection open
+2025-04-11 12:26:23,446 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 12:26:23,653 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 367]: {'book_id': 'B00NY9E7L2', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:23.647360'}
+2025-04-11 12:26:23,759 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 396]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:23.651133'}
+2025-04-11 12:26:23,873 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 368]: {'book_id': 'B0028QHHKK', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:23.848942'}
+2025-04-11 12:26:23,874 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 397]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:23.852773'}
+2025-04-11 12:26:24,035 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 369]: {'book_id': 'B0028QHHKK', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:24.028040'}
+2025-04-11 12:26:24,139 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 398]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:24.035947'}
+2025-04-11 12:26:24,140 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 399]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:24.057660'}
+2025-04-11 12:26:24,140 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 370]: {'book_id': 'B0028QHHKK', 'event_type': 'click', 'timestamp': '2025-04-11T12:26:24.055094'}
+2025-04-11 12:26:24,467 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 371]: {'book_id': 'B0BCZMR6N4', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:24.464300'}
+2025-04-11 12:26:24,573 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 400]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:24.466638'}
+2025-04-11 12:26:30,242 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 372]: {'book_id': 'B08QZC2HZ8', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:30.239079'}
+2025-04-11 12:26:30,347 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 401]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:30.241736'}
+2025-04-11 12:26:30,347 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 402]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:30.315704'}
+2025-04-11 12:26:30,348 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 373]: {'book_id': 'B08QZC2HZ8', 'event_type': 'click', 'timestamp': '2025-04-11T12:26:30.312792'}
+2025-04-11 12:26:30,788 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 374]: {'book_id': 'B0038BR11O', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:30.783266'}
+2025-04-11 12:26:30,893 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 403]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:30.787938'}
+2025-04-11 12:26:31,003 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 375]: {'book_id': 'B0038BR11O', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:30.974988'}
+2025-04-11 12:26:31,004 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 404]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:30.980149'}
+2025-04-11 12:26:31,119 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 376]: {'book_id': 'B0038BR11O', 'event_type': 'click', 'timestamp': '2025-04-11T12:26:31.112821'}
+2025-04-11 12:26:31,231 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 405]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:31.118893'}
+2025-04-11 12:26:31,423 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 377]: {'book_id': 'B00NY9E7L2', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:31.419317'}
+2025-04-11 12:26:31,529 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 406]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:31.422501'}
+2025-04-11 12:26:31,529 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 407]: {'total_recommendations': 0, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:31.517493'}
+2025-04-11 12:26:31,530 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 378]: {'book_id': 'B00NY9E7L2', 'event_type': 'click', 'timestamp': '2025-04-11T12:26:31.514497'}
+2025-04-11 12:26:31,976 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 379]: {'book_id': 'B0BCZMR6N4', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:31.973032'}
+2025-04-11 12:26:32,085 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 408]: {'total_recommendations': 0, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:31.976098'}
+2025-04-11 12:26:39,149 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 380]: {'book_id': 'B00NY9E7L2', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:39.143954'}
+2025-04-11 12:26:40,252 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 409]: {'total_recommendations': 0, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:39.148778'}
+2025-04-11 12:26:40,358 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 381]: {'book_id': 'B00NY9E7L2', 'event_type': 'hover', 'timestamp': '2025-04-11T12:26:39.387518'}
+2025-04-11 12:26:40,358 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 410]: {'total_recommendations': 0, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T12:26:39.392484'}
+2025-04-11 12:26:40,358 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 411]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T12:26:39.600664'}
+2025-04-11 12:31:37,052 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 382]: {'book_id': 'B0BQCPW3YC', 'event_type': 'hover', 'timestamp': '2025-04-11T12:31:37.041492'}
+2025-04-11 12:31:37,052 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 412]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T12:31:37.046465'}
+2025-04-11 12:31:37,156 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 383]: {'book_id': 'B0BQCPW3YC', 'event_type': 'click', 'timestamp': '2025-04-11T12:31:37.136275'}
+2025-04-11 12:31:37,156 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 413]: {'total_recommendations': 20, 'total_clicks': 5, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T12:31:37.139102'}
+2025-04-11 12:31:37,282 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 384]: {'book_id': 'B0BQCPW3YC', 'event_type': 'click', 'timestamp': '2025-04-11T12:31:37.274329'}
+2025-04-11 12:31:37,389 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 414]: {'total_recommendations': 20, 'total_clicks': 6, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T12:31:37.283123'}
+2025-04-11 12:31:37,565 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 385]: {'book_id': 'B0BQCPW3YC', 'event_type': 'click', 'timestamp': '2025-04-11T12:31:37.562495'}
+2025-04-11 12:31:37,674 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 415]: {'total_recommendations': 20, 'total_clicks': 7, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T12:31:37.565616'}
+2025-04-11 12:31:37,787 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 386]: {'book_id': 'B0BQCPW3YC', 'event_type': 'hover', 'timestamp': '2025-04-11T12:31:37.669197'}
+2025-04-11 12:31:37,787 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 387]: {'book_id': 'B0BQCPW3YC', 'event_type': 'click', 'timestamp': '2025-04-11T12:31:37.703540'}
+2025-04-11 12:31:37,787 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 416]: {'total_recommendations': 20, 'total_clicks': 7, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T12:31:37.674074'}
+2025-04-11 12:31:37,787 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 417]: {'total_recommendations': 20, 'total_clicks': 8, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T12:31:37.706024'}
+2025-04-11 12:31:38,179 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 388]: {'book_id': 'B0BQCPW3YC', 'event_type': 'hover', 'timestamp': '2025-04-11T12:31:38.175370'}
+2025-04-11 12:31:38,282 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 418]: {'total_recommendations': 20, 'total_clicks': 8, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T12:31:38.178997'}
+2025-04-11 12:31:38,282 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 419]: {'total_recommendations': 20, 'total_clicks': 9, 'clicks_on_recommended': 5, 'ctr': 0.25, 'timestamp': '2025-04-11T12:31:38.202268'}
+2025-04-11 12:31:38,282 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 389]: {'book_id': 'B0BQCPW3YC', 'event_type': 'click', 'timestamp': '2025-04-11T12:31:38.200222'}
+2025-04-11 12:31:38,386 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 420]: {'total_recommendations': 20, 'total_clicks': 10, 'clicks_on_recommended': 6, 'ctr': 0.3, 'timestamp': '2025-04-11T12:31:38.371946'}
+2025-04-11 12:31:38,386 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 390]: {'book_id': 'B0BQCPW3YC', 'event_type': 'click', 'timestamp': '2025-04-11T12:31:38.368161'}
+2025-04-11 12:31:38,518 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 391]: {'book_id': 'B0BQCPW3YC', 'event_type': 'click', 'timestamp': '2025-04-11T12:31:38.513524'}
+2025-04-11 12:31:38,631 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 421]: {'total_recommendations': 20, 'total_clicks': 11, 'clicks_on_recommended': 7, 'ctr': 0.35, 'timestamp': '2025-04-11T12:31:38.517759'}
+2025-04-11 12:31:38,737 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 392]: {'book_id': 'B0BQCPW3YC', 'event_type': 'click', 'timestamp': '2025-04-11T12:31:38.658085'}
+2025-04-11 12:31:38,737 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 422]: {'total_recommendations': 20, 'total_clicks': 12, 'clicks_on_recommended': 8, 'ctr': 0.4, 'timestamp': '2025-04-11T12:31:38.660510'}
+2025-04-11 12:31:38,844 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 393]: {'book_id': 'B0BQCPW3YC', 'event_type': 'click', 'timestamp': '2025-04-11T12:31:38.805166'}
+2025-04-11 12:31:38,844 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 423]: {'total_recommendations': 20, 'total_clicks': 13, 'clicks_on_recommended': 9, 'ctr': 0.45, 'timestamp': '2025-04-11T12:31:38.807393'}
+2025-04-11 12:31:38,975 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 394]: {'book_id': 'B0BQCPW3YC', 'event_type': 'click', 'timestamp': '2025-04-11T12:31:38.972132'}
+2025-04-11 12:31:39,080 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 424]: {'total_recommendations': 20, 'total_clicks': 14, 'clicks_on_recommended': 10, 'ctr': 0.5, 'timestamp': '2025-04-11T12:31:38.976229'}
+2025-04-11 12:31:39,205 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 395]: {'book_id': 'B0BQCPW3YC', 'event_type': 'hover', 'timestamp': '2025-04-11T12:31:39.120217'}
+2025-04-11 12:31:39,206 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 425]: {'total_recommendations': 20, 'total_clicks': 14, 'clicks_on_recommended': 10, 'ctr': 0.5, 'timestamp': '2025-04-11T12:31:39.122178'}
+2025-04-11 12:36:42,085 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 396]: {'book_id': 'B0BQCPW3YC', 'event_type': 'hover', 'timestamp': '2025-04-11T12:36:42.073974'}
+2025-04-11 12:36:42,085 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 426]: {'total_recommendations': 20, 'total_clicks': 14, 'clicks_on_recommended': 10, 'ctr': 0.5, 'timestamp': '2025-04-11T12:36:42.078716'}
+2025-04-11 12:37:39,877 - WARNING - Configured api_version (2, 6, 0) not supported; using (2, 6)
+2025-04-11 12:37:39,877 - INFO - Updating subscribed topics to: ('user_interactions', 'metrics_topic')
+2025-04-11 12:37:39,878 - INFO - Successfully connected to Kafka for topics: ['user_interactions', 'metrics_topic']
+2025-04-11 12:37:39,914 - INFO - server listening on [::1]:8765
+2025-04-11 12:37:39,914 - INFO - server listening on 127.0.0.1:8765
+2025-04-11 12:37:39,914 - INFO - WebSocket server started on ws://localhost:8765
+2025-04-11 12:37:39,914 - INFO - Starting to consume messages from 'user_interactions' and 'metrics_topic'...
+2025-04-11 12:37:39,914 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 12:37:39,915 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 12:37:39,923 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 12:37:40,028 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 12:37:40,029 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2025-04-11 12:37:40,137 - INFO - Group coordinator for dashboard_group is BrokerMetadata(nodeId='coordinator-1', host='localhost', port=9092, rack=None)
+2025-04-11 12:37:40,137 - INFO - Discovered coordinator coordinator-1 for group dashboard_group
+2025-04-11 12:37:40,138 - INFO - Starting new heartbeat thread
+2025-04-11 12:37:40,138 - INFO - Revoking previously assigned partitions set() for group dashboard_group
+2025-04-11 12:37:40,139 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=coordinator-1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 12:37:40,244 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=coordinator-1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 12:37:40,349 - INFO - (Re-)joining group dashboard_group
+2025-04-11 12:37:43,368 - INFO - Elected group leader -- performing partition assignments using range
+2025-04-11 12:37:43,388 - INFO - Successfully joined group dashboard_group with generation 11
+2025-04-11 12:37:43,389 - INFO - Updated partition assignment: [TopicPartition(topic='metrics_topic', partition=0), TopicPartition(topic='user_interactions', partition=0)]
+2025-04-11 12:37:43,389 - INFO - Setting newly assigned partitions {TopicPartition(topic='user_interactions', partition=0), TopicPartition(topic='metrics_topic', partition=0)} for group dashboard_group
+2025-04-11 12:37:43,402 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 427]: {'total_recommendations': 40, 'total_clicks': 14, 'clicks_on_recommended': 10, 'ctr': 0.25, 'timestamp': '2025-04-11T12:37:38.350690'}
+2025-04-11 12:49:48,139 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 397]: {'book_id': 'B00DVQ53OI', 'event_type': 'click', 'timestamp': '2025-04-11T12:49:48.120744'}
+2025-04-11 12:59:49,020 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 428]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T12:59:48.999202'}
+2025-04-11 12:59:50,125 - INFO - connection open
+2025-04-11 12:59:50,125 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 12:59:53,001 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 398]: {'book_id': 'B00UCV11T6', 'event_type': 'hover', 'timestamp': '2025-04-11T12:59:52.990946'}
+2025-04-11 12:59:54,104 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 429]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T12:59:52.996922'}
+2025-04-11 12:59:54,217 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 399]: {'book_id': 'B0BTD8ZP3V', 'event_type': 'hover', 'timestamp': '2025-04-11T12:59:53.238553'}
+2025-04-11 12:59:54,218 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 400]: {'book_id': 'B0BTD8ZP3V', 'event_type': 'click', 'timestamp': '2025-04-11T12:59:53.275963'}
+2025-04-11 12:59:54,218 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 401]: {'book_id': 'B005WBGQSC', 'event_type': 'hover', 'timestamp': '2025-04-11T12:59:53.787656'}
+2025-04-11 12:59:54,218 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 402]: {'book_id': 'B005WBGQSC', 'event_type': 'click', 'timestamp': '2025-04-11T12:59:53.857695'}
+2025-04-11 12:59:54,218 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 430]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T12:59:53.256761'}
+2025-04-11 12:59:54,218 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 431]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T12:59:53.282885'}
+2025-04-11 12:59:54,219 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 432]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T12:59:53.790725'}
+2025-04-11 12:59:54,219 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 433]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T12:59:53.862705'}
+2025-04-11 12:59:54,402 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 403]: {'book_id': 'B00UCV11T6', 'event_type': 'hover', 'timestamp': '2025-04-11T12:59:54.396894'}
+2025-04-11 12:59:54,512 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 434]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T12:59:54.400812'}
+2025-04-11 12:59:56,300 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 404]: {'book_id': 'B084M1XLN2', 'event_type': 'hover', 'timestamp': '2025-04-11T12:59:56.297770'}
+2025-04-11 12:59:56,406 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 435]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T12:59:56.300534'}
+2025-04-11 13:00:01,765 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 405]: {'book_id': 'B09CNF446H', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:01.761241'}
+2025-04-11 13:00:01,871 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 436]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:00:01.765166'}
+2025-04-11 13:00:01,976 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 406]: {'book_id': 'B09CNF446H', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:01.937212'}
+2025-04-11 13:00:01,977 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 437]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:00:01.940591'}
+2025-04-11 13:00:02,082 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 407]: {'book_id': 'B09CNF446H', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:02.055755'}
+2025-04-11 13:00:02,082 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 438]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:00:02.058664'}
+2025-04-11 13:00:02,224 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 408]: {'book_id': 'B09CNF446H', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:02.216873'}
+2025-04-11 13:00:02,337 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 439]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:00:02.223670'}
+2025-04-11 13:00:02,535 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 409]: {'book_id': 'B009YBTYVM', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:02.530813'}
+2025-04-11 13:00:02,642 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 440]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:00:02.535116'}
+2025-04-11 13:00:02,643 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 441]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:00:02.610965'}
+2025-04-11 13:00:02,643 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 410]: {'book_id': 'B009YBTYVM', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:02.606567'}
+2025-04-11 13:00:02,753 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 442]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:00:02.649626'}
+2025-04-11 13:00:02,755 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 411]: {'book_id': 'B009YBTYVM', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:02.646171'}
+2025-04-11 13:00:02,922 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 412]: {'book_id': 'B09CNF446H', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:02.916353'}
+2025-04-11 13:00:03,026 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 443]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:00:02.921467'}
+2025-04-11 13:00:03,243 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 444]: {'total_recommendations': 40, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.1, 'timestamp': '2025-04-11T13:00:03.238324'}
+2025-04-11 13:00:07,232 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 413]: {'book_id': 'B077NZ4SW3', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:07.229293'}
+2025-04-11 13:00:07,338 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 445]: {'total_recommendations': 40, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.1, 'timestamp': '2025-04-11T13:00:07.231886'}
+2025-04-11 13:00:07,339 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 446]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:07.311436'}
+2025-04-11 13:00:07,339 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 414]: {'book_id': 'B077NZ4SW3', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:07.307183'}
+2025-04-11 13:00:07,457 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 415]: {'book_id': 'B077NZ4SW3', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:07.454530'}
+2025-04-11 13:00:07,561 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 447]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:07.456815'}
+2025-04-11 13:00:07,668 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 416]: {'book_id': 'B077NZ4SW3', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:07.597651'}
+2025-04-11 13:00:07,668 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 448]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:07.600193'}
+2025-04-11 13:00:07,776 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 417]: {'book_id': 'B077NZ4SW3', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:07.734346'}
+2025-04-11 13:00:07,776 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 449]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:07.739362'}
+2025-04-11 13:00:07,880 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 418]: {'book_id': 'B077NZ4SW3', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:07.876884'}
+2025-04-11 13:00:07,984 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 450]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:07.880780'}
+2025-04-11 13:00:08,128 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 419]: {'book_id': 'B077NZ4SW3', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:08.123332'}
+2025-04-11 13:00:08,235 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 451]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:08.127600'}
+2025-04-11 13:00:08,339 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 420]: {'book_id': 'B077NZ4SW3', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:08.329675'}
+2025-04-11 13:00:08,339 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 452]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:08.333032'}
+2025-04-11 13:00:08,515 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 421]: {'book_id': 'B077NZ4SW3', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:08.511549'}
+2025-04-11 13:00:08,622 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 453]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:08.515184'}
+2025-04-11 13:00:08,920 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 422]: {'book_id': 'B077NZ4SW3', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:08.912226'}
+2025-04-11 13:00:09,032 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 454]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:08.919391'}
+2025-04-11 13:00:09,138 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 423]: {'book_id': 'B077NZ4SW3', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:09.088653'}
+2025-04-11 13:00:09,138 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 455]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:09.091709'}
+2025-04-11 13:00:09,355 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 424]: {'book_id': 'B006PLVATI', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:09.348445'}
+2025-04-11 13:00:09,460 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 456]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:00:09.353802'}
+2025-04-11 13:00:09,461 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 457]: {'total_recommendations': 40, 'total_clicks': 6, 'clicks_on_recommended': 6, 'ctr': 0.15, 'timestamp': '2025-04-11T13:00:09.452007'}
+2025-04-11 13:00:09,462 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 425]: {'book_id': 'B006PLVATI', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:09.447272'}
+2025-04-11 13:00:09,761 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 426]: {'book_id': 'B006PLVATI', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:09.755484'}
+2025-04-11 13:00:09,868 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 458]: {'total_recommendations': 40, 'total_clicks': 6, 'clicks_on_recommended': 6, 'ctr': 0.15, 'timestamp': '2025-04-11T13:00:09.760980'}
+2025-04-11 13:00:09,972 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 427]: {'book_id': 'B006PLVATI', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:09.941794'}
+2025-04-11 13:00:09,972 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 459]: {'total_recommendations': 40, 'total_clicks': 6, 'clicks_on_recommended': 6, 'ctr': 0.15, 'timestamp': '2025-04-11T13:00:09.945972'}
+2025-04-11 13:00:10,145 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 428]: {'book_id': 'B006PLVATI', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:10.139631'}
+2025-04-11 13:00:10,254 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 460]: {'total_recommendations': 40, 'total_clicks': 6, 'clicks_on_recommended': 6, 'ctr': 0.15, 'timestamp': '2025-04-11T13:00:10.145780'}
+2025-04-11 13:00:10,449 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 429]: {'book_id': 'B07RM4HSS5', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:10.447147'}
+2025-04-11 13:00:10,555 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 461]: {'total_recommendations': 40, 'total_clicks': 6, 'clicks_on_recommended': 6, 'ctr': 0.15, 'timestamp': '2025-04-11T13:00:10.449477'}
+2025-04-11 13:00:10,661 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 430]: {'book_id': 'B07RM4HSS5', 'event_type': 'click', 'timestamp': '2025-04-11T13:00:10.567272'}
+2025-04-11 13:00:10,661 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 462]: {'total_recommendations': 40, 'total_clicks': 7, 'clicks_on_recommended': 7, 'ctr': 0.175, 'timestamp': '2025-04-11T13:00:10.569248'}
+2025-04-11 13:00:11,251 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 431]: {'book_id': 'B08JH75G8N', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:11.245802'}
+2025-04-11 13:00:11,356 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 463]: {'total_recommendations': 40, 'total_clicks': 7, 'clicks_on_recommended': 7, 'ctr': 0.175, 'timestamp': '2025-04-11T13:00:11.249716'}
+2025-04-11 13:00:11,465 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 432]: {'book_id': 'B08JH75G8N', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:11.364339'}
+2025-04-11 13:00:11,465 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 464]: {'total_recommendations': 40, 'total_clicks': 7, 'clicks_on_recommended': 7, 'ctr': 0.175, 'timestamp': '2025-04-11T13:00:11.371132'}
+2025-04-11 13:00:13,098 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 433]: {'book_id': 'B077NZ4SW3', 'event_type': 'hover', 'timestamp': '2025-04-11T13:00:13.091063'}
+2025-04-11 13:00:13,208 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 465]: {'total_recommendations': 40, 'total_clicks': 7, 'clicks_on_recommended': 7, 'ctr': 0.175, 'timestamp': '2025-04-11T13:00:13.097878'}
+2025-04-11 13:00:13,546 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 466]: {'total_recommendations': 60, 'total_clicks': 7, 'clicks_on_recommended': 7, 'ctr': 0.11666666666666667, 'timestamp': '2025-04-11T13:00:13.542715'}
+2025-04-11 13:00:15,752 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:05:19,828 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 434]: {'book_id': 'B07965NYPZ', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:19.809489'}
+2025-04-11 13:05:20,338 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 467]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:19.822930'}
+2025-04-11 13:05:20,445 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 435]: {'book_id': 'B007AIT48O', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:20.409783'}
+2025-04-11 13:05:20,445 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 468]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:20.412115'}
+2025-04-11 13:05:21,564 - INFO - connection open
+2025-04-11 13:05:21,564 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:05:23,761 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:05:24,869 - INFO - connection open
+2025-04-11 13:05:24,869 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:05:30,949 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 436]: {'book_id': 'B00HEL6KGQ', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:30.945566'}
+2025-04-11 13:05:31,053 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 469]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:30.949765'}
+2025-04-11 13:05:31,157 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 437]: {'book_id': 'B00HEL6KGQ', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:31.147216'}
+2025-04-11 13:05:31,157 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 470]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:31.151444'}
+2025-04-11 13:05:31,696 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 438]: {'book_id': 'B00FFILWZO', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:31.691309'}
+2025-04-11 13:05:31,806 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 471]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:31.695672'}
+2025-04-11 13:05:31,807 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 472]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:31.738145'}
+2025-04-11 13:05:31,807 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 439]: {'book_id': 'B00FFILWZO', 'event_type': 'click', 'timestamp': '2025-04-11T13:05:31.734037'}
+2025-04-11 13:05:32,616 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 440]: {'book_id': 'B00HEL6KGQ', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:32.610159'}
+2025-04-11 13:05:32,723 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 473]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:32.615350'}
+2025-04-11 13:05:32,827 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 441]: {'book_id': 'B00HEL6KGQ', 'event_type': 'click', 'timestamp': '2025-04-11T13:05:32.722492'}
+2025-04-11 13:05:32,937 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 474]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:32.725571'}
+2025-04-11 13:05:33,572 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 442]: {'book_id': 'B00FFILWZO', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:33.567445'}
+2025-04-11 13:05:33,680 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 475]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:33.571882'}
+2025-04-11 13:05:37,307 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 443]: {'book_id': 'B07Z28V6JR', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:37.302252'}
+2025-04-11 13:05:37,410 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 476]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:37.306471'}
+2025-04-11 13:05:37,410 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 477]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:37.389522'}
+2025-04-11 13:05:37,411 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 444]: {'book_id': 'B07Z28V6JR', 'event_type': 'click', 'timestamp': '2025-04-11T13:05:37.387401'}
+2025-04-11 13:05:37,826 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 445]: {'book_id': 'B0979JP8RJ', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:37.821466'}
+2025-04-11 13:05:37,933 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 478]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:37.825795'}
+2025-04-11 13:05:37,934 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 479]: {'total_recommendations': 0, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:37.894557'}
+2025-04-11 13:05:37,934 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 446]: {'book_id': 'B0979JP8RJ', 'event_type': 'click', 'timestamp': '2025-04-11T13:05:37.891798'}
+2025-04-11 13:05:38,345 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 447]: {'book_id': 'B09TVQLCT4', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:38.342757'}
+2025-04-11 13:05:38,456 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 480]: {'total_recommendations': 0, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:05:38.345202'}
+2025-04-11 13:05:40,667 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:05:40,669 - INFO - connection open
+2025-04-11 13:05:40,669 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:05:41,373 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 481]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:05:41.368473'}
+2025-04-11 13:05:41,977 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 448]: {'book_id': 'B0BFNXVQGJ', 'event_type': 'hover', 'timestamp': '2025-04-11T13:05:41.971206'}
+2025-04-11 13:05:42,086 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 482]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:05:41.977590'}
+2025-04-11 13:05:47,602 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:06:01,938 - INFO - connection open
+2025-04-11 13:06:01,940 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:06:03,722 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 483]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:06:03.703825'}
+2025-04-11 13:06:04,283 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 449]: {'book_id': 'B0852Z2483', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:04.270904'}
+2025-04-11 13:06:04,392 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 484]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:06:04.282188'}
+2025-04-11 13:06:04,667 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 450]: {'book_id': 'B0BDVJYV2F', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:04.661545'}
+2025-04-11 13:06:04,777 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 485]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:06:04.666859'}
+2025-04-11 13:06:07,096 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 451]: {'book_id': 'B0BDVJYV2F', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:07.034489'}
+2025-04-11 13:06:07,096 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 486]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:06:07.039566'}
+2025-04-11 13:06:07,206 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 452]: {'book_id': 'B0BDVJYV2F', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:07.186373'}
+2025-04-11 13:06:07,206 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 487]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:06:07.190222'}
+2025-04-11 13:06:07,311 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 453]: {'book_id': 'B0BDVJYV2F', 'event_type': 'click', 'timestamp': '2025-04-11T13:06:07.196996'}
+2025-04-11 13:06:07,311 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 488]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:06:07.205849'}
+2025-04-11 13:06:07,555 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 454]: {'book_id': 'B0BDVJYV2F', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:07.552655'}
+2025-04-11 13:06:07,659 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 489]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:06:07.554769'}
+2025-04-11 13:06:09,745 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 455]: {'book_id': 'B003A83ETS', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:09.740801'}
+2025-04-11 13:06:09,852 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 490]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:06:09.745135'}
+2025-04-11 13:06:09,854 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 491]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:06:09.820416'}
+2025-04-11 13:06:09,854 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 456]: {'book_id': 'B003A83ETS', 'event_type': 'click', 'timestamp': '2025-04-11T13:06:09.816683'}
+2025-04-11 13:06:10,198 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 457]: {'book_id': 'B0852Z2483', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:10.190994'}
+2025-04-11 13:06:10,301 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 492]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:06:10.196294'}
+2025-04-11 13:06:10,302 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 493]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:10.275371'}
+2025-04-11 13:06:10,302 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 458]: {'book_id': 'B0852Z2483', 'event_type': 'click', 'timestamp': '2025-04-11T13:06:10.260502'}
+2025-04-11 13:06:10,549 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 459]: {'book_id': 'B0852Z2483', 'event_type': 'click', 'timestamp': '2025-04-11T13:06:10.536418'}
+2025-04-11 13:06:10,658 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 494]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:10.544744'}
+2025-04-11 13:06:10,773 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 460]: {'book_id': 'B0852Z2483', 'event_type': 'click', 'timestamp': '2025-04-11T13:06:10.705730'}
+2025-04-11 13:06:10,774 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 495]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:10.710164'}
+2025-04-11 13:06:10,884 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 461]: {'book_id': 'B0852Z2483', 'event_type': 'click', 'timestamp': '2025-04-11T13:06:10.846561'}
+2025-04-11 13:06:10,884 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 496]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:10.849469'}
+2025-04-11 13:06:11,130 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 462]: {'book_id': 'B0BDVJYV2F', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:11.123890'}
+2025-04-11 13:06:11,236 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 497]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:11.129589'}
+2025-04-11 13:06:11,399 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 463]: {'book_id': 'B0BDVJYV2F', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:11.391966'}
+2025-04-11 13:06:11,509 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 498]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:11.395828'}
+2025-04-11 13:06:11,510 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 499]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:11.406157'}
+2025-04-11 13:06:11,511 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 464]: {'book_id': 'B0BDVJYV2F', 'event_type': 'click', 'timestamp': '2025-04-11T13:06:11.402519'}
+2025-04-11 13:06:11,711 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 465]: {'book_id': 'B0BDVJYV2F', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:11.706776'}
+2025-04-11 13:06:11,815 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 500]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:11.709635'}
+2025-04-11 13:06:15,230 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 466]: {'book_id': 'B07R96R4JL', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:15.159268'}
+2025-04-11 13:06:15,341 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 501]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:15.163329'}
+2025-04-11 13:06:16,948 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 502]: {'total_recommendations': 40, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.075, 'timestamp': '2025-04-11T13:06:16.944615'}
+2025-04-11 13:06:18,726 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 467]: {'book_id': 'B01HHGQR8I', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:18.722136'}
+2025-04-11 13:06:18,834 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 503]: {'total_recommendations': 40, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.075, 'timestamp': '2025-04-11T13:06:18.725695'}
+2025-04-11 13:06:18,835 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 504]: {'total_recommendations': 40, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.1, 'timestamp': '2025-04-11T13:06:18.779170'}
+2025-04-11 13:06:18,835 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 468]: {'book_id': 'B01HHGQR8I', 'event_type': 'click', 'timestamp': '2025-04-11T13:06:18.772703'}
+2025-04-11 13:06:19,228 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 469]: {'book_id': 'B01CF3N006', 'event_type': 'click', 'timestamp': '2025-04-11T13:06:19.224491'}
+2025-04-11 13:06:19,334 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 505]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:06:19.228258'}
+2025-04-11 13:06:19,335 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 506]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:06:19.238607'}
+2025-04-11 13:06:19,335 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 470]: {'book_id': 'B01CF3N006', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:19.236696'}
+2025-04-11 13:06:19,471 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 471]: {'book_id': 'B01CF3N006', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:19.466819'}
+2025-04-11 13:06:19,574 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 507]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:06:19.470791'}
+2025-04-11 13:06:19,985 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 472]: {'book_id': 'B00V4BJ1MC', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:19.980029'}
+2025-04-11 13:06:20,093 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 508]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:06:19.984655'}
+2025-04-11 13:06:20,094 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 509]: {'total_recommendations': 40, 'total_clicks': 6, 'clicks_on_recommended': 6, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:20.023869'}
+2025-04-11 13:06:20,095 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 473]: {'book_id': 'B00V4BJ1MC', 'event_type': 'click', 'timestamp': '2025-04-11T13:06:20.019708'}
+2025-04-11 13:06:20,834 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 474]: {'book_id': 'B01CF3N006', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:20.827781'}
+2025-04-11 13:06:20,943 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 510]: {'total_recommendations': 40, 'total_clicks': 6, 'clicks_on_recommended': 6, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:20.833991'}
+2025-04-11 13:06:21,141 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 475]: {'book_id': 'B00V4BJ1MC', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:21.133638'}
+2025-04-11 13:06:21,245 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 511]: {'total_recommendations': 40, 'total_clicks': 6, 'clicks_on_recommended': 6, 'ctr': 0.15, 'timestamp': '2025-04-11T13:06:21.138684'}
+2025-04-11 13:06:21,797 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 512]: {'total_recommendations': 60, 'total_clicks': 6, 'clicks_on_recommended': 6, 'ctr': 0.1, 'timestamp': '2025-04-11T13:06:21.792008'}
+2025-04-11 13:06:22,320 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 476]: {'book_id': 'B0BYTBKP3J', 'event_type': 'hover', 'timestamp': '2025-04-11T13:06:22.316878'}
+2025-04-11 13:06:22,430 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 513]: {'total_recommendations': 60, 'total_clicks': 6, 'clicks_on_recommended': 6, 'ctr': 0.1, 'timestamp': '2025-04-11T13:06:22.319982'}
+2025-04-11 13:06:25,743 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:08:36,667 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 514]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:08:36.639563'}
+2025-04-11 13:08:37,220 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 477]: {'book_id': 'B01CC95XL2', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:37.214004'}
+2025-04-11 13:08:37,329 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 515]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:08:37.220169'}
+2025-04-11 13:08:37,787 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 478]: {'book_id': 'B003CNQ4ES', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:37.783685'}
+2025-04-11 13:08:37,892 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 516]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:08:37.787112'}
+2025-04-11 13:08:41,204 - INFO - connection open
+2025-04-11 13:08:41,204 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:08:42,595 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 479]: {'book_id': 'B003CNQ4ES', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:42.587643'}
+2025-04-11 13:08:42,698 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 517]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:08:42.593458'}
+2025-04-11 13:08:42,803 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 480]: {'book_id': 'B003CNQ4ES', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:42.758276'}
+2025-04-11 13:08:42,803 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 518]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:08:42.761434'}
+2025-04-11 13:08:42,907 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 481]: {'book_id': 'B003CNQ4ES', 'event_type': 'click', 'timestamp': '2025-04-11T13:08:42.818254'}
+2025-04-11 13:08:42,908 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 519]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:08:42.820812'}
+2025-04-11 13:08:43,216 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 482]: {'book_id': 'B06ZYX4V6Y', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:43.212941'}
+2025-04-11 13:08:43,325 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 520]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:08:43.216201'}
+2025-04-11 13:08:44,868 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 483]: {'book_id': 'B004JHY8BM', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:44.862998'}
+2025-04-11 13:08:44,979 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 521]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:08:44.868428'}
+2025-04-11 13:08:45,121 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 484]: {'book_id': 'B003WEABPK', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:45.116337'}
+2025-04-11 13:08:45,228 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 522]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:08:45.121172'}
+2025-04-11 13:08:45,229 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 523]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:08:45.191657'}
+2025-04-11 13:08:45,229 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 485]: {'book_id': 'B003WEABPK', 'event_type': 'click', 'timestamp': '2025-04-11T13:08:45.187474'}
+2025-04-11 13:08:45,541 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 486]: {'book_id': 'B00D387SDS', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:45.538404'}
+2025-04-11 13:08:45,648 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 524]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:08:45.541477'}
+2025-04-11 13:08:45,650 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 525]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:08:45.569841'}
+2025-04-11 13:08:45,651 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 487]: {'book_id': 'B00D387SDS', 'event_type': 'click', 'timestamp': '2025-04-11T13:08:45.566613'}
+2025-04-11 13:08:45,959 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 488]: {'book_id': 'B0843R8WG9', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:45.950061'}
+2025-04-11 13:08:46,067 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 526]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:08:45.962814'}
+2025-04-11 13:08:46,068 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 527]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:08:46.024715'}
+2025-04-11 13:08:46,068 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 489]: {'book_id': 'B0843R8WG9', 'event_type': 'click', 'timestamp': '2025-04-11T13:08:46.022234'}
+2025-04-11 13:08:46,487 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 490]: {'book_id': 'B005IH753U', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:46.483366'}
+2025-04-11 13:08:46,603 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 528]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:08:46.487034'}
+2025-04-11 13:08:46,605 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 529]: {'total_recommendations': 20, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.25, 'timestamp': '2025-04-11T13:08:46.550331'}
+2025-04-11 13:08:46,605 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 491]: {'book_id': 'B005IH753U', 'event_type': 'click', 'timestamp': '2025-04-11T13:08:46.546961'}
+2025-04-11 13:08:46,890 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 492]: {'book_id': 'B005IH753U', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:46.886715'}
+2025-04-11 13:08:46,996 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 530]: {'total_recommendations': 20, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.25, 'timestamp': '2025-04-11T13:08:46.890586'}
+2025-04-11 13:08:47,245 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 531]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:08:47.241648'}
+2025-04-11 13:08:55,035 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:08:55,156 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 493]: {'book_id': 'B013TN3U7E', 'event_type': 'hover', 'timestamp': '2025-04-11T13:08:55.150297'}
+2025-04-11 13:08:55,260 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 532]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:08:55.156667'}
+2025-04-11 13:19:24,693 - WARNING - Configured api_version (2, 6, 0) not supported; using (2, 6)
+2025-04-11 13:19:24,693 - INFO - Updating subscribed topics to: ('user_interactions', 'metrics_topic')
+2025-04-11 13:19:24,693 - INFO - Successfully connected to Kafka for topics: ['user_interactions', 'metrics_topic']
+2025-04-11 13:19:24,712 - INFO - server listening on [::1]:8765
+2025-04-11 13:19:24,712 - INFO - server listening on 127.0.0.1:8765
+2025-04-11 13:19:24,712 - INFO - WebSocket server started on ws://localhost:8765
+2025-04-11 13:19:24,712 - INFO - Starting to consume messages from 'user_interactions' and 'metrics_topic'...
+2025-04-11 13:19:24,713 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 13:19:24,713 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 13:19:24,773 - WARNING - Topic metrics_topic is not available during auto-create initialization
+2025-04-11 13:19:24,773 - WARNING - Topic user_interactions is not available during auto-create initialization
+2025-04-11 13:19:24,774 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 13:19:24,876 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 13:19:24,877 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2025-04-11 13:19:25,323 - INFO - Group coordinator for dashboard_group is BrokerMetadata(nodeId='coordinator-1', host='localhost', port=9092, rack=None)
+2025-04-11 13:19:25,323 - INFO - Discovered coordinator coordinator-1 for group dashboard_group
+2025-04-11 13:19:25,323 - INFO - Starting new heartbeat thread
+2025-04-11 13:19:25,323 - INFO - Revoking previously assigned partitions set() for group dashboard_group
+2025-04-11 13:19:25,324 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=coordinator-1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 13:19:25,425 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=coordinator-1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 13:19:25,527 - INFO - (Re-)joining group dashboard_group
+2025-04-11 13:19:28,598 - INFO - Elected group leader -- performing partition assignments using range
+2025-04-11 13:19:28,598 - WARNING - No partition metadata for topic metrics_topic
+2025-04-11 13:19:28,598 - WARNING - No partition metadata for topic user_interactions
+2025-04-11 13:19:28,632 - INFO - Successfully joined group dashboard_group with generation 1
+2025-04-11 13:19:28,632 - INFO - Updated partition assignment: []
+2025-04-11 13:19:28,632 - INFO - Setting newly assigned partitions set() for group dashboard_group
+2025-04-11 13:19:28,632 - INFO - Revoking previously assigned partitions set() for group dashboard_group
+2025-04-11 13:19:28,632 - INFO - (Re-)joining group dashboard_group
+2025-04-11 13:19:28,636 - INFO - Elected group leader -- performing partition assignments using range
+2025-04-11 13:19:28,639 - INFO - Successfully joined group dashboard_group with generation 2
+2025-04-11 13:19:28,639 - INFO - Updated partition assignment: [TopicPartition(topic='metrics_topic', partition=0), TopicPartition(topic='user_interactions', partition=0)]
+2025-04-11 13:19:28,639 - INFO - Setting newly assigned partitions {TopicPartition(topic='metrics_topic', partition=0), TopicPartition(topic='user_interactions', partition=0)} for group dashboard_group
+2025-04-11 13:23:12,022 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 0]: {'book_id': 'B07WHR3S4T', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:11.954815'}
+2025-04-11 13:23:12,491 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 0]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:12.005893'}
+2025-04-11 13:23:14,703 - INFO - connection open
+2025-04-11 13:23:14,704 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:23:15,497 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 1]: {'book_id': 'B00KO3N9C4', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:15.489337'}
+2025-04-11 13:23:15,616 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 1]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:15.496757'}
+2025-04-11 13:23:15,729 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 2]: {'book_id': 'B00KO3N9C4', 'event_type': 'click', 'timestamp': '2025-04-11T13:23:15.719896'}
+2025-04-11 13:23:15,837 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 2]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:15.728046'}
+2025-04-11 13:23:16,144 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 3]: {'book_id': 'B09W9WCTPY', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:16.131085'}
+2025-04-11 13:23:16,258 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 3]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:16.142184'}
+2025-04-11 13:23:16,259 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 4]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:16.162982'}
+2025-04-11 13:23:16,260 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 4]: {'book_id': 'B09W9WCTPY', 'event_type': 'click', 'timestamp': '2025-04-11T13:23:16.155106'}
+2025-04-11 13:23:16,545 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 5]: {'book_id': 'B07WHR3S4T', 'event_type': 'click', 'timestamp': '2025-04-11T13:23:16.531042'}
+2025-04-11 13:23:16,657 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 5]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:16.540197'}
+2025-04-11 13:23:16,658 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 6]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:16.559771'}
+2025-04-11 13:23:16,659 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 6]: {'book_id': 'B07WHR3S4T', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:16.552694'}
+2025-04-11 13:23:16,798 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 7]: {'book_id': 'B00KO3N9C4', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:16.787250'}
+2025-04-11 13:23:16,915 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 7]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:16.794512'}
+2025-04-11 13:23:19,233 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 8]: {'book_id': 'B09W9WCTPY', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:19.168021'}
+2025-04-11 13:23:19,234 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 8]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:19.175917'}
+2025-04-11 13:23:19,343 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 9]: {'book_id': 'B09W9WCTPY', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:19.337981'}
+2025-04-11 13:23:19,451 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 9]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:19.342180'}
+2025-04-11 13:23:19,852 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 10]: {'book_id': 'B00XRHANAK', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:19.843962'}
+2025-04-11 13:23:19,961 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 10]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:19.852103'}
+2025-04-11 13:23:19,962 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 11]: {'total_recommendations': 0, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:19.886984'}
+2025-04-11 13:23:19,962 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 11]: {'book_id': 'B00XRHANAK', 'event_type': 'click', 'timestamp': '2025-04-11T13:23:19.882509'}
+2025-04-11 13:23:20,443 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 12]: {'book_id': 'B07L3PDR73', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:20.427149'}
+2025-04-11 13:23:20,555 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 12]: {'total_recommendations': 0, 'total_clicks': 4, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:20.440610'}
+2025-04-11 13:23:20,556 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 13]: {'total_recommendations': 0, 'total_clicks': 5, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:20.527293'}
+2025-04-11 13:23:20,557 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 13]: {'book_id': 'B07L3PDR73', 'event_type': 'click', 'timestamp': '2025-04-11T13:23:20.519679'}
+2025-04-11 13:23:21,271 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 14]: {'book_id': 'B09W9WCTPY', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:21.260183'}
+2025-04-11 13:23:21,377 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 14]: {'total_recommendations': 0, 'total_clicks': 5, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:21.267829'}
+2025-04-11 13:23:23,584 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:23:23,598 - INFO - connection open
+2025-04-11 13:23:23,598 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:23:24,688 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:23:24,693 - INFO - connection open
+2025-04-11 13:23:24,693 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:23:25,263 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 15]: {'book_id': 'B07WHR3S4T', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:25.243767'}
+2025-04-11 13:23:25,373 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 15]: {'total_recommendations': 0, 'total_clicks': 5, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:25.253021'}
+2025-04-11 13:23:25,373 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 16]: {'total_recommendations': 0, 'total_clicks': 5, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:25.277085'}
+2025-04-11 13:23:25,374 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 16]: {'book_id': 'B07WHR3S4T', 'event_type': 'click', 'timestamp': '2025-04-11T13:23:25.273412'}
+2025-04-11 13:23:25,683 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 17]: {'book_id': 'B07L3PDR73', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:25.669199'}
+2025-04-11 13:23:25,794 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 17]: {'total_recommendations': 0, 'total_clicks': 5, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:25.682961'}
+2025-04-11 13:23:25,795 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 18]: {'total_recommendations': 0, 'total_clicks': 5, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:25.719937'}
+2025-04-11 13:23:25,795 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 18]: {'book_id': 'B07L3PDR73', 'event_type': 'click', 'timestamp': '2025-04-11T13:23:25.712744'}
+2025-04-11 13:23:26,096 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 19]: {'book_id': 'B09W9WCTPY', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:26.083011'}
+2025-04-11 13:23:26,212 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 19]: {'total_recommendations': 0, 'total_clicks': 5, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:26.091266'}
+2025-04-11 13:23:27,890 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 20]: {'book_id': 'B08P2F55N8', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:27.881374'}
+2025-04-11 13:23:28,004 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 20]: {'total_recommendations': 0, 'total_clicks': 5, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:27.887954'}
+2025-04-11 13:23:28,007 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 21]: {'book_id': 'B08P2F55N8', 'event_type': 'click', 'timestamp': '2025-04-11T13:23:27.984699'}
+2025-04-11 13:23:28,114 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 21]: {'total_recommendations': 0, 'total_clicks': 6, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:27.992164'}
+2025-04-11 13:23:28,433 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 22]: {'book_id': 'B07WHR3S4T', 'event_type': 'hover', 'timestamp': '2025-04-11T13:23:28.428201'}
+2025-04-11 13:23:28,540 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 22]: {'total_recommendations': 0, 'total_clicks': 6, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:23:28.433159'}
+2025-04-11 13:24:02,732 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:24:02,734 - INFO - connection open
+2025-04-11 13:24:02,734 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:24:03,804 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 23]: {'book_id': 'B08P2F55N8', 'event_type': 'hover', 'timestamp': '2025-04-11T13:24:03.792975'}
+2025-04-11 13:24:03,804 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:24:03,912 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 23]: {'total_recommendations': 0, 'total_clicks': 6, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:24:03.800685'}
+2025-04-11 13:24:04,047 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 24]: {'book_id': 'B07FVMLN3G', 'event_type': 'hover', 'timestamp': '2025-04-11T13:24:04.031785'}
+2025-04-11 13:24:04,159 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 24]: {'total_recommendations': 0, 'total_clicks': 6, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:24:04.050138'}
+2025-04-11 13:24:04,416 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 25]: {'book_id': 'B08P2F55N8', 'event_type': 'hover', 'timestamp': '2025-04-11T13:24:04.411816'}
+2025-04-11 13:24:04,521 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 25]: {'total_recommendations': 0, 'total_clicks': 6, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:24:04.416266'}
+2025-04-11 13:24:19,959 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 26]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:24:19.720492'}
+2025-04-11 13:24:19,961 - INFO - connection open
+2025-04-11 13:24:19,961 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:24:21,383 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 26]: {'book_id': 'B0081KZ0ZG', 'event_type': 'hover', 'timestamp': '2025-04-11T13:24:21.364229'}
+2025-04-11 13:24:21,492 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 27]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:24:21.379565'}
+2025-04-11 13:24:21,717 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 27]: {'book_id': 'B0081KZ0ZG', 'event_type': 'hover', 'timestamp': '2025-04-11T13:24:21.711944'}
+2025-04-11 13:24:21,827 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 28]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:24:21.715926'}
+2025-04-11 13:24:21,828 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 29]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:24:21.761051'}
+2025-04-11 13:24:21,828 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 28]: {'book_id': 'B0081KZ0ZG', 'event_type': 'click', 'timestamp': '2025-04-11T13:24:21.755510'}
+2025-04-11 13:24:22,108 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 29]: {'book_id': 'B000SEHDGM', 'event_type': 'hover', 'timestamp': '2025-04-11T13:24:22.098007'}
+2025-04-11 13:24:22,214 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 30]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:24:22.105282'}
+2025-04-11 13:24:22,216 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 31]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:24:22.171310'}
+2025-04-11 13:24:22,217 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 30]: {'book_id': 'B000SEHDGM', 'event_type': 'click', 'timestamp': '2025-04-11T13:24:22.164035'}
+2025-04-11 13:24:22,401 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 31]: {'book_id': 'B00IQNYU22', 'event_type': 'hover', 'timestamp': '2025-04-11T13:24:22.389243'}
+2025-04-11 13:24:22,506 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 32]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:24:22.400912'}
+2025-04-11 13:24:22,507 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 33]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:24:22.457374'}
+2025-04-11 13:24:22,508 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 32]: {'book_id': 'B00IQNYU22', 'event_type': 'click', 'timestamp': '2025-04-11T13:24:22.453887'}
+2025-04-11 13:24:22,645 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 33]: {'book_id': 'B00CLZT8RI', 'event_type': 'hover', 'timestamp': '2025-04-11T13:24:22.637168'}
+2025-04-11 13:24:22,755 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 34]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:24:22.647146'}
+2025-04-11 13:24:22,758 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 35]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:24:22.712355'}
+2025-04-11 13:24:22,758 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 34]: {'book_id': 'B00CLZT8RI', 'event_type': 'click', 'timestamp': '2025-04-11T13:24:22.706664'}
+2025-04-11 13:24:22,870 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 36]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:24:22.839237'}
+2025-04-11 13:24:22,873 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 35]: {'book_id': 'B00CLZT8RI', 'event_type': 'hover', 'timestamp': '2025-04-11T13:24:22.832786'}
+2025-04-11 13:24:23,010 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 36]: {'book_id': 'B0081KZ0ZG', 'event_type': 'hover', 'timestamp': '2025-04-11T13:24:23.005019'}
+2025-04-11 13:24:23,116 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 37]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:24:23.008985'}
+2025-04-11 13:24:26,428 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:25:22,671 - INFO - connection open
+2025-04-11 13:25:22,672 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:25:23,046 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 38]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:25:23.031913'}
+2025-04-11 13:25:23,645 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 37]: {'book_id': 'B00QSQLE5U', 'event_type': 'hover', 'timestamp': '2025-04-11T13:25:23.633405'}
+2025-04-11 13:25:23,751 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 39]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:25:23.645386'}
+2025-04-11 13:25:23,882 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 38]: {'book_id': 'B00966TN1Q', 'event_type': 'hover', 'timestamp': '2025-04-11T13:25:23.874516'}
+2025-04-11 13:25:23,990 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 40]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:25:23.880623'}
+2025-04-11 13:25:24,153 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 39]: {'book_id': 'B00966TN1Q', 'event_type': 'hover', 'timestamp': '2025-04-11T13:25:24.148187'}
+2025-04-11 13:25:24,266 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 41]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:25:24.153169'}
+2025-04-11 13:25:24,268 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 42]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:25:24.204539'}
+2025-04-11 13:25:24,268 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 40]: {'book_id': 'B00966TN1Q', 'event_type': 'click', 'timestamp': '2025-04-11T13:25:24.200129'}
+2025-04-11 13:25:24,576 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 41]: {'book_id': 'B08815C7NR', 'event_type': 'hover', 'timestamp': '2025-04-11T13:25:24.561636'}
+2025-04-11 13:25:24,686 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 43]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:25:24.572479'}
+2025-04-11 13:25:24,688 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 44]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:25:24.611394'}
+2025-04-11 13:25:24,688 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 42]: {'book_id': 'B08815C7NR', 'event_type': 'click', 'timestamp': '2025-04-11T13:25:24.602880'}
+2025-04-11 13:25:26,896 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:39:22,182 - WARNING - Configured api_version (2, 6, 0) not supported; using (2, 6)
+2025-04-11 13:39:22,182 - INFO - Updating subscribed topics to: ('user_interactions', 'metrics_topic')
+2025-04-11 13:39:22,183 - INFO - Successfully connected to Kafka for topics: ['user_interactions', 'metrics_topic']
+2025-04-11 13:39:22,195 - INFO - server listening on [::1]:8765
+2025-04-11 13:39:22,195 - INFO - server listening on 127.0.0.1:8765
+2025-04-11 13:39:22,195 - INFO - WebSocket server started on ws://localhost:8765
+2025-04-11 13:39:22,195 - INFO - Starting to consume messages from 'user_interactions' and 'metrics_topic'...
+2025-04-11 13:39:22,196 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 13:39:22,196 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 13:39:22,256 - WARNING - Topic metrics_topic is not available during auto-create initialization
+2025-04-11 13:39:22,256 - WARNING - Topic user_interactions is not available during auto-create initialization
+2025-04-11 13:39:22,257 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 13:39:22,362 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 13:39:22,362 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2025-04-11 13:39:22,807 - INFO - Group coordinator for dashboard_group is BrokerMetadata(nodeId='coordinator-1', host='localhost', port=9092, rack=None)
+2025-04-11 13:39:22,808 - INFO - Discovered coordinator coordinator-1 for group dashboard_group
+2025-04-11 13:39:22,808 - INFO - Starting new heartbeat thread
+2025-04-11 13:39:22,809 - INFO - Revoking previously assigned partitions set() for group dashboard_group
+2025-04-11 13:39:22,810 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=coordinator-1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-04-11 13:39:22,915 - INFO - <BrokerConnection client_id=kafka-python-2.1.4, node_id=coordinator-1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-04-11 13:39:23,016 - INFO - (Re-)joining group dashboard_group
+2025-04-11 13:39:26,076 - INFO - Elected group leader -- performing partition assignments using range
+2025-04-11 13:39:26,077 - WARNING - No partition metadata for topic user_interactions
+2025-04-11 13:39:26,077 - WARNING - No partition metadata for topic metrics_topic
+2025-04-11 13:39:26,121 - INFO - Successfully joined group dashboard_group with generation 1
+2025-04-11 13:39:26,122 - INFO - Updated partition assignment: []
+2025-04-11 13:39:26,122 - INFO - Setting newly assigned partitions set() for group dashboard_group
+2025-04-11 13:39:26,122 - INFO - Revoking previously assigned partitions set() for group dashboard_group
+2025-04-11 13:39:26,123 - INFO - (Re-)joining group dashboard_group
+2025-04-11 13:39:26,126 - INFO - Elected group leader -- performing partition assignments using range
+2025-04-11 13:39:26,130 - INFO - Successfully joined group dashboard_group with generation 2
+2025-04-11 13:39:26,131 - INFO - Updated partition assignment: [TopicPartition(topic='metrics_topic', partition=0), TopicPartition(topic='user_interactions', partition=0)]
+2025-04-11 13:39:26,131 - INFO - Setting newly assigned partitions {TopicPartition(topic='metrics_topic', partition=0), TopicPartition(topic='user_interactions', partition=0)} for group dashboard_group
+2025-04-11 13:46:07,304 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 0]: {'book_id': 'B018RUW99Y', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:07.256054'}
+2025-04-11 13:46:07,797 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 0]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:07.299509'}
+2025-04-11 13:46:07,907 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 1]: {'book_id': 'B018RUW99Y', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:07.801612'}
+2025-04-11 13:46:07,908 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 2]: {'book_id': 'B07BTFDBJQ', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:07.823994'}
+2025-04-11 13:46:07,908 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 1]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:07.810643'}
+2025-04-11 13:46:07,908 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 2]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:07.831265'}
+2025-04-11 13:46:08,135 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 3]: {'book_id': 'B087THZHKT', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:08.126915'}
+2025-04-11 13:46:08,247 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 3]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:08.136843'}
+2025-04-11 13:46:08,445 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 4]: {'book_id': 'B08PHSVSVG', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:08.418805'}
+2025-04-11 13:46:08,550 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 4]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:08.446465'}
+2025-04-11 13:46:11,549 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 5]: {'book_id': 'B08PHSVSVG', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:11.539186'}
+2025-04-11 13:46:11,655 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 5]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:11.547146'}
+2025-04-11 13:46:11,808 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 6]: {'book_id': 'B00AFULEQO', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:11.802908'}
+2025-04-11 13:46:11,918 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 6]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:11.810046'}
+2025-04-11 13:46:12,100 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 7]: {'book_id': 'B018RUW99Y', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:12.096187'}
+2025-04-11 13:46:12,207 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 7]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:12.100631'}
+2025-04-11 13:46:12,786 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 8]: {'book_id': 'B08RCT1QT8', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:12.771831'}
+2025-04-11 13:46:12,898 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 8]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:12.780861'}
+2025-04-11 13:46:13,008 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 9]: {'book_id': 'B08RCT1QT8', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:12.914544'}
+2025-04-11 13:46:13,008 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 9]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:12.922621'}
+2025-04-11 13:46:14,118 - INFO - connection open
+2025-04-11 13:46:14,120 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:46:15,068 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 10]: {'book_id': 'B087THZHKT', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:15.060757'}
+2025-04-11 13:46:15,173 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 10]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:15.069028'}
+2025-04-11 13:46:15,568 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 11]: {'book_id': 'B087THZHKT', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:15.559412'}
+2025-04-11 13:46:15,681 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 11]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:15.567291'}
+2025-04-11 13:46:15,682 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 12]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:15.590177'}
+2025-04-11 13:46:15,682 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 12]: {'book_id': 'B087THZHKT', 'event_type': 'click', 'timestamp': '2025-04-11T13:46:15.585087'}
+2025-04-11 13:46:15,979 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 13]: {'book_id': 'B00ILHW4H6', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:15.965293'}
+2025-04-11 13:46:16,086 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 13]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:15.976993'}
+2025-04-11 13:46:16,087 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 14]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:16.058507'}
+2025-04-11 13:46:16,087 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 14]: {'book_id': 'B00ILHW4H6', 'event_type': 'click', 'timestamp': '2025-04-11T13:46:16.051419'}
+2025-04-11 13:46:16,417 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 15]: {'book_id': 'B00AFULEQO', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:16.407847'}
+2025-04-11 13:46:16,530 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 15]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:16.417606'}
+2025-04-11 13:46:16,531 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 16]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:16.474145'}
+2025-04-11 13:46:16,531 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 16]: {'book_id': 'B00AFULEQO', 'event_type': 'click', 'timestamp': '2025-04-11T13:46:16.459669'}
+2025-04-11 13:46:16,673 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 17]: {'book_id': 'B00AFULEQO', 'event_type': 'click', 'timestamp': '2025-04-11T13:46:16.665145'}
+2025-04-11 13:46:16,781 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 17]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:16.673938'}
+2025-04-11 13:46:16,899 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 18]: {'book_id': 'B00AFULEQO', 'event_type': 'click', 'timestamp': '2025-04-11T13:46:16.823532'}
+2025-04-11 13:46:16,899 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 18]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:16.833770'}
+2025-04-11 13:46:17,006 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 19]: {'book_id': 'B00AFULEQO', 'event_type': 'click', 'timestamp': '2025-04-11T13:46:16.980737'}
+2025-04-11 13:46:17,006 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 19]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:16.986607'}
+2025-04-11 13:46:17,222 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 20]: {'book_id': 'B018RUW99Y', 'event_type': 'hover', 'timestamp': '2025-04-11T13:46:17.213198'}
+2025-04-11 13:46:17,326 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 20]: {'total_recommendations': 0, 'total_clicks': 3, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:46:17.221104'}
+2025-04-11 13:46:19,585 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:46:19,621 - INFO - connection open
+2025-04-11 13:46:19,621 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:47:42,265 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:50:27,074 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 21]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:50:27.060182'}
+2025-04-11 13:50:29,490 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 22]: {'total_recommendations': 40, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:50:29.483254'}
+2025-04-11 13:50:30,347 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 21]: {'book_id': 'B00AQ6PBKC', 'event_type': 'hover', 'timestamp': '2025-04-11T13:50:30.319839'}
+2025-04-11 13:50:30,453 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 23]: {'total_recommendations': 40, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:50:30.342952'}
+2025-04-11 13:50:31,561 - INFO - connection open
+2025-04-11 13:50:31,562 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:50:32,926 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 22]: {'book_id': 'B01GU5Q1Q0', 'event_type': 'hover', 'timestamp': '2025-04-11T13:50:32.918827'}
+2025-04-11 13:50:33,033 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 24]: {'total_recommendations': 40, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:50:32.927446'}
+2025-04-11 13:50:33,035 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 25]: {'total_recommendations': 40, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.025, 'timestamp': '2025-04-11T13:50:33.013016'}
+2025-04-11 13:50:33,036 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 23]: {'book_id': 'B01GU5Q1Q0', 'event_type': 'click', 'timestamp': '2025-04-11T13:50:33.004919'}
+2025-04-11 13:50:33,419 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 24]: {'book_id': 'B013O7U6G8', 'event_type': 'hover', 'timestamp': '2025-04-11T13:50:33.409989'}
+2025-04-11 13:50:33,526 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 26]: {'total_recommendations': 40, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.025, 'timestamp': '2025-04-11T13:50:33.419032'}
+2025-04-11 13:50:33,527 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 27]: {'total_recommendations': 40, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.05, 'timestamp': '2025-04-11T13:50:33.429659'}
+2025-04-11 13:50:33,527 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 25]: {'book_id': 'B013O7U6G8', 'event_type': 'click', 'timestamp': '2025-04-11T13:50:33.425452'}
+2025-04-11 13:50:33,706 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 26]: {'book_id': 'B00NYGN3YM', 'event_type': 'hover', 'timestamp': '2025-04-11T13:50:33.693044'}
+2025-04-11 13:50:33,817 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 28]: {'total_recommendations': 40, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.05, 'timestamp': '2025-04-11T13:50:33.706941'}
+2025-04-11 13:50:33,818 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 29]: {'total_recommendations': 40, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.075, 'timestamp': '2025-04-11T13:50:33.765003'}
+2025-04-11 13:50:33,818 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 27]: {'book_id': 'B00NYGN3YM', 'event_type': 'click', 'timestamp': '2025-04-11T13:50:33.759975'}
+2025-04-11 13:50:33,925 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 30]: {'total_recommendations': 40, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.075, 'timestamp': '2025-04-11T13:50:33.831940'}
+2025-04-11 13:50:33,926 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 28]: {'book_id': 'B00NYGN3YM', 'event_type': 'hover', 'timestamp': '2025-04-11T13:50:33.827220'}
+2025-04-11 13:50:34,033 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 31]: {'total_recommendations': 40, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.075, 'timestamp': '2025-04-11T13:50:34.023379'}
+2025-04-11 13:50:34,033 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 29]: {'book_id': 'B013O7U6G8', 'event_type': 'hover', 'timestamp': '2025-04-11T13:50:34.015136'}
+2025-04-11 13:50:37,343 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:50:37,447 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 32]: {'total_recommendations': 40, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.075, 'timestamp': '2025-04-11T13:50:37.374008'}
+2025-04-11 13:50:37,448 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 30]: {'book_id': 'B002RI90UY', 'event_type': 'hover', 'timestamp': '2025-04-11T13:50:37.368846'}
+2025-04-11 13:51:08,852 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 33]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:51:08.832920'}
+2025-04-11 13:51:08,853 - INFO - connection open
+2025-04-11 13:51:08,853 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:51:10,125 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 31]: {'book_id': 'B006GA46KI', 'event_type': 'hover', 'timestamp': '2025-04-11T13:51:10.106929'}
+2025-04-11 13:51:10,232 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 34]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:51:10.126181'}
+2025-04-11 13:51:10,232 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 35]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:51:10.161330'}
+2025-04-11 13:51:10,232 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 32]: {'book_id': 'B006GA46KI', 'event_type': 'click', 'timestamp': '2025-04-11T13:51:10.152385'}
+2025-04-11 13:51:10,505 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 33]: {'book_id': 'B006GA46KI', 'event_type': 'hover', 'timestamp': '2025-04-11T13:51:10.496480'}
+2025-04-11 13:51:10,612 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 36]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:51:10.505591'}
+2025-04-11 13:51:12,215 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 34]: {'book_id': 'B006GA46KI', 'event_type': 'hover', 'timestamp': '2025-04-11T13:51:12.206711'}
+2025-04-11 13:51:12,216 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:51:12,322 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 37]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:51:12.215835'}
+2025-04-11 13:54:36,984 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 35]: {'book_id': 'B07CBJJPTX', 'event_type': 'hover', 'timestamp': '2025-04-11T13:54:36.957535'}
+2025-04-11 13:54:37,492 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 38]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:36.982968'}
+2025-04-11 13:54:37,603 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 36]: {'book_id': 'B09RW8V3C6', 'event_type': 'hover', 'timestamp': '2025-04-11T13:54:37.493862'}
+2025-04-11 13:54:37,603 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 39]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:37.500757'}
+2025-04-11 13:54:38,159 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 37]: {'book_id': 'B0794RL55P', 'event_type': 'hover', 'timestamp': '2025-04-11T13:54:38.145951'}
+2025-04-11 13:54:38,271 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 40]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:38.154056'}
+2025-04-11 13:54:40,307 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 38]: {'book_id': 'B076YMQJTN', 'event_type': 'hover', 'timestamp': '2025-04-11T13:54:40.300892'}
+2025-04-11 13:54:40,416 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 41]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:40.306401'}
+2025-04-11 13:54:40,547 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 39]: {'book_id': 'B076YMQJTN', 'event_type': 'hover', 'timestamp': '2025-04-11T13:54:40.540320'}
+2025-04-11 13:54:40,652 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 42]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:40.544867'}
+2025-04-11 13:54:41,114 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 40]: {'book_id': 'B09FZLLPT1', 'event_type': 'hover', 'timestamp': '2025-04-11T13:54:41.103329'}
+2025-04-11 13:54:41,225 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 43]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:41.111828'}
+2025-04-11 13:54:42,331 - INFO - connection open
+2025-04-11 13:54:42,331 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:54:43,662 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 41]: {'book_id': 'B009EE9J2S', 'event_type': 'hover', 'timestamp': '2025-04-11T13:54:43.651989'}
+2025-04-11 13:54:43,771 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 44]: {'total_recommendations': 0, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:43.663561'}
+2025-04-11 13:54:43,881 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 42]: {'book_id': 'B009EE9J2S', 'event_type': 'click', 'timestamp': '2025-04-11T13:54:43.792565'}
+2025-04-11 13:54:43,881 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 45]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:43.800490'}
+2025-04-11 13:54:43,988 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 43]: {'book_id': 'B009EE9J2S', 'event_type': 'click', 'timestamp': '2025-04-11T13:54:43.972867'}
+2025-04-11 13:54:43,988 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 46]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:43.982713'}
+2025-04-11 13:54:44,272 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 44]: {'book_id': 'B08RW4LC91', 'event_type': 'hover', 'timestamp': '2025-04-11T13:54:44.261773'}
+2025-04-11 13:54:44,378 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 47]: {'total_recommendations': 0, 'total_clicks': 1, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:44.271077'}
+2025-04-11 13:54:44,486 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 45]: {'book_id': 'B08RW4LC91', 'event_type': 'click', 'timestamp': '2025-04-11T13:54:44.406308'}
+2025-04-11 13:54:44,486 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 48]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:44.410697'}
+2025-04-11 13:54:44,739 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 46]: {'book_id': 'B07CBJJPTX', 'event_type': 'hover', 'timestamp': '2025-04-11T13:54:44.731892'}
+2025-04-11 13:54:44,851 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 49]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:44.738549'}
+2025-04-11 13:54:47,222 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 47]: {'book_id': 'B0794RL55P', 'event_type': 'hover', 'timestamp': '2025-04-11T13:54:47.065365'}
+2025-04-11 13:54:47,222 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 50]: {'total_recommendations': 0, 'total_clicks': 2, 'clicks_on_recommended': 0, 'ctr': 0, 'timestamp': '2025-04-11T13:54:47.072342'}
+2025-04-11 13:55:30,227 - INFO - WebSocket connection closed by client
+2025-04-11 13:55:30,228 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:55:35,744 - INFO - connection open
+2025-04-11 13:55:35,745 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:55:36,770 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 51]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:55:36.756197'}
+2025-04-11 13:55:37,314 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 48]: {'book_id': 'B0049EN8UM', 'event_type': 'hover', 'timestamp': '2025-04-11T13:55:37.299473'}
+2025-04-11 13:55:37,427 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 52]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:55:37.313121'}
+2025-04-11 13:55:37,536 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 49]: {'book_id': 'B0049EN8UM', 'event_type': 'hover', 'timestamp': '2025-04-11T13:55:37.488660'}
+2025-04-11 13:55:37,536 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 53]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:55:37.494985'}
+2025-04-11 13:55:37,937 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 50]: {'book_id': 'B003S9VQZ8', 'event_type': 'hover', 'timestamp': '2025-04-11T13:55:37.927217'}
+2025-04-11 13:55:38,048 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 54]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:55:37.935633'}
+2025-04-11 13:55:38,050 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 55]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:55:37.991426'}
+2025-04-11 13:55:38,050 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 51]: {'book_id': 'B003S9VQZ8', 'event_type': 'click', 'timestamp': '2025-04-11T13:55:37.984102'}
+2025-04-11 13:55:38,327 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 52]: {'book_id': 'B003S9VQZ8', 'event_type': 'hover', 'timestamp': '2025-04-11T13:55:38.321784'}
+2025-04-11 13:55:38,434 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 56]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:55:38.327441'}
+2025-04-11 13:55:42,081 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 53]: {'book_id': 'B00CFLW85C', 'event_type': 'hover', 'timestamp': '2025-04-11T13:55:42.070779'}
+2025-04-11 13:55:42,189 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 57]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:55:42.081639'}
+2025-04-11 13:55:42,189 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 58]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:55:42.177175'}
+2025-04-11 13:55:42,189 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 54]: {'book_id': 'B00CFLW85C', 'event_type': 'click', 'timestamp': '2025-04-11T13:55:42.168669'}
+2025-04-11 13:55:43,355 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:55:43,388 - INFO - connection open
+2025-04-11 13:55:43,388 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:55:45,032 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 55]: {'book_id': 'B0049EN8UM', 'event_type': 'hover', 'timestamp': '2025-04-11T13:55:45.025649'}
+2025-04-11 13:55:45,140 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 59]: {'total_recommendations': 20, 'total_clicks': 2, 'clicks_on_recommended': 2, 'ctr': 0.1, 'timestamp': '2025-04-11T13:55:45.033389'}
+2025-04-11 13:55:45,141 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 60]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:55:45.103209'}
+2025-04-11 13:55:45,142 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 56]: {'book_id': 'B0049EN8UM', 'event_type': 'click', 'timestamp': '2025-04-11T13:55:45.094896'}
+2025-04-11 13:55:45,457 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 57]: {'book_id': 'B07FXTL7Q3', 'event_type': 'hover', 'timestamp': '2025-04-11T13:55:45.444551'}
+2025-04-11 13:55:45,567 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 61]: {'total_recommendations': 20, 'total_clicks': 3, 'clicks_on_recommended': 3, 'ctr': 0.15, 'timestamp': '2025-04-11T13:55:45.457014'}
+2025-04-11 13:55:45,569 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 62]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:55:45.524647'}
+2025-04-11 13:55:45,569 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 58]: {'book_id': 'B07FXTL7Q3', 'event_type': 'click', 'timestamp': '2025-04-11T13:55:45.518638'}
+2025-04-11 13:55:45,794 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 59]: {'book_id': 'B00CFLW85C', 'event_type': 'hover', 'timestamp': '2025-04-11T13:55:45.789456'}
+2025-04-11 13:55:45,900 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 63]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:55:45.794267'}
+2025-04-11 13:55:46,211 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 60]: {'book_id': 'B00BGGBE20', 'event_type': 'hover', 'timestamp': '2025-04-11T13:55:46.203555'}
+2025-04-11 13:55:46,316 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 64]: {'total_recommendations': 20, 'total_clicks': 4, 'clicks_on_recommended': 4, 'ctr': 0.2, 'timestamp': '2025-04-11T13:55:46.211342'}
+2025-04-11 13:55:46,419 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 61]: {'book_id': 'B00BGGBE20', 'event_type': 'click', 'timestamp': '2025-04-11T13:55:46.318477'}
+2025-04-11 13:55:46,529 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 65]: {'total_recommendations': 20, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.25, 'timestamp': '2025-04-11T13:55:46.324176'}
+2025-04-11 13:55:46,945 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 66]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:55:46.941272'}
+2025-04-11 13:55:49,580 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 62]: {'book_id': 'B000FC1QPQ', 'event_type': 'hover', 'timestamp': '2025-04-11T13:55:49.572684'}
+2025-04-11 13:55:49,685 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 67]: {'total_recommendations': 40, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.125, 'timestamp': '2025-04-11T13:55:49.579267'}
+2025-04-11 13:55:49,790 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 68]: {'total_recommendations': 60, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.08333333333333333, 'timestamp': '2025-04-11T13:55:49.762837'}
+2025-04-11 13:56:02,942 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 69]: {'total_recommendations': 80, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.0625, 'timestamp': '2025-04-11T13:56:02.937246'}
+2025-04-11 13:56:04,705 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 63]: {'book_id': 'B00XCDZ2L4', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:04.697528'}
+2025-04-11 13:56:04,816 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 70]: {'total_recommendations': 80, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.0625, 'timestamp': '2025-04-11T13:56:04.705150'}
+2025-04-11 13:56:05,122 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 64]: {'book_id': 'B08R6HD29W', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:05.113913'}
+2025-04-11 13:56:05,227 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 71]: {'total_recommendations': 80, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.0625, 'timestamp': '2025-04-11T13:56:05.121432'}
+2025-04-11 13:56:05,416 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 65]: {'book_id': 'B00XCDZ2L4', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:05.410616'}
+2025-04-11 13:56:05,528 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 72]: {'total_recommendations': 80, 'total_clicks': 5, 'clicks_on_recommended': 5, 'ctr': 0.0625, 'timestamp': '2025-04-11T13:56:05.417135'}
+2025-04-11 13:56:06,632 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:56:16,066 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 73]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:56:16.053654'}
+2025-04-11 13:56:16,067 - INFO - connection open
+2025-04-11 13:56:16,067 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:56:18,386 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 66]: {'book_id': 'B09MB4543Y', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:18.312267'}
+2025-04-11 13:56:18,387 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 74]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:56:18.331450'}
+2025-04-11 13:56:18,494 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 67]: {'book_id': 'B09MB4543Y', 'event_type': 'click', 'timestamp': '2025-04-11T13:56:18.419180'}
+2025-04-11 13:56:18,494 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 68]: {'book_id': 'B09MB4543Y', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:18.447111'}
+2025-04-11 13:56:18,494 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 75]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:56:18.423654'}
+2025-04-11 13:56:18,495 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 76]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:56:18.452937'}
+2025-04-11 13:56:18,605 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 69]: {'book_id': 'B09MB4543Y', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:18.597325'}
+2025-04-11 13:56:18,709 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 77]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:56:18.605327'}
+2025-04-11 13:56:20,320 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 70]: {'book_id': 'B09MB4543Y', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:20.311042'}
+2025-04-11 13:56:20,320 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:56:20,426 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 78]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:56:20.319297'}
+2025-04-11 13:56:30,415 - INFO - connection open
+2025-04-11 13:56:30,416 - INFO - New WebSocket client connected. Total clients: 1
+2025-04-11 13:56:30,452 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 79]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:56:30.438721'}
+2025-04-11 13:56:31,775 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 71]: {'book_id': 'B01NASBRF3', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:31.763207'}
+2025-04-11 13:56:31,885 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 80]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:56:31.773814'}
+2025-04-11 13:56:32,149 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 72]: {'book_id': 'B01NASBRF3', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:32.143816'}
+2025-04-11 13:56:32,253 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 81]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:56:32.149831'}
+2025-04-11 13:56:32,630 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 73]: {'book_id': 'B01NASBRF3', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:32.619033'}
+2025-04-11 13:56:32,737 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 82]: {'total_recommendations': 20, 'total_clicks': 0, 'clicks_on_recommended': 0, 'ctr': 0.0, 'timestamp': '2025-04-11T13:56:32.630885'}
+2025-04-11 13:56:32,738 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 83]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:56:32.673610'}
+2025-04-11 13:56:32,739 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 74]: {'book_id': 'B01NASBRF3', 'event_type': 'click', 'timestamp': '2025-04-11T13:56:32.666344'}
+2025-04-11 13:56:32,850 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 75]: {'book_id': 'B01NASBRF3', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:32.835915'}
+2025-04-11 13:56:32,961 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 84]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:56:32.850633'}
+2025-04-11 13:56:33,905 - INFO - Received message from 'user_interactions' [Partition: 0, Offset: 76]: {'book_id': 'B00W3QR4IK', 'event_type': 'hover', 'timestamp': '2025-04-11T13:56:33.900423'}
+2025-04-11 13:56:33,906 - INFO - WebSocket client disconnected. Total clients: 0
+2025-04-11 13:56:34,011 - INFO - Received message from 'metrics_topic' [Partition: 0, Offset: 85]: {'total_recommendations': 20, 'total_clicks': 1, 'clicks_on_recommended': 1, 'ctr': 0.05, 'timestamp': '2025-04-11T13:56:33.906326'}
