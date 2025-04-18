@@ -13,6 +13,7 @@ import torch
 from google.cloud import bigquery
 from collections import Counter
 import random
+from textblob import TextBlob
 from google.oauth2 import service_account
 
 # Directory to save extracted and transformed data
@@ -21,6 +22,30 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 TRAINING_CUTOFF_DATE = dt.datetime(2019,1,1)
 TRAINING_CUTOFF_REVIEWS_LOWER = 10
 TRAINING_CUTOFF_REVIEWS_UPPER = 50
+
+def process_sample(dataset,eligible_users, sample_size=10000):
+
+    random.seed(72)
+    if len(eligible_users) > sample_size:
+        sampled_users = set(random.sample(eligible_users, sample_size))
+        print(f"Sampled {sample_size} users")
+    else:
+        sampled_users = set(eligible_users)
+        print(f"Using all {len(sampled_users)} eligible users (less than requested {sample_size})")
+
+    # Step 5: Filter dataset to keep only reviews from sampled users
+    def keep_sampled_users(example):
+        return example['user_id'] in sampled_users
+
+    filtered_dataset = dataset.filter(keep_sampled_users)
+
+    # Print statistics
+    num_users = len(set(filtered_dataset['user_id']))
+    num_reviews = len(filtered_dataset)
+    print(f"Final dataset: {num_reviews} reviews from {num_users} unique users")
+    print(f"Average reviews per user: {num_reviews / num_users:.2f}")
+
+    return filtered_dataset
 
 @dag(
     dag_id='kindle_store_etl_taskflow',
@@ -93,51 +118,17 @@ def kindle_store_etl():
 
         columns_to_keep = ['rating', 'title', 'text', 'parent_asin', 'user_id', 'timestamp']
         transformed_dataset = transformed_dataset.select_columns(columns_to_keep)
-        num_users = len(set(transformed_dataset['user_id']))
-        num_reviews = len(transformed_dataset)
-        print(f"Final dataset: {num_reviews} reviews from {num_users} unique users")
-        print(f"Average reviews per user: {num_reviews / num_users:.2f}")
+        transformed_dataset = process_sample(transformed_dataset, eligible_users)
+        
+        def get_polarity(text):
+            blob = TextBlob(text)
+            return blob.sentiment.polarity
+        transformed_df = transformed_dataset.to_pandas()
+        transformed_df['combined'] = transformed_df['title'] + " " + transformed_df['text']
+        transformed_df['sentiment_score'] = transformed_df['combined'].apply(get_polarity)
 
-        # # Auto-detect device
-        # if device is None:
-        #     device = torch.device("mps") if torch.backends.mps.is_available() else torch.device("cpu")
-        # device_id =  0 if device.type == 'mps' else -1
-        # print(f"Using device: {device}")
-
-        # # Load sentiment analysis model
-        # model_name = "distilbert-base-uncased-finetuned-sst-2-english"
-        # sentiment_analyzer = pipeline(
-        #     "sentiment-analysis",
-        #     model=model_name,
-        #     tokenizer=model_name,
-        #     device=device_id,
-        #     batch_size=batch_size
-        # )
-
-        # # Define function to process text in batches
-        # def compute_sentiment(batch):
-        # # Combine title and text, ensuring missing values don't break the pipeline
-        #     combined_texts = [
-        #         ((t if t is not None else "") + " " + (r if r is not None else ""))[:500]
-        #         for t, r in zip(batch["title"], batch["text"])
-        #     ]
-        #     results = sentiment_analyzer(combined_texts)
-
-        #     # Convert POSITIVE/NEGATIVE to a numeric score
-        #     batch["sentiment_score"] = [
-        #         res["score"] if res["label"] == "POSITIVE" else (1 - res["score"]) for res in results
-        #     ]
-
-        #     # Remove title and text while keeping other columns
-        #     batch.pop("title", None)
-        #     batch.pop("text", None)
-        #     return batch
-
-        # # Apply transformation efficiently using map() with batched=True
-        # transformed_dataset = transformed_dataset.map(compute_sentiment, batched=True, batch_size=batch_size)
-
-        transformed_dataset.save_to_disk(transformed_review_path)
-
+        transformed_df.drop(columns  = ['combined'],inplace = True)
+        transformed_df.to_csv(transformed_review_path)        
         print(f"Transformed dataset saved at: {transformed_review_path}")
         return {"reviews_path": transformed_review_path}
 
@@ -213,9 +204,9 @@ def kindle_store_etl():
             bigquery.SchemaField("text", "STRING"),
             bigquery.SchemaField("parent_asin", "STRING"),
             bigquery.SchemaField("user_id", "STRING"),
-            bigquery.SchemaField("timestamp", "TIMESTAMP")
-        ]
-
+            bigquery.SchemaField("timestamp", "TIMESTAMP"),
+            bigquery.SchemaField("sentiment_score", "FLOAT"),
+        ]        
         metadata_schema = [
             bigquery.SchemaField("title", "STRING"),
             bigquery.SchemaField("average_rating", "FLOAT"),
@@ -230,11 +221,10 @@ def kindle_store_etl():
         ]
 
         # Load datasets from disk
-        reviews_dataset = load_from_disk(review_file_path["reviews_path"])
         metadata_dataset = load_from_disk(books_file_path["metadata_path"])
 
         # Convert to pandas DataFrames
-        reviews_df = reviews_dataset.to_pandas()
+        reviews_df = pd.read_csv(review_file_path['reviews_path'])
         metadata_df = metadata_dataset.to_pandas()
 
         # Convert timestamp to datetime (assuming it's in milliseconds)
@@ -265,14 +255,6 @@ def kindle_store_etl():
         metadata_load_job.result()
         print(f"Loaded {metadata_load_job.output_rows} rows into {metadata_table_id}")
 
-    # @task
-    # def load_data(file_path_review: dict, file_path_book: dict):
-    #     """Load the transformed data (example: log completion)."""
-    #     reviews_path = file_path_review["reviews_path"]
-    #     metadata_path = file_path_book["metadata_path"]
-        
-    #     print(f"Data loaded from {reviews_path} and {metadata_path}")
-    #     # Add logic here to load into a database or other destination if needed
     
     # Define task flow
     extracted_book_path = extract_book_data()

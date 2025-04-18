@@ -16,6 +16,9 @@ logs/
 # Ignore Environment files
 *.env
 
+# Python Venv
+venv/
+
 .git
 .DS_Store
 airflow_settings.yaml
