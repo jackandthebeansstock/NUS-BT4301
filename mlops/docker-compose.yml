@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  als:
+    build:
+      context: ./docker/als
+      dockerfile: dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - MLFLOW_TRACKING_URI=http://localhost:5000
+  bert4rec:
+    build:
+      context: ./docker/bert4rec
+      dockerfile: dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - MLFLOW_TRACKING_URI=http://localhost:5000
+  lstm:
+    build:
+      context: ./docker/lstm
+      dockerfile: dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - MLFLOW_TRACKING_URI=http://localhost:5000
+  mab:
+    build:
+      context: ./docker/mab
+      dockerfile: dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - MLFLOW_TRACKING_URI=http://localhost:5000
+  random_walk:
+    build:
+      context: ./docker/random_walk
+      dockerfile: dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - MLFLOW_TRACKING_URI=http://localhost:5000

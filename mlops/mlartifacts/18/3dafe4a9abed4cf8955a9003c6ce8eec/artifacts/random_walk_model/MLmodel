@@ -1,0 +1,26 @@
+artifact_path: random_walk_model
+flavors:
+  python_function:
+    config:
+      device: null
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pytorch
+    pickle_module_name: mlflow.pytorch.pickle_module
+    python_version: 3.11.6
+  pytorch:
+    code: null
+    model_data: data
+    pytorch_version: 2.3.1
+mlflow_version: 2.21.2
+model_size_bytes: 1133206
+model_uuid: c8cad8ac7380404ab5d0923634b7486f
+prompts: null
+run_id: 3dafe4a9abed4cf8955a9003c6ce8eec
+saved_input_example_info:
+  artifact_path: input_example.json
+  serving_input_path: serving_input_example.json
+  type: ndarray
+utc_time_created: '2025-04-18 06:57:06.853481'
