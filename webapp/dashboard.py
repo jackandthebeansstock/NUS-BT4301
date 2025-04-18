@@ -17,6 +17,7 @@ import mlflow.pytorch
 from datetime import datetime
 import os
 import glob
+from collections import defaultdict
 
 # Setup logging
 logging.basicConfig(
@@ -33,7 +34,7 @@ app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(
     app,
     cors_allowed_origins="*",
-    async_mode='eventlet',
+    async_mode='threading',
     ping_timeout=60,
     ping_interval=30,
     max_http_buffer_size=1_000_000,
@@ -65,12 +66,15 @@ metrics = {
     'total_recommendations': 0,
     'total_clicks': 0,
     'clicks_on_recommended': 0,
-    'recommended_books': set(),
-    'has_recommended': False  # Track if recommendations have been shown
+    'has_recommended': False,
+    'unique_users': 0,
+    'likes': 0,
+    'dislikes': 0,
+    'diversity': 0.0,
+    'coverage': 0.0
 }
-
-# Set to track unique clicks
-unique_clicks = set()
+unique_users = set()
+user_recommendations = defaultdict(set)  # Track recommendations per user
 
 def init_db():
     with db_lock:
@@ -83,11 +87,21 @@ def init_db():
                          author TEXT,
                          img TEXT,
                          hovers INTEGER,
-                         clicks INTEGER)''')
+                         clicks INTEGER,
+                         genre TEXT)''')
             c.execute('''CREATE TABLE IF NOT EXISTS user_interactions
                         (book_id TEXT,
+                         user_id TEXT,
                          timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-                         UNIQUE(book_id))''')  # Add UNIQUE constraint to prevent duplicate book_id entries
+                         PRIMARY KEY (book_id, user_id))''')
+            c.execute('''CREATE TABLE IF NOT EXISTS user_feedback
+                        (book_id TEXT,
+                         user_id TEXT,
+                         feedback_type TEXT,
+                         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                         PRIMARY KEY (book_id, user_id))''')
+            conn.commit()
+            logger.info("Created books, user_interactions, and user_feedback tables")
             
             c.execute("SELECT COUNT(*) FROM books")
             if c.fetchone()[0] == 0:
@@ -98,11 +112,25 @@ def init_db():
                     title = str(row['title'])
                     author = str(row['author']) if pd.notna(row['author']) else 'Unknown Author'
                     img = 'https://via.placeholder.com/150'
-                    sample_books.append((book_id, title, author, img, 0, 0))
+                    genre = None
+                    categories = row['categories']
+                    if categories and categories != 'nan':
+                        try:
+                            category_list = [cat.strip() for cat in categories.split("'") if cat.strip()]
+                            logger.debug(f"Split categories: {category_list}")
+                            if category_list:
+                                genre = category_list[-2]
+                        except (ValueError, SyntaxError):
+                            logger.warning(f"Invalid categories format for book {book_id}: {categories}")
+                    sample_books.append((book_id, title, author, img, 0, 0, genre))
                 
-                c.executemany('INSERT INTO books VALUES (?,?,?,?,?,?)', sample_books)
-                conn.commit()
-                logger.info(f"Initialized database with {len(sample_books)} books from product_clean.xlsx")
+                try:
+                    c.executemany('INSERT INTO books VALUES (?,?,?, ?, ?, ?, ?)', sample_books)
+                    conn.commit()
+                    logger.info(f"Initialized database with {len(sample_books)} books from product_clean.xlsx")
+                except Exception as e:
+                    logger.error(f"Error inserting books: {str(e)}")
+                    raise    
             conn.close()
         except Exception as e:
             logger.error(f"Database initialization failed: {str(e)}")
@@ -155,50 +183,34 @@ class BERT4Rec(nn.Module):
 
 def load_from_mlflow_artifacts():
     try:
-        # Define paths
         mlartifacts_dir = "mlartifacts"
-        experiment_id = "0"  # Hardcode to default experiment ID since we're not using mlruns
-
-        # Check if mlartifacts directory exists
+        experiment_id = "0"
         if not os.path.exists(mlartifacts_dir):
             logger.error(f"MLflow artifacts directory not found at {mlartifacts_dir}")
             raise FileNotFoundError(f"MLflow artifacts directory not found at {mlartifacts_dir}")
-
-        # Check if experiment directory exists in mlartifacts
         experiment_dir = os.path.join(mlartifacts_dir, experiment_id)
         if not os.path.exists(experiment_dir):
             logger.error(f"Experiment directory not found at {experiment_dir}")
             raise FileNotFoundError(f"Experiment directory not found at {experiment_dir}")
-
-        # Find all run directories in mlartifacts/0/ (only directories)
         run_dirs = [d for d in glob.glob(os.path.join(experiment_dir, "*")) if os.path.isdir(d)]
         if not run_dirs:
             logger.error(f"No runs found in mlartifacts for experiment {experiment_id}")
             raise Exception(f"No runs found in mlartifacts for experiment {experiment_id}")
-
-        # Sort runs by modification time to get the latest
         run_dirs.sort(key=os.path.getmtime, reverse=True)
         latest_run_dir = run_dirs[0]
         run_id = os.path.basename(latest_run_dir)
         logger.info(f"Latest run ID from mlartifacts: {run_id}")
-
-        # Construct the artifact path in mlartifacts
         artifact_base_path = os.path.join(mlartifacts_dir, experiment_id, run_id, "artifacts")
         if not os.path.exists(artifact_base_path):
             logger.error(f"Artifacts directory not found at {artifact_base_path}")
             raise FileNotFoundError(f"Artifacts directory not found at {artifact_base_path}")
-
-        # Load the model weights directly from bert4rec_model.pth
         model_pth_path = os.path.join(artifact_base_path, "bert4rec_model.pth")
         if not os.path.exists(model_pth_path):
             logger.error(f"Model .pth file not found at {model_pth_path}")
             raise FileNotFoundError(f"Model .pth file not found at {model_pth_path}")
-
-        # Load the encoders first to get num_books and num_categories
         book_encoder_path = os.path.join(artifact_base_path, "book_encoder.pkl")
         category_encoder_path = os.path.join(artifact_base_path, "category_encoder.pkl")
         asin_to_category_path = os.path.join(artifact_base_path, "asin_to_category.pkl")
-
         if not os.path.exists(book_encoder_path):
             logger.error(f"book_encoder.pkl not found at {book_encoder_path}")
             raise FileNotFoundError(f"book_encoder.pkl not found at {book_encoder_path}")
@@ -208,35 +220,25 @@ def load_from_mlflow_artifacts():
         if not os.path.exists(asin_to_category_path):
             logger.error(f"asin_to_category.pkl not found at {asin_to_category_path}")
             raise FileNotFoundError(f"asin_to_category.pkl not found at {asin_to_category_path}")
-
         book_encoder = joblib.load(book_encoder_path)
         logger.info(f"Loaded book_encoder from {book_encoder_path}")
-
         category_encoder = joblib.load(category_encoder_path)
         logger.info(f"Loaded category_encoder from {category_encoder_path}")
-
         num_books = len(book_encoder.classes_)
         num_categories = len(category_encoder.classes_)
-
-        # Instantiate the model
         model = BERT4Rec(num_books, num_categories)
         model.load_state_dict(torch.load(model_pth_path, map_location=device))
         model.to(device)
         model.eval()
         logger.info(f"Loaded model weights from {model_pth_path}")
-
-        # Load asin_to_category
         with open(asin_to_category_path, 'rb') as f:
             asin_to_category = pickle.load(f)
         logger.info(f"Loaded asin_to_category from {asin_to_category_path}")
-
         return model, book_encoder, category_encoder, asin_to_category
-
     except Exception as e:
         logger.error(f"Failed to load from mlartifacts: {str(e)}")
         raise
 
-# Load model and artifacts from mlartifacts
 try:
     model, book_encoder, category_encoder, asin_to_category = load_from_mlflow_artifacts()
     num_books = len(book_encoder.classes_)
@@ -266,6 +268,17 @@ def predict(encoded_book_ids, top_k=5):
         top_k_probs, top_k_ids = torch.topk(probs, top_k)
         top_k_asins = book_encoder.inverse_transform(top_k_ids.cpu().numpy())
         return list(map(str, top_k_asins)), top_k_probs.cpu().numpy()
+
+def get_genre_distribution(top_books):
+    conn = get_db()
+    cursor = conn.cursor()
+    cursor.execute('SELECT id, genre FROM books WHERE id IN ({})'.format(','.join(['?'] * len(top_books))), tuple(top_books))
+    genres = [row['genre'] for row in cursor.fetchall() if row['genre']]
+    conn.close()
+    genre_counts = defaultdict(int)
+    for genre in genres:
+        genre_counts[genre] += 1
+    return dict(genre_counts)
 
 @app.route('/')
 def index():
@@ -299,12 +312,13 @@ def get_books():
 
 @app.route('/api/has_history')
 def has_history():
+    user_id = request.args.get('user_id', 'anonymous')
     try:
         conn = get_db()
         cursor = conn.cursor()
-        cursor.execute("SELECT COUNT(*) FROM user_interactions")
+        cursor.execute("SELECT COUNT(*) FROM user_interactions WHERE user_id = ?", (user_id,))
         count = cursor.fetchone()[0]
-        logger.debug(f"History count: {count}")
+        logger.debug(f"History count for user {user_id}: {count}")
         return jsonify({'hasHistory': count > 0})
     except Exception as e:
         logger.error(f"Database error in has_history: {str(e)}")
@@ -314,24 +328,28 @@ def has_history():
 
 @app.route('/api/click_history')
 def get_click_history():
+    user_id = request.args.get('user_id', 'anonymous')
     try:
         conn = get_db()
         query = '''
-            SELECT ui.book_id, b.title, ui.timestamp
+            SELECT ui.book_id, b.title, b.author, b.genre, ui.timestamp
             FROM user_interactions ui
             JOIN books b ON ui.book_id = b.id
+            WHERE ui.user_id = ?
             ORDER BY ui.timestamp DESC
             LIMIT 50
         '''
-        clicks = conn.execute(query).fetchall()
+        clicks = conn.execute(query, (user_id,)).fetchall()
         click_history = [
             {
                 'book_id': click['book_id'],
                 'title': click['title'],
+                'author': click['author'],
+                'genre': click['genre'],
                 'timestamp': click['timestamp']
             } for click in clicks
         ]
-        logger.debug(f"Returning click history with {len(click_history)} entries")
+        logger.debug(f"Returning click history for user {user_id} with {len(click_history)} entries")
         return jsonify({
             'clicks': click_history,
             'total_clicks': len(click_history)
@@ -342,57 +360,63 @@ def get_click_history():
     finally:
         conn.close()
 
-@app.route('/api/book_click_history/<book_id>')
-def get_book_click_history(book_id):
-    try:
-        conn = get_db()
-        query = '''
-            SELECT ui.book_id, b.title, ui.timestamp
-            FROM user_interactions ui
-            JOIN books b ON ui.book_id = b.id
-            WHERE ui.book_id = ?
-            ORDER BY ui.timestamp DESC
-            LIMIT 50
-        '''
-        clicks = conn.execute(query, (book_id,)).fetchall()
-        click_history = [
-            {
-                'book_id': click['book_id'],
-                'title': click['title'],
-                'timestamp': click['timestamp']
-            } for click in clicks
-        ]
-        logger.debug(f"Returning click history for book {book_id} with {len(click_history)} entries")
-        return jsonify({
-            'clicks': click_history,
-            'total_clicks': len(click_history)
-        })
-    except Exception as e:
-        logger.error(f"Database error in get_book_click_history: {str(e)}")
-        return jsonify({"error": "Failed to load book click history"}), 500
-    finally:
-        conn.close()
-
 @app.route('/api/historical_metrics')
 def get_historical_metrics():
     date = request.args.get('date')
     try:
         conn = get_db()
         query = '''
-            SELECT ui.book_id, ui.timestamp
+            SELECT ui.book_id, ui.user_id, ui.timestamp
             FROM user_interactions ui
             WHERE DATE(ui.timestamp) = ?
         '''
         clicks = conn.execute(query, (date,)).fetchall()
         total_clicks = len(clicks)
-        clicks_on_recommended = sum(1 for click in clicks if click['book_id'] in metrics['recommended_books'])
-        total_recommendations = metrics['total_recommendations'] if metrics['total_recommendations'] > 0 else 1  # Avoid division by zero
+        clicks_on_recommended = sum(1 for click in clicks if click['book_id'] in user_recommendations.get(click['user_id'], set()))
+        total_recommendations = metrics['total_recommendations'] if metrics['total_recommendations'] > 0 else 1
         ctr = clicks_on_recommended / total_recommendations
-        return jsonify({
+        query = '''
+            SELECT feedback_type, COUNT(*) as count
+            FROM user_feedback
+            WHERE DATE(timestamp) = ?
+            GROUP BY feedback_type
+        '''
+        feedback = conn.execute(query, (date,)).fetchall()
+        likes = next((row['count'] for row in feedback if row['feedback_type'] == 'like'), 0)
+        dislikes = next((row['count'] for row in feedback if row['feedback_type'] == 'dislike'), 0)
+        query = '''
+            SELECT COUNT(DISTINCT user_id) as unique_users
+            FROM user_feedback
+            WHERE DATE(timestamp) = ?
+        '''
+        cursor = conn.execute(query, (date,))
+        unique_users = cursor.fetchone()['unique_users']
+        
+        # Genre distribution
+        query = '''
+            SELECT b.genre, COUNT(*) as count
+            FROM user_interactions ui
+            JOIN books b ON ui.book_id = b.id
+            WHERE DATE(ui.timestamp) = ? AND b.genre IS NOT NULL
+            GROUP BY b.genre
+        '''
+        genres = conn.execute(query, (date,)).fetchall()
+        genre_distribution = {row['genre']: row['count'] for row in genres}
+        
+        metrics_data = {
             'total_recommendations': total_recommendations,
             'total_clicks': total_clicks,
             'clicks_on_recommended': clicks_on_recommended,
-            'ctr': ctr
+            'ctr': ctr,
+            'unique_users': unique_users,
+            'likes': likes,
+            'dislikes': dislikes,
+            'diversity': metrics['diversity'],
+            'coverage': metrics['coverage']
+        }
+        return jsonify({
+            'metrics': metrics_data,
+            'genre_distribution': genre_distribution
         })
     except Exception as e:
         logger.error(f"Error fetching historical metrics: {str(e)}")
@@ -406,49 +430,53 @@ def handle_connect():
 
 @socketio.on('update_interaction')
 def handle_interaction(data):
-    global metrics, unique_clicks
+    global metrics
     book_id = data.get('bookId')
     event_type = data.get('eventType')
+    user_id = data.get('userId', 'anonymous')
     if not book_id or not event_type:
         logger.warning("Invalid interaction data")
         return
     
-    # Update books.db
+    unique_users.add(user_id)
+    metrics['unique_users'] = len(unique_users)
+    
     try:
         conn = get_db()
         cursor = conn.cursor()
         if event_type == 'click':
-            # Check if this book has already been clicked
-            if book_id not in unique_clicks:
-                # Increment the clicks in the books table
+            try:
+                cursor.execute('INSERT INTO user_interactions (book_id, user_id) VALUES (?, ?)', (book_id, user_id))
                 cursor.execute('UPDATE books SET clicks = clicks + 1 WHERE id = ?', (book_id,))
-                # Insert into user_interactions (UNIQUE constraint will prevent duplicates)
-                try:
-                    cursor.execute('INSERT INTO user_interactions (book_id) VALUES (?)', (book_id,))
-                    unique_clicks.add(book_id)
-                    metrics['total_clicks'] += 1
-                    if book_id in metrics['recommended_books']:
-                        metrics['clicks_on_recommended'] += 1
-                except sqlite3.IntegrityError:
-                    # If the book_id already exists in user_interactions, skip incrementing
-                    logger.debug(f"Book {book_id} already clicked, skipping duplicate.")
-            else:
-                logger.debug(f"Book {book_id} already clicked, skipping duplicate.")
+                metrics['total_clicks'] += 1
+            except sqlite3.IntegrityError:
+                logger.debug(f"Click for book {book_id} by user {user_id} already exists.")
         elif event_type == 'hover':
             cursor.execute('UPDATE books SET hovers = hovers + 1 WHERE id = ?', (book_id,))
+        elif event_type in ['like', 'dislike']:
+            try:
+                cursor.execute('INSERT INTO user_feedback (book_id, user_id, feedback_type) VALUES (?, ?, ?)',
+                              (book_id, user_id, event_type))
+                metrics[event_type + 's'] += 1
+                if book_id in user_recommendations[user_id]:
+                    metrics['clicks_on_recommended'] += 1
+                logger.info(f"Recorded {event_type} for book {book_id} by user {user_id}")
+            except sqlite3.IntegrityError:
+                logger.debug(f"Feedback for book {book_id} by user {user_id} already exists.")
         conn.commit()
-        updated_book = conn.execute('SELECT * FROM books WHERE id = ?', (book_id,)).fetchone()
-        socketio.emit('update_counts', dict(updated_book))
+        if event_type in ['click', 'hover']:
+            updated_book = conn.execute('SELECT * FROM books WHERE id = ?', (book_id,)).fetchone()
+            socketio.emit('update_counts', dict(updated_book))
         logger.info(f"Updated book {book_id} with {event_type}")
     except Exception as e:
         logger.error(f"Interaction error: {str(e)}")
     finally:
         conn.close()
 
-    # Send interaction to Kafka
     interaction = {
         'book_id': book_id,
         'event_type': event_type,
+        'user_id': user_id,
         'timestamp': pd.Timestamp.now().isoformat()
     }
     try:
@@ -458,20 +486,32 @@ def handle_interaction(data):
     except Exception as e:
         logger.error(f"Kafka send error (interactions): {str(e)}")
 
-    # Send metrics to Kafka
     send_metrics_update()
 
 def send_metrics_update():
     global metrics
+    top_books = []
+    for user_id, books in user_recommendations.items():
+        top_books.extend(list(books)[:20])
+    top_books = list(set(top_books))[:20]
+    genre_distribution = get_genre_distribution(top_books)
     metrics_data = {
         'total_recommendations': metrics['total_recommendations'],
         'total_clicks': metrics['total_clicks'],
         'clicks_on_recommended': metrics['clicks_on_recommended'],
         'ctr': metrics['clicks_on_recommended'] / metrics['total_recommendations'] if metrics['total_recommendations'] > 0 else 0,
+        'unique_users': metrics['unique_users'],
+        'likes': metrics['likes'],
+        'dislikes': metrics['dislikes'],
+        'diversity': metrics['diversity'],
+        'coverage': metrics['coverage'],
         'timestamp': datetime.now().isoformat()
     }
     try:
-        producer.send('metrics_topic', metrics_data)
+        producer.send('metrics_topic', {
+            'metrics': metrics_data,
+            'genre_distribution': genre_distribution
+        })
         producer.flush()
         logger.info(f"Sent metrics to Kafka: {metrics_data}")
     except Exception as e:
@@ -482,12 +522,21 @@ def handle_get_recommendations(data):
     global metrics
     logger.debug(f"Received get_recommendations with data: {data}")
     session_clicks = data.get('sessionClicks', [])
+    user_id = data.get('userId', 'anonymous')
     
     conn = get_db()
     cursor = conn.cursor()
-    cursor.execute('SELECT book_id FROM user_interactions ORDER BY timestamp ASC')
-    historical_clicks = [row[0] for row in cursor.fetchall()]
-    conn.close()
+    historical_clicks = []
+    try:
+        cursor.execute('SELECT book_id FROM user_interactions WHERE user_id = ? ORDER BY timestamp ASC', (user_id,))
+        historical_clicks = [row[0] for row in cursor.fetchall()]
+    except sqlite3.OperationalError as e:
+        logger.warning(f"Could not query user_interactions: {str(e)}. Proceeding with empty history.")
+        historical_clicks = []
+    
+    cursor.execute('SELECT id, genre FROM books')
+    book_genres = {row['id']: row['genre'] for row in cursor.fetchall()}
+    total_books = len(book_genres)
     
     def filter_valid_books(book_ids):
         return [bid for bid in book_ids if bid in book_encoder.classes_]
@@ -522,50 +571,50 @@ def handle_get_recommendations(data):
             unique_books.append(book)
             unique_probs.append(prob)
     
+    top_books = []
     if unique_books:
         sorted_pairs = sorted(zip(unique_probs, unique_books), reverse=True)
         top_books = [book for _, book in sorted_pairs][:20]
-        # Set initial count to 20 for the first recommendation, then increment
         if not metrics['has_recommended']:
             metrics['total_recommendations'] = 20
             metrics['has_recommended'] = True
         else:
             metrics['total_recommendations'] += len(top_books)
-        metrics['recommended_books'].update(top_books)
+        user_recommendations[user_id].update(top_books)
+        genres = [book_genres.get(book, None) for book in top_books if book_genres.get(book, None)]
+        unique_genres = len(set(genres) - {None})
+        metrics['diversity'] = unique_genres
+        metrics['coverage'] = (len(set().union(*user_recommendations.values())) / total_books * 100) if total_books > 0 else 0
         if len(top_books) < 20:
-            conn = get_db()
-            cursor = conn.cursor()
-            placeholder = ','.join(['?'] * len(top_books))
-            cursor.execute(f'SELECT id FROM books WHERE id NOT IN ({placeholder})', tuple(top_books))
+            cursor.execute('SELECT id FROM books WHERE id NOT IN ({})'.format(','.join(['?'] * len(top_books))), tuple(top_books))
             remaining_books = [row['id'] for row in cursor.fetchall()]
-            conn.close()
             if remaining_books:
                 additional_books = random.sample(remaining_books, min(20 - len(top_books), len(remaining_books)))
                 top_books.extend(additional_books)
-                if not metrics['has_recommended']:
-                    metrics['total_recommendations'] = 20
-                    metrics['has_recommended'] = True
-                else:
-                    metrics['total_recommendations'] += len(additional_books)
-                metrics['recommended_books'].update(additional_books)
+                metrics['total_recommendations'] += len(additional_books)
+                user_recommendations[user_id].update(additional_books)
+                genres = [book_genres.get(book, None) for book in top_books if book_genres.get(book, None)]
+                metrics['diversity'] = len(set(genres) - {None})
+                metrics['coverage'] = (len(set().union(*user_recommendations.values())) / total_books * 100) if total_books > 0 else 0
     else:
-        conn = get_db()
-        cursor = conn.cursor()
         cursor.execute('SELECT id FROM books')
         all_book_ids = [row['id'] for row in cursor.fetchall()]
-        conn.close()
         top_books = random.sample(all_book_ids, min(20, len(all_book_ids)))
-        # Set initial count to 20 for the first recommendation, then increment
         if not metrics['has_recommended']:
             metrics['total_recommendations'] = 20
             metrics['has_recommended'] = True
         else:
             metrics['total_recommendations'] += len(top_books)
-        metrics['recommended_books'].update(top_books)
+        user_recommendations[user_id].update(top_books)
+        genres = [book_genres.get(book, None) for book in top_books if book_genres.get(book, None)]
+        metrics['diversity'] = len(set(genres) - {None})
+        metrics['coverage'] = (len(set().union(*user_recommendations.values())) / total_books * 100) if total_books > 0 else 0
     
     logger.debug(f"Emitting recommendations: {top_books}")
-    socketio.emit('recommendations', {'books': top_books}, to=request.sid)
+    socketio.emit('recommendations', {'books': top_books, 'user_id': user_id}, to=request.sid)
     send_metrics_update()
+    
+    conn.close()
 
 if __name__ == '__main__':
     socketio.run(app, host='0.0.0.0', port=5003, debug=True, use_reloader=False)

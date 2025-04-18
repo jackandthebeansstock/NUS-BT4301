@@ -1,24 +1,24 @@
-2025-04-11 13:21:46,920 - INFO - Using device: cpu
-2025-04-11 13:21:46,920 - INFO - Script started
-2025-04-11 13:21:46,920 - INFO - Starting training script
-2025-04-11 13:21:46,921 - INFO - Initializing KindleDataset
-2025-04-11 13:21:55,270 - INFO - Loaded customer_df: (10000, 11), product_df: (50000, 11)
-2025-04-11 13:21:58,552 - INFO - Dataset initialized: 9562 books, 68 categories, mode=train
-2025-04-11 13:21:58,552 - INFO - Initializing KindleDataset
-2025-04-11 13:22:06,586 - INFO - Loaded customer_df: (10000, 11), product_df: (50000, 11)
-2025-04-11 13:22:09,834 - INFO - Dataset initialized: 9562 books, 68 categories, mode=eval
-2025-04-11 13:22:09,834 - INFO - Datasets loaded
-2025-04-11 13:22:09,834 - INFO - Starting training with 2 epochs
-2025-04-11 13:22:09,834 - INFO - Initializing BERT4Rec model
-2025-04-11 13:22:09,861 - INFO - DataLoader created with 28 batches
-2025-04-11 13:22:10,440 - INFO - MLflow tracking URI set
-2025-04-11 13:22:11,138 - INFO - MLflow run started with ID: 14500db681904257b5694e73294c954b
-2025-04-11 13:22:14,413 - INFO - Epoch 1 completed, avg loss = 9.3745
-2025-04-11 13:22:17,591 - INFO - Epoch 2 completed, avg loss = 9.2851
-2025-04-11 13:22:21,052 - INFO - Model and artifacts logged to MLflow
-2025-04-11 13:22:21,053 - INFO - Saved run ID 14500db681904257b5694e73294c954b to latest_run_id.txt
-2025-04-11 13:22:21,073 - INFO - Starting evaluation
-2025-04-11 13:22:21,073 - INFO - Starting evaluation
-2025-04-11 13:22:22,388 - INFO - Evaluation completed: Hit Rate=0.0031, NDCG=0.0025, MRR=0.0023, Accuracy=0.0016, Precision=0.0016, F1 Score=0.0016, AUC-ROC=0.6635
-2025-04-11 13:22:22,388 - INFO - Training and evaluation completed successfully
-2025-04-11 13:22:22,389 - INFO - Script completed
+2025-04-13 21:18:22,872 - INFO - Using device: cpu
+2025-04-13 21:18:22,872 - INFO - Script started
+2025-04-13 21:18:22,872 - INFO - Starting training script
+2025-04-13 21:18:22,873 - INFO - Initializing KindleDataset
+2025-04-13 21:18:27,970 - INFO - Loaded customer_df: (4426, 11), product_df: (50000, 11)
+2025-04-13 21:18:31,542 - INFO - Dataset initialized: 4334 books, 68 categories, mode=train
+2025-04-13 21:18:31,543 - INFO - Initializing KindleDataset
+2025-04-13 21:18:34,927 - INFO - Loaded customer_df: (4426, 11), product_df: (50000, 11)
+2025-04-13 21:18:38,546 - INFO - Dataset initialized: 4334 books, 68 categories, mode=eval
+2025-04-13 21:18:38,546 - INFO - Datasets loaded
+2025-04-13 21:18:38,546 - INFO - Starting training with 2 epochs
+2025-04-13 21:18:38,546 - INFO - Initializing BERT4Rec model
+2025-04-13 21:18:38,551 - INFO - DataLoader created with 13 batches
+2025-04-13 21:18:43,256 - INFO - MLflow tracking URI set
+2025-04-13 21:18:43,685 - INFO - MLflow run started with ID: e71a0cf7d10449fab64ffd1fb3e85bff
+2025-04-13 21:18:44,750 - INFO - Epoch 1 completed, avg loss = 8.6514
+2025-04-13 21:18:45,742 - INFO - Epoch 2 completed, avg loss = 8.4550
+2025-04-13 21:18:48,253 - INFO - Model and artifacts logged to MLflow
+2025-04-13 21:18:48,254 - INFO - Saved run ID e71a0cf7d10449fab64ffd1fb3e85bff to latest_run_id.txt
+2025-04-13 21:18:48,270 - INFO - Starting evaluation
+2025-04-13 21:18:48,271 - INFO - Starting evaluation
+2025-04-13 21:18:50,002 - INFO - Evaluation completed: Hit Rate=0.0076, NDCG=0.0032, MRR=0.0019, Accuracy=0.0000, Precision=0.0000, F1 Score=0.0000, AUC-ROC=0.0000
+2025-04-13 21:18:50,003 - INFO - Training and evaluation completed successfully
+2025-04-13 21:18:50,012 - INFO - Script completed
