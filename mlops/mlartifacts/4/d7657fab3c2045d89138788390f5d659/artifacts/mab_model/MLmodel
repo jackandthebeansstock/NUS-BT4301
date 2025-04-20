@@ -1,0 +1,26 @@
+artifact_path: mab_model
+flavors:
+  python_function:
+    config:
+      device: null
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pytorch
+    pickle_module_name: mlflow.pytorch.pickle_module
+    python_version: 3.11.6
+  pytorch:
+    code: null
+    model_data: data
+    pytorch_version: 2.3.1
+mlflow_version: 2.21.2
+model_size_bytes: 436074
+model_uuid: f17d1fd8c2024cddb5a6895f18f7aa52
+prompts: null
+run_id: d7657fab3c2045d89138788390f5d659
+saved_input_example_info:
+  artifact_path: input_example.json
+  serving_input_path: serving_input_example.json
+  type: ndarray
+utc_time_created: '2025-04-18 05:54:22.905613'

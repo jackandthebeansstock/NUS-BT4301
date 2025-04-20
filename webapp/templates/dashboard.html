@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendation Performance Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .metric {
+            font-size: 1.2em;
+            margin: 5px 0;
+            color: #2c3e50;
+        }
+        .chart-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        select {
+            padding: 5px;
+            font-size: 1em;
+            margin-left: 10px;
+            border-radius: 4px;
+        }
+        label {
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        #back-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        #back-btn:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Recommendation Performance Dashboard</h1>
+    
+    <div>
+        <label for="date-select">Select Date:</label>
+        <select id="date-select">
+            <option value="current">Current Day (Real-Time)</option>
+            {% for date in dates %}
+            <option value="{{ date }}">{{ date }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    
+    <div id="metrics">
+        <h2 id="date-title">Current Day (Real-Time)</h2>
+        <p class="metric"><strong>Total Recommendations:</strong> <span id="total-recs">0</span></p>
+        <p class="metric"><strong>Total Clicks:</strong> <span id="total-clicks">0</span></p>
+        <p class="metric"><strong>Clicks on Recommended Books:</strong> <span id="rec-clicks">0</span></p>
+        <p class="metric"><strong>CTR:</strong> <span id="ctr">0.00%</span></p>
+        <p class="metric"><strong>Unique Users:</strong> <span id="unique-users">0</span></p>
+        <p class="metric"><strong>Likes:</strong> <span id="likes">0</span></p>
+        <p class="metric"><strong>Dislikes:</strong> <span id="dislikes">0</span></p>
+        <p class="metric"><strong>Diversity (Unique Genres):</strong> <span id="diversity">0</span></p>
+        <p class="metric"><strong>Coverage (% of Catalog):</strong> <span id="coverage">0.00%</span></p>
+    </div>
+    
+    <div class="chart-container">
+        <canvas id="ctr-chart"></canvas>
+    </div>
+    
+    <div class="chart-container">
+        <canvas id="feedback-chart"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="genre-dist-chart"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="user-engagement-chart"></canvas>
+    </div>
+    
+    <button id="back-btn">Back to Store</button>
+    
+    <script>
+        const ws = new WebSocket('ws://localhost:8765');
+        let currentDate = 'current';
+        
+        const ctrCtx = document.getElementById('ctr-chart').getContext('2d');
+        const ctrChart = new Chart(ctrCtx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'CTR (%)',
+                    data: [],
+                    borderColor: '#3498db',
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'minute',
+                            parser: 'yyyy-MM-dd\'T\'HH:mm:ss.SSSZ',
+                            displayFormats: {
+                                minute: 'HH:mm'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Time'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'CTR (%)'
+                        }
+                    }
+                }
+            }
+        });
+        
+        const feedbackCtx = document.getElementById('feedback-chart').getContext('2d');
+        const feedbackChart = new Chart(feedbackCtx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [
+                    {
+                        label: 'Likes',
+                        data: [],
+                        borderColor: '#2ecc71',
+                        fill: false
+                    },
+                    {
+                        label: 'Dislikes',
+                        data: [],
+                        borderColor: '#e74c3c',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'minute',
+                            parser: 'yyyy-MM-dd\'T\'HH:mm:ss.SSSZ',
+                            displayFormats: {
+                                minute: 'HH:mm'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Time'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Count'
+                        }
+                    }
+                }
+            }
+        });
+
+        const genreDistCtx = document.getElementById('genre-dist-chart').getContext('2d');
+        const genreDistChart = new Chart(genreDistCtx, {
+            type: 'bar',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Genre Distribution',
+                    data: [],
+                    backgroundColor: '#3498db'
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Count'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Genre Distribution of Recommendations'
+                    }
+                }
+            }
+        });
+
+        const userEngagementCtx = document.getElementById('user-engagement-chart').getContext('2d');
+        const userEngagementChart = new Chart(userEngagementCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Clicks', 'Likes', 'Dislikes'],
+                datasets: [{
+                    label: 'User Engagement',
+                    data: [0, 0, 0],
+                    backgroundColor: ['#3498db', '#2ecc71', '#e74c3c']
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Count'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'User Engagement Metrics'
+                    }
+                }
+            }
+        });
+        
+        function updateMetrics(metrics) {
+            document.getElementById('total-recs').textContent = metrics.total_recommendations;
+            document.getElementById('total-clicks').textContent = metrics.total_clicks;
+            document.getElementById('rec-clicks').textContent = metrics.clicks_on_recommended;
+            document.getElementById('ctr').textContent = (metrics.ctr * 100).toFixed(2) + '%';
+            document.getElementById('unique-users').textContent = metrics.unique_users;
+            document.getElementById('likes').textContent = metrics.likes;
+            document.getElementById('dislikes').textContent = metrics.dislikes;
+            document.getElementById('diversity').textContent = metrics.diversity;
+            document.getElementById('coverage').textContent = metrics.coverage.toFixed(2) + '%';
+            
+            if (currentDate === 'current') {
+                const now = new Date(metrics.timestamp);
+                ctrChart.data.labels.push(now);
+                ctrChart.data.datasets[0].data.push(metrics.ctr * 100);
+                if (ctrChart.data.labels.length > 60) {
+                    ctrChart.data.labels.shift();
+                    ctrChart.data.datasets[0].data.shift();
+                }
+                ctrChart.update();
+                feedbackChart.data.labels.push(now);
+                feedbackChart.data.datasets[0].data.push(metrics.likes);
+                feedbackChart.data.datasets[1].data.push(metrics.dislikes);
+                if (feedbackChart.data.labels.length > 60) {
+                    feedbackChart.data.labels.shift();
+                    feedbackChart.data.datasets[0].data.shift();
+                    feedbackChart.data.datasets[1].data.shift();
+                }
+                feedbackChart.update();
+                userEngagementChart.data.datasets[0].data = [metrics.total_clicks, metrics.likes, metrics.dislikes];
+                userEngagementChart.update();
+            }
+        }
+
+        function updateGenreDistribution(genres) {
+            const labels = Object.keys(genres);
+            const data = Object.values(genres);
+            genreDistChart.data.labels = labels;
+            genreDistChart.data.datasets[0].data = data;
+            genreDistChart.update();
+        }
+        
+        ws.onmessage = function(event) {
+            if (currentDate === 'current') {
+                const data = JSON.parse(event.data);
+                console.log('Received data:', data);
+                updateMetrics(data.metrics);
+                updateGenreDistribution(data.genre_distribution);
+            }
+        };
+        
+        ws.onopen = function() {
+            console.log('Connected to WebSocket server');
+        };
+        
+        ws.onclose = function() {
+            console.log('Disconnected from WebSocket server');
+        };
+        
+        ws.onerror = function(error) {
+            console.error('WebSocket error:', error);
+        };
+        
+        document.getElementById('date-select').addEventListener('change', function() {
+            currentDate = this.value;
+            document.getElementById('date-title').textContent = currentDate === 'current' ? 'Current Day (Real-Time)' : currentDate;
+            
+            if (currentDate === 'current') {
+                ctrChart.data.labels = [];
+                ctrChart.data.datasets[0].data = [];
+                feedbackChart.data.labels = [];
+                feedbackChart.data.datasets[0].data = [];
+                feedbackChart.data.datasets[1].data = [];
+                genreDistChart.data.labels = [];
+                genreDistChart.data.datasets[0].data = [];
+                userEngagementChart.data.datasets[0].data = [0, 0, 0];
+                ctrChart.update();
+                feedbackChart.update();
+                genreDistChart.update();
+                userEngagementChart.update();
+            } else {
+                fetch(`/api/historical_metrics?date=${currentDate}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        updateMetrics(data.metrics);
+                        updateGenreDistribution(data.genre_distribution);
+                        ctrChart.data.labels = [];
+                        ctrChart.data.datasets[0].data = [];
+                        feedbackChart.data.labels = [];
+                        feedbackChart.data.datasets[0].data = [];
+                        feedbackChart.data.datasets[1].data = [];
+                        genreDistChart.data.labels = [];
+                        genreDistChart.data.datasets[0].data = [];
+                        userEngagementChart.data.datasets[0].data = [data.metrics.total_clicks, data.metrics.likes, data.metrics.dislikes];
+                        ctrChart.update();
+                        feedbackChart.update();
+                        genreDistChart.update();
+                        userEngagementChart.update();
+                    })
+                    .catch(err => console.error('Error fetching historical data:', err));
+            }
+        });
+
+        document.getElementById('back-btn').addEventListener('click', function() {
+            window.location.href = '/';
+        });
+    </script>

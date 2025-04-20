@@ -7,11 +7,22 @@ logs/
 # Ignore CSV files
 *.csv
 
+# Ignore JSON files
+*.json
+
+# 
+venv/
+
+# 
+logs/
+*.log
+
 # Ignore json files
 *.json
 
 # Ignore Parquet files
 *.parquet
+
 
 # Ignore Environment files
 *.env
