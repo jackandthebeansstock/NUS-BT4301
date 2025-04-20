@@ -1,3 +1,6 @@
+# ignore logs
+logs/
+
 # Ignore Excel files
 *.xlsx
 
@@ -14,11 +17,18 @@ venv/
 logs/
 *.log
 
+# Ignore json files
+*.json
+
 # Ignore Parquet files
 *.parquet
 
+
 # Ignore Environment files
 *.env
+
+# Python Venv
+venv/
 
 .git
 .DS_Store

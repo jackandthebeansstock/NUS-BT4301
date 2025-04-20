@@ -1,0 +1,57 @@
+===========================
+Filename
+===========================
+
+classify.py
+
+---------------------------
+Description
+---------------------------
+
+A command-line and Python-callable tool that performs zero-shot text classification
+using Hugging Face’s `facebook/bart-large-mnli` model. It classifies input text against
+a fixed set of conceptual labels (e.g. damage, support, value) and returns the top-N
+most relevant concepts with confidence scores. The tool also reports runtime and
+optionally writes output to a .csv file.
+
+---------------------------
+Function Usage Example
+---------------------------
+
+from classify import classify_review
+
+result = classify_review("The angry dog chases Jack the rabbit.", top_n=1)
+
+---------------------------
+CLI Input Parameters
+---------------------------
+
+Parameter   Type    Required   Description
+---------   ----    --------   ---------------------------------------------------
+text        str     Yes        The input review or sentence to classify.
+--top_n     int     No         Number of top matching concepts to return (default: 3).
+--csv       str     No         Optional path to write the results to a .csv file.
+
+---------------------------
+CLI Usage Examples
+---------------------------
+
+# Run with default top 3 concepts
+python classify.py "The angry dog chases Jack the rabbit."
+
+# Return top 5 concepts and write output to a text file
+python classify.py "Jack and Jill went up the Van to fetch a pail of candy." --top_n 5 > output.txt
+
+---------------------------
+Sample Output (CLI or Function)
+---------------------------
+
+{
+  "time_taken_seconds": 6.81,
+  "top_concepts": [
+    {
+      "label": "dissatisfaction",
+      "score": 0.9919
+    }
+  ]
+}

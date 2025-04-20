@@ -1,0 +1,50 @@
+===========================
+Filename
+===========================
+
+lda_cli.py
+
+---------------------------
+Description
+---------------------------
+
+Command-line interface for performing LDA-based clustering on user behavioural data.
+This tool uses the LdaClustering class (defined in lda.py) to:
+  - Load an input CSV file with user data.
+  - Check for negative feature values.
+  - Fit an LDA model with configurable Dirichlet priors.
+  - Export topic probabilities per user to a CSV file.
+  - Save the fitted LDA model.
+  - Generate various 2D and 3D visualisations of the clusters and save them to a PDF.
+
+---------------------------
+CLI Input Parameters
+---------------------------
+
+Parameter         Type    Required  Description
+----------------  ------  --------  -----------------------------------------------
+data              str     Yes       Path to the input CSV file containing user data.
+--alpha           float   No        Dirichlet prior for topic mixture (default: 1.0).
+--beta            float   No        Dirichlet prior for topic-word distribution (default: 1.0).
+--num_topics      int     No        Number of topics to generate (default: 4).
+--max_iter        int     No        Maximum iterations for LDA (default: 50).
+--seed            int     No        Random seed for reproducibility (default: 1).
+--output_model    str     No        Path to save the LDA model (default: lda_model.pkl).
+--output_csv      str     No        Path to save topic probabilities CSV (default: user_topic_probabilities.csv).
+--output_pdf      str     No        Path to save the visualisation PDF (default: lda_cluster_plots.pdf).
+
+---------------------------
+Example Usage
+---------------------------
+
+python lda_cli.py user_category_metrics.csv --alpha 1.0 --beta 1.0 --num_topics 4
+
+python lda_cli.py data.csv --max_iter 100 --seed 42 --output_model my_lda_model.pkl
+
+---------------------------
+Output
+---------------------------
+
+- The fitted LDA model is saved to the specified output_model file.
+- Topic probabilities per user are exported to the specified CSV file.
+- A PDF containing visualisations (2D and 3D cluster projections) is saved to the specified output_pdf file.
